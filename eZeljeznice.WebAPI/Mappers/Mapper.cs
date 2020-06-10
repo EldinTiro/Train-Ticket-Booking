@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using eZeljeznice.Model;
+using eZeljeznice.Model.Requests;
 using eZeljeznice.WebAPI.Database;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,7 @@ namespace eZeljeznice.WebAPI.Mappers
         public Mapper()
         {
             CreateMap<Korisnici, KorisniciVM>();
+            CreateMap<Korisnici, KorisniciInsertRequest>().ReverseMap();
             CreateMap<ZeljeznickeStanice, ZeljeznickeStaniceVM>();
         }
     }

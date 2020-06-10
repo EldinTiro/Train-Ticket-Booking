@@ -2,6 +2,7 @@
 using eZeljeznice.Model;
 using eZeljeznice.Model.Requests;
 using eZeljeznice.WebAPI.Database;
+using eZeljeznice.WebAPI.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,9 +26,23 @@ namespace eZeljeznice.WebAPI.Services
             return _mapper.Map<List<KorisniciVM>>(list);
         }
 
-        public KorisniciVM Insert(KorisniciInserRequest request)
+        public KorisniciVM Insert(KorisniciInsertRequest request)
         {
-            throw new NotImplementedException();
+            var entity = _mapper.Map<Korisnici>(request);
+
+            if (request.Password != request.PasswordConfirmation)
+            {
+                throw new UserException("Passwordi se ne slazu!");
+            }
+
+            entity.LozinkaHash = "test";
+            entity.LozinkaSalt = "test";
+
+            _context.Add(entity);
+            _context.SaveChanges();
+
+            return _mapper.Map<KorisniciVM>(entity);
+
         }
     }
 }

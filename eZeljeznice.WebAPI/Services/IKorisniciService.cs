@@ -12,7 +12,7 @@ namespace eZeljeznice.WebAPI.Services
     {
         List<KorisniciVM> Get();
 
-        KorisniciVM Insert(KorisniciInserRequest request);
+        KorisniciVM Insert(KorisniciInsertRequest request);
 
     }
 }
