@@ -3,6 +3,7 @@ using eZeljeznice.Model;
 using eZeljeznice.Model.Requests;
 using eZeljeznice.WebAPI.Database;
 using eZeljeznice.WebAPI.Exceptions;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,11 +20,31 @@ namespace eZeljeznice.WebAPI.Services
             this._context = context;
             this._mapper = mapper;
         }
-        public List<KorisniciVM> Get()
+        public List<KorisniciVM> Get(KorisniciSearchRequest request)
         {
-            var list = _context.Korisnici.ToList();
+
+            var query = _context.Korisnici.AsQueryable();
+
+            if (!string.IsNullOrWhiteSpace(request?.Ime))
+            {
+                query = query.Where(x => x.Ime.StartsWith(request.Ime));
+            }
+
+            if (!string.IsNullOrWhiteSpace(request?.Prezime))
+            {
+                query = query.Where(x => x.Prezime.StartsWith(request.Prezime));
+            }
+
+            var list = query.ToList();
 
             return _mapper.Map<List<KorisniciVM>>(list);
+        }
+
+        public KorisniciVM GetById(int id)
+        {
+            var entity = _context.Korisnici.Find(id);
+
+            return _mapper.Map<KorisniciVM>(entity);
         }
 
         public KorisniciVM Insert(KorisniciInsertRequest request)
@@ -39,6 +60,27 @@ namespace eZeljeznice.WebAPI.Services
             entity.LozinkaSalt = "test";
 
             _context.Add(entity);
+            _context.SaveChanges();
+
+            return _mapper.Map<KorisniciVM>(entity);
+
+        }
+
+        public KorisniciVM Update(int id, KorisniciInsertRequest request)
+        {
+            var entity = _context.Korisnici.Find(id);
+
+            _mapper.Map(request, entity);
+
+            if(!string.IsNullOrWhiteSpace(request.Password))
+            { 
+                if(request.Password != request.PasswordConfirmation)
+                {
+                    throw new Exception("Passwordi se ne slažu");
+                }
+                //TODO: update password
+            }
+
             _context.SaveChanges();
 
             return _mapper.Map<KorisniciVM>(entity);

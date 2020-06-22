@@ -10,9 +10,10 @@ namespace eZeljeznice.WebAPI.Services
 {
     public interface IKorisniciService
     {
-        List<KorisniciVM> Get();
-
+        List<KorisniciVM> Get(KorisniciSearchRequest request);
+        KorisniciVM GetById(int id);
         KorisniciVM Insert(KorisniciInsertRequest request);
+        KorisniciVM Update(int id, KorisniciInsertRequest request);
 
     }
 }

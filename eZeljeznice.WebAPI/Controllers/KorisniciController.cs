@@ -23,17 +23,29 @@ namespace eZeljeznice.WebAPI.Controllers
         }
 
         [HttpGet]
-        public List<KorisniciVM> Get()
+        public List<KorisniciVM> Get([FromQuery]KorisniciSearchRequest request)
         {
-            var list = _service.Get();
+            var list = _service.Get(request);
 
             return list;
+        }
+
+        [HttpGet("{id}")]
+        public KorisniciVM Get(int id)
+        {
+            return _service.GetById(id);
         }
 
         [HttpPost]
         public KorisniciVM Insert(KorisniciInsertRequest request)
         {
             return _service.Insert(request);
+        }
+
+        [HttpPut("{id}")]
+        public KorisniciVM Update(int id, KorisniciInsertRequest request)
+        {
+            return _service.Update(id, request);
         }
     }
 }
