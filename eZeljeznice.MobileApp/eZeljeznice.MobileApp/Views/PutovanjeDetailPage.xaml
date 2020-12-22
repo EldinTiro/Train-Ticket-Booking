@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="eZeljeznice.MobileApp.Views.PutovanjeDetailPage">
+    <ContentPage.Content>
+        <StackLayout Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="White">
+            <Grid  Padding="10" Margin="20,30,0,0" RowSpacing="20"  >
+                <Grid.RowDefinitions >
+                    <RowDefinition Height="*" ></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" ></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <BoxView Margin="110,0,0,0" Grid.Column="0" Grid.Row="0" Grid.RowSpan="7"  BackgroundColor="Gray" WidthRequest="3" VerticalOptions="FillAndExpand" HorizontalOptions="EndAndExpand" 	/>
+                <BoxView Margin="110,0,0,0" Grid.Column="1" Grid.Row="0" Grid.RowSpan="7"  BackgroundColor="Gray" WidthRequest="3" VerticalOptions="FillAndExpand" HorizontalOptions="EndAndExpand" 	/>
+                <Label Grid.Row="0" Grid.Column="0">Polazište</Label><Label Grid.Row="0" Grid.Column="1" FontAttributes="Bold" Text="{Binding Putovanje.Polaziste}"  ></Label>
+                <Label Grid.Row="1" Grid.Column="0">Odredište</Label><Label Grid.Row="1" Grid.Column="1" FontAttributes="Bold" Text="{Binding Putovanje.Odrediste}"  ></Label> 
+                <Label Grid.Row="2" Grid.Column="0">Datum polaska</Label><Label Grid.Row="2" Grid.Column="1" FontAttributes="Bold" Text="{Binding Putovanje.DatumPolaska, StringFormat='{0:M/d/yy}'}"  ></Label>
+                <Label Grid.Row="3" Grid.Column="0">Vrijeme polaska</Label><Label Grid.Row="3" Grid.Column="1" FontAttributes="Bold" Text="{Binding Putovanje.VrijemePolaska,StringFormat='{0:HH:mm}'}"  ></Label>
+                <Label Grid.Row="4" Grid.Column="0">Vrijeme dolaska</Label><Label Grid.Row="4" Grid.Column="1" FontAttributes="Bold" Text="{Binding Putovanje.VrijemeDolaska, StringFormat='{0:HH:mm}'}"  ></Label>
+                <Label Grid.Row="5" Grid.Column="0">Broj odraslih</Label>
+                <Label Grid.Row="5" Grid.Column="1" FontAttributes="Bold" Text="{Binding BrojOdraslih}"  ></Label>
+                <Button Command="{Binding SmanjiBrojOdraslih}" Grid.Row="5" Grid.Column="2" FontSize="Micro" Text="Smanji" WidthRequest="30" HeightRequest="30" BackgroundColor="RosyBrown"></Button>
+                <Button Command="{Binding PovecajBrojOdraslih}" Grid.Row="5" Grid.Column="3" FontSize="Micro" Text="Povećaj" WidthRequest="30" HeightRequest="30" BackgroundColor="Wheat"></Button>
+                <Label Grid.Row="6" Grid.Column="0">Broj djece (50% popust)</Label>
+                <Label Grid.Row="6" Grid.Column="1" FontAttributes="Bold" Text="{Binding BrojDjece}"  ></Label>
+                <Button Command="{Binding SmanjiBrojDjece}" Grid.Row="6" Grid.Column="2" FontSize="Micro" Text="Smanji" WidthRequest="30" HeightRequest="30" BackgroundColor="RosyBrown"></Button>
+                <Button Command="{Binding PovecajBrojDjece}" Grid.Row="6" Grid.Column="3" FontSize="Micro" Text="Povećaj" WidthRequest="30" HeightRequest="30" BackgroundColor="Wheat"></Button>
+                <Label Grid.Row="7" Grid.Column="0">Ukupna cijena</Label>
+                <Label Grid.Row="7" Grid.Column="1" FontAttributes="Bold" Text="{Binding FinalnaCijena}"  ></Label>
+
+            </Grid>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

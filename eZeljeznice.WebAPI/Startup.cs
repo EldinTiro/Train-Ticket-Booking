@@ -5,7 +5,9 @@ using System.Threading.Tasks;
 using AutoMapper;
 using eZeljeznice.WebAPI.Database;
 using eZeljeznice.WebAPI.Filters;
+using eZeljeznice.WebAPI.Security;
 using eZeljeznice.WebAPI.Services;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -36,14 +38,44 @@ namespace eZeljeznice.WebAPI
 
             services.AddAutoMapper(typeof(Startup));
 
+            services.AddAuthentication("BasicAuthentication").AddScheme<AuthenticationSchemeOptions, BasicAuthenticationHandler>("BasicAuthentication", null);
+
             // Register the Swagger generator, defining 1 or more Swagger documents
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "TheCodeBuzz-Service", Version = "v1" });
+
+                c.AddSecurityDefinition("basic", new OpenApiSecurityScheme
+                {
+                    Name = "Authorization",
+                    Type = SecuritySchemeType.Http,
+                    Scheme = "basic",
+                    In = ParameterLocation.Header,
+                    Description = "Basic Authorization header using the Bearer scheme."
+                });
+
+                c.AddSecurityRequirement(new OpenApiSecurityRequirement
+                {
+                    {
+                          new OpenApiSecurityScheme
+                            {
+                                Reference = new OpenApiReference
+                                {
+                                    Type = ReferenceType.SecurityScheme,
+                                    Id = "basic"
+                                }
+                            },
+                            new string[] {}
+                    }
+                });
+
             });
 
             services.AddScoped<IZeljeznickeStaniceService, ZeljeznickeStaniceService>();
             services.AddScoped<IKorisniciService, KorisniciService>();
+            services.AddScoped<IPutovanjaService, PutovanjaService>();
+            services.AddScoped<IGradoviService, GradoviService>();
+            services.AddScoped<IKupciService, KupciService>();
 
             services.AddDbContext<IB170285Context>(options => options.UseSqlServer(Configuration.GetConnectionString("ZeljeznickeDB")));
         }
@@ -64,11 +96,11 @@ namespace eZeljeznice.WebAPI
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
 
             app.UseRouting();
 
-            
+            app.UseAuthentication();
 
             app.UseAuthorization();
 

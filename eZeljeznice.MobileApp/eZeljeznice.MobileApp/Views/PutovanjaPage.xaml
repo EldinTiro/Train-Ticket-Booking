@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:ViewModel="clr-namespace:eZeljeznice.MobileApp.ViewModels"
+             mc:Ignorable="d"
+             x:Class="eZeljeznice.MobileApp.Views.PutovanjaPage">
+    <ContentPage.BindingContext>
+        <ViewModel:PutovanjaViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Putovanja"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Label>Odaberi polaznu stanicu :</Label>
+            <Picker ItemsSource="{Binding ZSPolazisteList}" SelectedItem="{Binding SelectedZSPolaziste}" ItemDisplayBinding="{Binding Naziv}"></Picker>
+            <Label>Odaberi krajnju stanicu :</Label>
+            <Picker ItemsSource="{Binding ZSOdredisteList}" SelectedItem="{Binding SelectedZSOdrediste}" ItemDisplayBinding="{Binding Naziv}"></Picker>
+            <Label>Broj odraslih osoba :</Label>
+            <Picker x:Name="IndustryTypePicker1" SelectedIndex="{Binding SelectedOdrasli}" HorizontalOptions="FillAndExpand">
+                <Picker.Items>
+                    <x:String></x:String>
+                    <x:String>1</x:String>
+                    <x:String>2</x:String>
+                    <x:String>3</x:String>
+                    <x:String>4</x:String>
+                    <x:String>5</x:String>
+                    <x:String>6</x:String>
+                </Picker.Items>
+            </Picker>
+            <Label>Broj djece :</Label>
+            <Picker x:Name="IndustryTypePicker2" SelectedIndex="{Binding SelectedDjeca}" HorizontalOptions="FillAndExpand">
+                <Picker.Items>
+                    <x:String></x:String>
+                    <x:String>1</x:String>
+                    <x:String>2</x:String>
+                    <x:String>3</x:String>
+                    <x:String>4</x:String>
+                    <x:String>5</x:String>
+                    <x:String>6</x:String>
+                </Picker.Items>
+            </Picker>
+            <Label>Datum polaska:</Label>
+            <DatePicker x:Name="DatePickerT">
+                <DatePicker.Format>yyyy-MM-dd</DatePicker.Format>
+            </DatePicker>
+            <ListView ItemsSource="{Binding PutovanjaList}" ItemSelected="ListView_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                        <StackLayout Padding="10" Orientation="Horizontal">
+                                <Label Text="{Binding Polaziste}" TextColor="#4d5296"
+                                LineBreakMode="NoWrap" 
+                                Style="{DynamicResource ListItemTextStyle}" 
+                                FontSize="16" />
+                                <Label Text="  -   " TextColor="#4d5296"
+                                LineBreakMode="NoWrap" 
+                                Style="{DynamicResource ListItemTextStyle}" 
+                                FontSize="16" />
+                                <Label Text="{Binding Odrediste}" TextColor="#4d5296"
+                                LineBreakMode="NoWrap"
+                                Style="{DynamicResource ListItemTextStyle}"
+                                FontSize="16" />
+                                <Label Text="{Binding Cijena}" TextColor="#4d5296"
+                                LineBreakMode="NoWrap"
+                                Style="{DynamicResource ListItemTextStyle}"
+                                FontSize="16" />
+                                <Label Text=" KM" TextColor="#4d5296"
+                                LineBreakMode="NoWrap" 
+                                Style="{DynamicResource ListItemTextStyle}" 
+                                FontSize="16" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

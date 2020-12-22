@@ -4,13 +4,16 @@ using System.Linq;
 using System.Threading.Tasks;
 using eZeljeznice.Model;
 using eZeljeznice.Model.Requests;
+using eZeljeznice.Model.Responses;
 using eZeljeznice.WebAPI.Database;
 using eZeljeznice.WebAPI.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace eZeljeznice.WebAPI.Controllers
 {
+    [Authorize(AuthenticationSchemes = "BasicAuthentication")]
     [Route("api/[controller]")]
     [ApiController]
     public class KorisniciController : ControllerBase
@@ -26,6 +29,13 @@ namespace eZeljeznice.WebAPI.Controllers
         public List<KorisniciVM> Get([FromQuery]KorisniciSearchRequest request)
         {
             var list = _service.Get(request);
+
+            return list;
+        }
+        [HttpGet("Loyalty")]
+        public List<KorisniciLoyaltyResponse> GetLoyalty()
+        {
+            var list = _service.GetLoyalty();
 
             return list;
         }

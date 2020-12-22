@@ -1,4 +1,5 @@
 ﻿using eZeljeznice.WinUI.Korisnici;
+using eZeljeznice.WinUI.Putovanja;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -116,6 +117,38 @@ namespace eZeljeznice.WinUI
         private void noviKorisnikToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmKorisniciDetalji frm = new frmKorisniciDetalji();
+            frm.Show();
+        }
+
+        private void pretragaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmPutovanja frm = new frmPutovanja();
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.Show();
+        }
+
+        private void novoPutovanjeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPutovanjaDetalji frm = new frmPutovanjaDetalji();
+            frm.Show();
+        }
+
+        private void kreirajAkcijuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPutovanjaAkcije frm = new frmPutovanjaAkcije();
+            frm.Show();
+        }
+
+        private void topRelacijeToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmTopRelacije frm = new frmTopRelacije();
+            frm.Show();
+        }
+
+        private void loyalityProgramToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmLoyalityProgram frm = new frmLoyalityProgram();
             frm.Show();
         }
     }

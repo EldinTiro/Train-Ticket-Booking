@@ -8,6 +8,8 @@ namespace eZeljeznice.WebAPI.Services
 {
     public interface IZeljeznickeStaniceService
     {
-        List<Database.ZeljeznickeStanice> Get();
+        List<ZeljeznickeStaniceVM> Get();
+        ZeljeznickeStaniceVM GetById(int id);
+
     }
 }

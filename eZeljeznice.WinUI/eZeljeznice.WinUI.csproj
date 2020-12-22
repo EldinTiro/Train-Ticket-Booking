@@ -21,7 +21,7 @@
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+    <WarningLevel>3</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -72,6 +72,12 @@
     <Compile Include="frmIndex.Designer.cs">
       <DependentUpon>frmIndex.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Korisnici\frmKorisnici.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,8 +92,41 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Putovanja\frmLoyalityProgram.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Putovanja\frmLoyalityProgram.Designer.cs">
+      <DependentUpon>frmLoyalityProgram.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Putovanja\frmPutovanja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Putovanja\frmPutovanja.Designer.cs">
+      <DependentUpon>frmPutovanja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Putovanja\frmPutovanjaAkcije.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Putovanja\frmPutovanjaAkcije.Designer.cs">
+      <DependentUpon>frmPutovanjaAkcije.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Putovanja\frmPutovanjaDetalji.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Putovanja\frmPutovanjaDetalji.Designer.cs">
+      <DependentUpon>frmPutovanjaDetalji.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Putovanja\frmTopRelacije.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Putovanja\frmTopRelacije.Designer.cs">
+      <DependentUpon>frmTopRelacije.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmIndex.resx">
       <DependentUpon>frmIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Korisnici\frmKorisnici.resx">
       <DependentUpon>frmKorisnici.cs</DependentUpon>
@@ -105,6 +144,21 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Putovanja\frmLoyalityProgram.resx">
+      <DependentUpon>frmLoyalityProgram.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Putovanja\frmPutovanja.resx">
+      <DependentUpon>frmPutovanja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Putovanja\frmPutovanjaAkcije.resx">
+      <DependentUpon>frmPutovanjaAkcije.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Putovanja\frmPutovanjaDetalji.resx">
+      <DependentUpon>frmPutovanjaDetalji.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Putovanja\frmTopRelacije.resx">
+      <DependentUpon>frmTopRelacije.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>PublicSettingsSingleFileGenerator</Generator>

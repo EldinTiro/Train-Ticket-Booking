@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using eZeljeznice.Model.Requests;
+using eZeljeznice.Model.Responses;
 
 namespace eZeljeznice.WebAPI.Services
 {
@@ -14,6 +15,7 @@ namespace eZeljeznice.WebAPI.Services
         KorisniciVM GetById(int id);
         KorisniciVM Insert(KorisniciInsertRequest request);
         KorisniciVM Update(int id, KorisniciInsertRequest request);
-
+        KorisniciVM Authenticiraj(string username, string pass);
+        List<KorisniciLoyaltyResponse> GetLoyalty();
     }
 }

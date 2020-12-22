@@ -36,7 +36,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtDatumRodjenja = new System.Windows.Forms.TextBox();
+            this.txtDatumRodjenja = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.txtKorisnickoIme = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -45,6 +45,9 @@
             this.txtPotvrda = new System.Windows.Forms.TextBox();
             this.btnSnimi = new System.Windows.Forms.Button();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label6 = new System.Windows.Forms.Label();
+            this.cbxGradovi = new System.Windows.Forms.ComboBox();
+            this.cboxAktivan = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
@@ -119,7 +122,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(10, 221);
+            this.label4.Location = new System.Drawing.Point(10, 273);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(75, 13);
             this.label4.TabIndex = 9;
@@ -127,7 +130,7 @@
             // 
             // txtKorisnickoIme
             // 
-            this.txtKorisnickoIme.Location = new System.Drawing.Point(13, 237);
+            this.txtKorisnickoIme.Location = new System.Drawing.Point(13, 289);
             this.txtKorisnickoIme.Name = "txtKorisnickoIme";
             this.txtKorisnickoIme.Size = new System.Drawing.Size(365, 20);
             this.txtKorisnickoIme.TabIndex = 8;
@@ -136,7 +139,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(10, 270);
+            this.label5.Location = new System.Drawing.Point(10, 322);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 13);
             this.label5.TabIndex = 11;
@@ -144,7 +147,7 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(10, 289);
+            this.txtPassword.Location = new System.Drawing.Point(13, 341);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(165, 20);
             this.txtPassword.TabIndex = 10;
@@ -152,7 +155,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(213, 270);
+            this.label7.Location = new System.Drawing.Point(213, 322);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(44, 13);
             this.label7.TabIndex = 15;
@@ -160,14 +163,14 @@
             // 
             // txtPotvrda
             // 
-            this.txtPotvrda.Location = new System.Drawing.Point(213, 289);
+            this.txtPotvrda.Location = new System.Drawing.Point(213, 341);
             this.txtPotvrda.Name = "txtPotvrda";
             this.txtPotvrda.Size = new System.Drawing.Size(165, 20);
             this.txtPotvrda.TabIndex = 14;
             // 
             // btnSnimi
             // 
-            this.btnSnimi.Location = new System.Drawing.Point(246, 346);
+            this.btnSnimi.Location = new System.Drawing.Point(246, 401);
             this.btnSnimi.Name = "btnSnimi";
             this.btnSnimi.Size = new System.Drawing.Size(132, 23);
             this.btnSnimi.TabIndex = 16;
@@ -179,11 +182,41 @@
             // 
             this.errorProvider.ContainerControl = this;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(12, 222);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(30, 13);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "Grad";
+            // 
+            // cbxGradovi
+            // 
+            this.cbxGradovi.FormattingEnabled = true;
+            this.cbxGradovi.Location = new System.Drawing.Point(15, 238);
+            this.cbxGradovi.Name = "cbxGradovi";
+            this.cbxGradovi.Size = new System.Drawing.Size(140, 21);
+            this.cbxGradovi.TabIndex = 18;
+            // 
+            // cboxAktivan
+            // 
+            this.cboxAktivan.AutoSize = true;
+            this.cboxAktivan.Location = new System.Drawing.Point(274, 241);
+            this.cboxAktivan.Name = "cboxAktivan";
+            this.cboxAktivan.Size = new System.Drawing.Size(68, 17);
+            this.cboxAktivan.TabIndex = 19;
+            this.cboxAktivan.Text = "Aktivan?";
+            this.cboxAktivan.UseVisualStyleBackColor = true;
+            // 
             // frmKorisniciDetalji
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(473, 535);
+            this.Controls.Add(this.cboxAktivan);
+            this.Controls.Add(this.cbxGradovi);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.btnSnimi);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtPotvrda);
@@ -217,7 +250,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtDatumRodjenja;
+        private System.Windows.Forms.DateTimePicker txtDatumRodjenja;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtKorisnickoIme;
         private System.Windows.Forms.Label label5;
@@ -226,5 +259,8 @@
         private System.Windows.Forms.TextBox txtPotvrda;
         private System.Windows.Forms.Button btnSnimi;
         private System.Windows.Forms.ErrorProvider errorProvider;
+        private System.Windows.Forms.ComboBox cbxGradovi;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.CheckBox cboxAktivan;
     }
 }

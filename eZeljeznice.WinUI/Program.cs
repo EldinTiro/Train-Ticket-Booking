@@ -1,4 +1,5 @@
 ﻿using eZeljeznice.WinUI.Korisnici;
+using eZeljeznice.WinUI.Putovanja;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace eZeljeznice.WinUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmIndex());
+            Application.Run(new frmLogin());
         }
     }
 }

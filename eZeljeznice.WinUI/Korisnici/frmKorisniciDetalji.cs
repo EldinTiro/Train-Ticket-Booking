@@ -15,6 +15,8 @@ namespace eZeljeznice.WinUI.Korisnici
     public partial class frmKorisniciDetalji : Form
     {
         private readonly APIService _service = new APIService("korisnici");
+        private readonly APIService _apiServiceGradovi = new APIService("gradovi");
+
         private int? _id = null;
         public frmKorisniciDetalji(int ? korisnikId = null)
         {
@@ -34,7 +36,9 @@ namespace eZeljeznice.WinUI.Korisnici
                     Password = txtPassword.Text,
                     PasswordConfirmation = txtPotvrda.Text,
                     Prezime = txtPrezime.Text,
-                    DatumRodjenja = txtDatumRodjenja.Text,
+                    DatumRodjenja = txtDatumRodjenja.Value,
+                    GradID = cbxGradovi.SelectedIndex,
+                    Status = Convert.ToInt32(cboxAktivan.Checked)
                 };
 
                 if (_id.HasValue)
@@ -52,6 +56,15 @@ namespace eZeljeznice.WinUI.Korisnici
 
         private async void frmKorisniciDetalji_Load(object sender, EventArgs e)
         {
+            var gradovi = await _apiServiceGradovi.Get<List<GradoviVM>>();
+            if (gradovi != null)
+            {
+                gradovi.Insert(0, new GradoviVM());
+                cbxGradovi.DisplayMember = "Naziv";
+                cbxGradovi.ValueMember = "GradID";
+                cbxGradovi.DataSource = gradovi;
+            }
+
             if (_id.HasValue)
             {
                 var korisnik = await _service.GetById<KorisniciVM>(_id);
