@@ -1,16 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 
-namespace eZeljeznice.WebAPI.Database
+namespace eZeljeznice.Model
 {
-    public partial class Pretrage
+    public class PretragaVM
     {
         public int PretragaId { get; set; }
         public int? RelacijaId { get; set; }
         public int? KupacId { get; set; }
         public int? Ocjena { get; set; }
-
-        public virtual Kupci Kupac { get; set; }
-        public virtual Relacije Relacija { get; set; }
     }
 }

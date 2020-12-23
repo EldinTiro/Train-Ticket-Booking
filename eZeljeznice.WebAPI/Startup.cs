@@ -76,6 +76,7 @@ namespace eZeljeznice.WebAPI
             services.AddScoped<IPutovanjaService, PutovanjaService>();
             services.AddScoped<IGradoviService, GradoviService>();
             services.AddScoped<IKupciService, KupciService>();
+            services.AddScoped<IRecommender, RecommenderService>();
 
             services.AddDbContext<IB170285Context>(options => options.UseSqlServer(Configuration.GetConnectionString("ZeljeznickeDB")));
         }

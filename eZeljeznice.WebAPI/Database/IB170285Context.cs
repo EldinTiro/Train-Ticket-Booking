@@ -143,6 +143,8 @@ namespace eZeljeznice.WebAPI.Database
 
                 entity.Property(e => e.RelacijaId).HasColumnName("RelacijaID");
 
+                entity.Property(e => e.Ocjena).HasColumnName("Ocjena");
+
                 entity.HasOne(d => d.Kupac)
                     .WithMany(p => p.Pretrage)
                     .HasForeignKey(d => d.KupacId)
