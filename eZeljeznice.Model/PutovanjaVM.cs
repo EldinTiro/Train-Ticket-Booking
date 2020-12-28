@@ -14,6 +14,7 @@ namespace eZeljeznice.Model
         public double? Cijena { get; set; }
         public string VrijemePolaska { get; set; }
         public string VrijemeDolaska { get; set; }
+        public decimal ProsjecnaOcjena { get; set; }
 
     }
 }

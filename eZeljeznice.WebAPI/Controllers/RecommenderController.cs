@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 
 namespace eZeljeznice.WebAPI.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
     public class RecommenderController : ControllerBase
     {
         private readonly IRecommender _service;

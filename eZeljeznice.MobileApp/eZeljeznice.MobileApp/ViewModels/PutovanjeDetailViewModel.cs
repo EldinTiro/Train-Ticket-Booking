@@ -14,6 +14,8 @@ namespace eZeljeznice.MobileApp.ViewModels
     {
         private readonly APIService _putovanjaServiceAPI = new APIService("putovanje");
         private readonly APIService _zeljeznickeStaniceAPI = new APIService("zeljeznickeStanice");
+        private readonly APIService _recommenderService = new APIService("Recommender");
+        private readonly APIService _pretragaOcjeneService = new APIService("Pretrage");
 
         public ICommand InitCommand { get; set; }
         public ICommand PovecajBrojOdraslih { get; set; }
@@ -21,7 +23,11 @@ namespace eZeljeznice.MobileApp.ViewModels
         public ICommand PovecajBrojDjece { get; set; }
         public ICommand SmanjiBrojDjece { get; set; }
 
+        public ICommand RecommenderCommand { get; set; }
+
         public PutovanjaVM Putovanje { get; set; }
+
+        public ObservableCollection<PutovanjaVM> RecommenderList { get; set; } = new ObservableCollection<PutovanjaVM>();
 
         public string Odrasli { get; set; }
         public string Djeca { get; set; }
@@ -36,6 +42,7 @@ namespace eZeljeznice.MobileApp.ViewModels
             PovecajBrojDjece = new Command(() => BrojDjece += 1);
             SmanjiBrojDjece = new Command(() => BrojDjece -= 1);
             InitCommand = new Command(async () => await Init());
+            RecommenderCommand = new Command(async () => await Recommender());
         }
 
         int _BrojOdraslih = 0;
@@ -87,6 +94,39 @@ namespace eZeljeznice.MobileApp.ViewModels
             }
 
             FinalnaCijena = finalnaCijenaPutovanja;
+
+        }
+
+        public async Task Recommender()
+        {
+            RecommenderList.Clear();
+            List<PutovanjaVM> lista = new List<PutovanjaVM>();
+            lista = await _recommenderService.GetSlicnaPutovanja<List<PutovanjaVM>>(Putovanje.PutovanjeID);
+
+            List<PretragaVM> listaPrOcjena = new List<PretragaVM>();
+            listaPrOcjena = await _pretragaOcjeneService.Get<List<PretragaVM>>(null);
+
+
+
+            foreach (var item in lista)
+            {
+                int ukupno = 0;
+                decimal iznos = 0;
+
+                foreach (var item2 in listaPrOcjena)
+                {
+                    if (item2.RelacijaId == item.RelacijaID)
+                    {
+                        iznos += Convert.ToDecimal(item2.Ocjena);
+                        ukupno++;
+                    }
+                }
+
+                item.ProsjecnaOcjena = iznos / ukupno;
+
+                RecommenderList.Add(item);
+
+            }
 
         }
     }

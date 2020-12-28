@@ -28,6 +28,13 @@ namespace eZeljeznice.MobileApp
             _route = route;
         }
 
+        public async Task<T> GetSlicnaPutovanja<T>(int id)
+        {
+            var url = $"{_apiUrl}/{_route}/GetSlicnaPutovanja/{id}";
+
+            return await url.GetJsonAsync<T>();
+        }
+
         public async Task<T> Get<T>(object search)
         {
             var url = $"{_apiUrl}/{_route}";

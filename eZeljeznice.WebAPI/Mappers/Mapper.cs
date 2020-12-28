@@ -20,6 +20,7 @@ namespace eZeljeznice.WebAPI.Mappers
             CreateMap<Putovanja, PutovanjaInsertRequest>().ReverseMap();
             CreateMap<Gradovi, GradoviVM>();
             CreateMap<Kupci, KupciVM>();
+            CreateMap<Pretrage, PretragaVM>();
         }
     }
 }

@@ -25,5 +25,16 @@ namespace eZeljeznice.MobileApp.Views
 
             InitializeComponent();
         }
+
+        protected override async void OnAppearing()
+        {
+
+            base.OnAppearing();
+            await model.Init();
+            await model.Recommender();
+
+
+
+        }
     }
 }

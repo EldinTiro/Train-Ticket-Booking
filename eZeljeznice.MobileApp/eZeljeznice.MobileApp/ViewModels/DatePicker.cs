@@ -6,5 +6,7 @@ namespace eZeljeznice.MobileApp.ViewModels
 {
     class DatePicker
     {
+
+
     }
 }
