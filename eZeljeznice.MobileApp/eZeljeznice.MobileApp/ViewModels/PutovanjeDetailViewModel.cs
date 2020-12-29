@@ -38,9 +38,21 @@ namespace eZeljeznice.MobileApp.ViewModels
         public PutovanjeDetailViewModel()
         {
             PovecajBrojOdraslih = new Command(() => BrojOdraslih += 1);
-            SmanjiBrojOdraslih = new Command(() => BrojOdraslih -= 1);
+            SmanjiBrojOdraslih = new Command(() =>
+            {
+                if (BrojOdraslih > 0)
+                {
+                    BrojOdraslih -= 1;
+                }
+            });
             PovecajBrojDjece = new Command(() => BrojDjece += 1);
-            SmanjiBrojDjece = new Command(() => BrojDjece -= 1);
+            SmanjiBrojDjece = new Command(() =>
+            {
+                if (BrojDjece > 0)
+                {
+                    BrojDjece -= 1;
+                }
+            });
             InitCommand = new Command(async () => await Init());
             RecommenderCommand = new Command(async () => await Recommender());
         }

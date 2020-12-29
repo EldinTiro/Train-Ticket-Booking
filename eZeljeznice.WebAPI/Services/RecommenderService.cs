@@ -58,6 +58,9 @@ namespace eZeljeznice.WebAPI.Services
 
                     _mapper.Map(element, elementPreporuceni);
 
+                    elementPreporuceni.Polaziste = _context.Relacije.Where(w => w.RelacijaId == element.RelacijaId).Select(s => s.ZeljeznickaStanicaOd.Naziv).FirstOrDefault();
+                    elementPreporuceni.Odrediste = _context.Relacije.Where(w => w.RelacijaId == element.RelacijaId).Select(s => s.ZeljeznickaStanicaDo.Naziv).FirstOrDefault();
+
                     preporucenaPutovanja.Add(elementPreporuceni);
 
                 }

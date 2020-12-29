@@ -17,30 +17,6 @@
             <Picker ItemsSource="{Binding ZSPolazisteList}" SelectedItem="{Binding SelectedZSPolaziste}" ItemDisplayBinding="{Binding Naziv}"></Picker>
             <Label>Odaberi krajnju stanicu :</Label>
             <Picker ItemsSource="{Binding ZSOdredisteList}" SelectedItem="{Binding SelectedZSOdrediste}" ItemDisplayBinding="{Binding Naziv}"></Picker>
-            <Label>Broj odraslih osoba :</Label>
-            <Picker x:Name="IndustryTypePicker1" SelectedIndex="{Binding SelectedOdrasli}" HorizontalOptions="FillAndExpand">
-                <Picker.Items>
-                    <x:String></x:String>
-                    <x:String>1</x:String>
-                    <x:String>2</x:String>
-                    <x:String>3</x:String>
-                    <x:String>4</x:String>
-                    <x:String>5</x:String>
-                    <x:String>6</x:String>
-                </Picker.Items>
-            </Picker>
-            <Label>Broj djece :</Label>
-            <Picker x:Name="IndustryTypePicker2" SelectedIndex="{Binding SelectedDjeca}" HorizontalOptions="FillAndExpand">
-                <Picker.Items>
-                    <x:String></x:String>
-                    <x:String>1</x:String>
-                    <x:String>2</x:String>
-                    <x:String>3</x:String>
-                    <x:String>4</x:String>
-                    <x:String>5</x:String>
-                    <x:String>6</x:String>
-                </Picker.Items>
-            </Picker>
             <Label>Datum polaska:</Label>
             <DatePicker x:Name="DatePickerT">
                 <DatePicker.Format>yyyy-MM-dd</DatePicker.Format>
@@ -49,28 +25,33 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                        <StackLayout Padding="10" Orientation="Horizontal">
-                                <Label Text="{Binding Polaziste}" TextColor="#4d5296"
+                            <StackLayout Padding="10" Orientation="Horizontal">
+                                <StackLayout>
+                                    <StackLayout>
+                                        <Label Text="{Binding Polaziste}" TextColor="#4d5296"
+                                        Style="{DynamicResource ListItemTextStyle}" 
+                                        FontSize="12" />
+                                        <Label Text="{Binding Odrediste}" TextColor="#4d5296"
+                                        Style="{DynamicResource ListItemTextStyle}"
+                                        FontSize="12" />
+                                    </StackLayout>
+                                    <Label Text="{Binding VrijemePolaska, StringFormat='Polazak: {0:HH:mm}'}" TextColor="ForestGreen"
+                                     Style="{DynamicResource ListItemTextStyle}" 
+                                     FontSize="12"/>
+                                </StackLayout>
+                                <StackLayout>
+                                    <Label Text="{Binding Cijena,StringFormat='Cijena: {0} KM'}" 
+                                d:Text="{Binding .}"
                                 LineBreakMode="NoWrap" 
                                 Style="{DynamicResource ListItemTextStyle}" 
+                                TextColor="DarkBlue"
+                                FontAttributes="Bold"
+                                VerticalOptions="CenterAndExpand" 
+                                HorizontalOptions="CenterAndExpand"
                                 FontSize="16" />
-                                <Label Text="  -   " TextColor="#4d5296"
-                                LineBreakMode="NoWrap" 
-                                Style="{DynamicResource ListItemTextStyle}" 
-                                FontSize="16" />
-                                <Label Text="{Binding Odrediste}" TextColor="#4d5296"
-                                LineBreakMode="NoWrap"
-                                Style="{DynamicResource ListItemTextStyle}"
-                                FontSize="16" />
-                                <Label Text="{Binding Cijena}" TextColor="#4d5296"
-                                LineBreakMode="NoWrap"
-                                Style="{DynamicResource ListItemTextStyle}"
-                                FontSize="16" />
-                                <Label Text=" KM" TextColor="#4d5296"
-                                LineBreakMode="NoWrap" 
-                                Style="{DynamicResource ListItemTextStyle}" 
-                                FontSize="16" />
+                                </StackLayout>
                             </StackLayout>
+
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>

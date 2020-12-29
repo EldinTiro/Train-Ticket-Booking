@@ -14,13 +14,11 @@ namespace eZeljeznice.MobileApp.Views
     public partial class PutovanjeDetailPage : ContentPage
     {
         private PutovanjeDetailViewModel model = null;
-        public PutovanjeDetailPage(Model.PutovanjaVM putovanje,string odrasli, string djeca)
+        public PutovanjeDetailPage(Model.PutovanjaVM putovanje)
         {
             BindingContext = model = new PutovanjeDetailViewModel
             {
-                Putovanje = putovanje,
-                Odrasli = odrasli,
-                Djeca = djeca
+                Putovanje = putovanje
             };
 
             InitializeComponent();
@@ -33,8 +31,19 @@ namespace eZeljeznice.MobileApp.Views
             await model.Init();
             await model.Recommender();
 
+        }
 
+        private async void ListView_ItemsSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            var PutovanjeItem = e.SelectedItem as Model.PutovanjaVM;
 
+            model.RecommenderList.Clear();
+            await Navigation.PushAsync(new PutovanjeDetailPage(PutovanjeItem));
+        }
+
+        private async void Rezervisi_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new StripePaymentGatwayPage());
         }
     }
 }

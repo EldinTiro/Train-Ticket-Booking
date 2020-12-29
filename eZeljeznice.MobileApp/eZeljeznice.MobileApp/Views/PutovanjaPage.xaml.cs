@@ -34,7 +34,7 @@ namespace eZeljeznice.MobileApp.Views
             var PutovanjeItem = e.SelectedItem as Model.PutovanjaVM;
             
             model.PutovanjaList.Clear();
-            await Navigation.PushAsync(new PutovanjeDetailPage(PutovanjeItem,model.SelectedOdrasli,model.SelectedDjeca));
+            await Navigation.PushAsync(new PutovanjeDetailPage(PutovanjeItem));
         }
 
         /*async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)

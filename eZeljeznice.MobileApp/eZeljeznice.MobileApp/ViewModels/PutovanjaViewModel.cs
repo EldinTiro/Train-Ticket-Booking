@@ -134,7 +134,7 @@ namespace eZeljeznice.MobileApp.ViewModels
             PutovanjaList.Clear();
             foreach (var putovanje in list)
             {
-                    var InitCijenaPutovanja = putovanje.Cijena;
+                  /* var InitCijenaPutovanja = putovanje.Cijena;
                     finalnaCijenaPutovanja = InitCijenaPutovanja;
 
                     if (SelectedOdrasli != null && !SelectedOdrasli.Equals("0"))
@@ -149,7 +149,8 @@ namespace eZeljeznice.MobileApp.ViewModels
                         finalnaCijenaPutovanja += cijenaDjece;
                     }
 
-                    putovanje.Cijena = finalnaCijenaPutovanja;
+                    putovanje.Cijena = finalnaCijenaPutovanja;*/
+
                     PutovanjaList.Add(putovanje);
             }
 

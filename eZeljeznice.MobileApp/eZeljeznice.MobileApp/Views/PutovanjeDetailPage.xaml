@@ -6,8 +6,8 @@
         <ScrollView>
         <Grid  Padding="10" Margin="10" HorizontalOptions="End">
             <Grid.RowDefinitions>
-                <RowDefinition Height="800" ></RowDefinition>
-                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="500" ></RowDefinition>
+                <RowDefinition Height="600"></RowDefinition>
                 <RowDefinition Height="Auto"></RowDefinition>
                 <RowDefinition Height="Auto"></RowDefinition>
                 <RowDefinition Height="Auto"></RowDefinition>
@@ -40,9 +40,9 @@
                     <Label Grid.Row="1" Grid.Column="0">Odredište</Label>
                     <Label Grid.Row="1" Grid.Column="1" FontAttributes="Bold" Text="{Binding Putovanje.Odrediste}"  ></Label>
                     <Label Grid.Row="2" Grid.Column="0">Datum polaska</Label>
-                    <Label Grid.Row="2" Grid.Column="1" FontAttributes="Bold" Text="{Binding Putovanje.DatumPolaska, StringFormat='{0:M/d/yy}'}"  ></Label>
+                    <Label Grid.Row="2" Grid.Column="1" FontAttributes="Bold" Text="{Binding Putovanje.DatumPolaska, StringFormat='{0:dd/MM/yyyy}'}"  ></Label>
                     <Label Grid.Row="3" Grid.Column="0">Vrijeme polaska</Label>
-                    <Label Grid.Row="3" Grid.Column="1" FontAttributes="Bold" Text="{Binding Putovanje.VrijemePolaska,StringFormat='{0:HH:mm}'}"  ></Label>
+                    <Label Grid.Row="3" Grid.Column="1" FontAttributes="Bold" Text="{Binding Putovanje.VrijemePolaska,StringFormat='{}{0:hh\\:mm}'}"  ></Label>
                     <Label Grid.Row="4" Grid.Column="0">Vrijeme dolaska</Label>
                     <Label Grid.Row="4" Grid.Column="1" FontAttributes="Bold" Text="{Binding Putovanje.VrijemeDolaska, StringFormat='{0:HH:mm}'}"  ></Label>
                     <Label Grid.Row="5" Grid.Column="0">Broj odraslih</Label>
@@ -54,55 +54,63 @@
                     <Button Command="{Binding SmanjiBrojDjece}" Grid.Row="6" Grid.Column="2" FontSize="Micro" Text="Smanji" WidthRequest="30" HeightRequest="30" BackgroundColor="RosyBrown"></Button>
                     <Button Command="{Binding PovecajBrojDjece}" Grid.Row="6" Grid.Column="3" FontSize="Micro" Text="Povećaj" WidthRequest="30" HeightRequest="30" BackgroundColor="Wheat"></Button>
                     <Label Grid.Row="7" Grid.Column="0">Ukupna cijena</Label>
-                    <Label Grid.Row="7" Grid.Column="1" FontAttributes="Bold" Text="{Binding FinalnaCijena}"  ></Label>
+                    <Label Grid.Row="7" Grid.Column="1" FontAttributes="Bold" Text="{Binding FinalnaCijena}"></Label>
+                        <StackLayout Grid.Row="8" Grid.Column="2"
+                         VerticalOptions="CenterAndExpand" 
+                     HorizontalOptions="CenterAndExpand">
+                            <Button x:Name="Rezervisi" Text="Rezerviši" BackgroundColor="ForestGreen" FontSize="Small" Clicked="Rezervisi_Clicked"></Button>
+                        </StackLayout>
 
                 </Grid>
 
             </StackLayout>
 
-                <RelativeLayout Grid.Row="1" Grid.ColumnSpan="2" HeightRequest="170" Margin="10" BackgroundColor="LightSlateGray">
-                <Label HorizontalOptions="Start" >Preporucena putovanja:</Label>
+                <StackLayout Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="AntiqueWhite">
+                    <Label HorizontalOptions="Start"
+                                TextColor="Black"
+                                FontAttributes="Bold"
+                                FontSize="18">Preporucena putovanja:</Label>
                 <ListView
                             ItemsSource="{Binding RecommenderList}"
-                HasUnevenRows="True"
-                SeparatorVisibility="None"
-                    Margin="0,33,0,0"
-                Rotation="270"
-                RowHeight="150"
-RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5, Constant=-70}"
-RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=-0.5, Constant=70}"
-RelativeLayout.WidthConstraint="{ConstraintExpression Type=Constant, Constant=140}"
-RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
+                            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5, Constant=-70}"
+                            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=-0.5, Constant=70}"
+                            RelativeLayout.WidthConstraint="{ConstraintExpression Type=Constant, Constant=140}"
+                            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
+                            ItemSelected="ListView_ItemsSelected">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
                                     <StackLayout Padding="10" Orientation="Horizontal">
-                                        <Label Text="{Binding Polaziste}" TextColor="#4d5296"
+                                        <StackLayout>
+                                            <StackLayout>
+                                                <Label Text="{Binding Polaziste}" TextColor="#4d5296"
+                                        Style="{DynamicResource ListItemTextStyle}" 
+                                        FontSize="12" />
+                                                <Label Text="{Binding Odrediste}" TextColor="#4d5296"
+                                        Style="{DynamicResource ListItemTextStyle}"
+                                        FontSize="12" />
+                                            </StackLayout>
+                                            <Label Text="{Binding VrijemePolaska, StringFormat='Polazak: {0:HH:mm}'}" TextColor="ForestGreen"
+                                     Style="{DynamicResource ListItemTextStyle}" 
+                                     FontSize="12"/>
+                                        </StackLayout>
+                                        <StackLayout>
+                                            <Label Text="{Binding Cijena,StringFormat='Cijena: {0} KM'}" 
                                 LineBreakMode="NoWrap" 
                                 Style="{DynamicResource ListItemTextStyle}" 
+                                TextColor="DarkBlue"
+                                FontAttributes="Bold"
+                                VerticalOptions="CenterAndExpand" 
+                                HorizontalOptions="CenterAndExpand"
                                 FontSize="16" />
-                                        <Label Text="  -   " TextColor="#4d5296"
-                                LineBreakMode="NoWrap" 
-                                Style="{DynamicResource ListItemTextStyle}" 
-                                FontSize="16" />
-                                        <Label Text="{Binding Odrediste}" TextColor="#4d5296"
-                                LineBreakMode="NoWrap"
-                                Style="{DynamicResource ListItemTextStyle}"
-                                FontSize="16" />
-                                        <Label Text="{Binding Cijena}" TextColor="#4d5296"
-                                LineBreakMode="NoWrap"
-                                Style="{DynamicResource ListItemTextStyle}"
-                                FontSize="16" />
-                                        <Label Text=" KM" TextColor="#4d5296"
-                                LineBreakMode="NoWrap" 
-                                Style="{DynamicResource ListItemTextStyle}" 
-                                FontSize="16" />
+                                        </StackLayout>
                                     </StackLayout>
+
                                 </ViewCell>
                             </DataTemplate>
                         </ListView.ItemTemplate>
                     </ListView>
-            </RelativeLayout>
+            </StackLayout>
 
         </Grid>
         </ScrollView>
