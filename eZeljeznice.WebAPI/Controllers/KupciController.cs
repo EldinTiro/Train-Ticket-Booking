@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace eZeljeznice.WebAPI.Controllers
 {
-    [Authorize(AuthenticationSchemes = "BasicAuthentication")]
+
     [Route("api/[controller]")]
     [ApiController]
     public class KupciController : ControllerBase
@@ -29,6 +29,13 @@ namespace eZeljeznice.WebAPI.Controllers
             return _service.Get(request); ;
         }
 
+        [HttpGet]
+        [Route("Authenticiraj/{username},{password}")]
+        public KupciVM Authenticiraj(string username, string password)
+        {
+            return _service.Authenticiraj(username, password);
+        }
+
         [HttpGet("{id}")]
         public KupciVM Get(int id)
         {
@@ -36,15 +43,15 @@ namespace eZeljeznice.WebAPI.Controllers
         }
 
         [HttpPost]
-        public KupciVM Insert(KupciInsertRequest request)
+        public void Insert(KupciInsertRequest request)
         {
-            return _service.Insert(request);
+            _service.Insert(request);
         }
 
         [HttpPut("{id}")]
-        public KupciVM Update(int id, KupciInsertRequest request)
+        public void Update(int id, KupciInsertRequest request)
         {
-            return _service.Update(id, request);
+            _service.Update(id, request);
         }
     }
 }

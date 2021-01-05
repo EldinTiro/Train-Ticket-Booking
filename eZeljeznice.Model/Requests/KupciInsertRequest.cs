@@ -7,23 +7,27 @@ namespace eZeljeznice.Model.Requests
 {
     public class KupciInsertRequest
     {
-        public int KupacId { get; set; }
-        [Required]
-        [MinLength(4)]
-        public string KorisnickoIme { get; set; }
-        public string LozinkaSalt { get; set; }
-        public string LozinkaHash { get; set; }
-        [Required]
-        [MinLength(4)]
+        [Required(AllowEmptyStrings = false)]
         public string Ime { get; set; }
-        [Required]
-        [MinLength(2)]
+        [Required(AllowEmptyStrings = false)]
         public string Prezime { get; set; }
-        public DateTime? DatumRegistracije { get; set; }
+        [Required(AllowEmptyStrings = true)]
+
+        public DateTime DatumRegistracije { get; set; }
+
         [EmailAddress]
+        [Required]
+        [MinLength(5)]
         public string Email { get; set; }
+        [Required(AllowEmptyStrings = false)]
+        public string Telefon { get; set; }
+        [Required(AllowEmptyStrings = false)]
+        public string KorisnickoIme { get; set; }
+        [Required(AllowEmptyStrings = false)]
+        [MinLength(3)]
         public string Password { get; set; }
-        public string PasswordConfirmation { get; set; }
+        [Required(AllowEmptyStrings = false)]
+        public string PasswordPotvrda { get; set; }
 
     }
 }

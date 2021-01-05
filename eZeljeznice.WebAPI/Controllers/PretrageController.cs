@@ -10,7 +10,6 @@ using System.Threading.Tasks;
 
 namespace eZeljeznice.WebAPI.Controllers
 {
-    [Authorize(AuthenticationSchemes = "BasicAuthentication")]
     [Route("api/[controller]")]
     [ApiController]
     public class PretrageController : ControllerBase

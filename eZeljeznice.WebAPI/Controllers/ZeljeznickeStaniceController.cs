@@ -11,7 +11,6 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 
 namespace eZeljeznice.WebAPI.Controllers
 {
-    [Authorize(AuthenticationSchemes = "BasicAuthentication")]
     [Route("api/[controller]")]
     [ApiController]
     public class ZeljeznickeStaniceController : ControllerBase

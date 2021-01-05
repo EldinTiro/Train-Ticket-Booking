@@ -1,4 +1,5 @@
 ﻿using eZeljeznice.MobileApp.Views;
+using eZeljeznice.Model;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -10,7 +11,7 @@ namespace eZeljeznice.MobileApp.ViewModels
 {
     public class LoginViewModel : BaseViewModel
     {
-        private readonly APIService _service = new APIService("korisnici");
+        private readonly APIService _service = new APIService("Kupci");
         public LoginViewModel()
         {
             LoginCommand = new Command(async () => await Login());
@@ -34,18 +35,31 @@ namespace eZeljeznice.MobileApp.ViewModels
         async Task Login()
         {
             IsBusy = true;
-            APIService.Username = Username;
-            APIService.Password = Password;
 
             try
             {
-                await _service.Get<dynamic>(null);
-                Application.Current.MainPage = new MainPage();
+
+                KupciVM kupac = await _service.Authenticiraj<KupciVM>(Username, Password);
+
+
+                if (kupac != null)
+                {
+                    Global.PrijavljeniKupac = kupac;
+
+                    await Application.Current.MainPage.DisplayAlert("Uspjeh", "Dobrodosli " + kupac.Ime + " " + kupac.Prezime, "OK");
+                    Application.Current.MainPage = new MainPage();
+
+                }
+                else
+                {
+                    await Application.Current.MainPage.DisplayAlert("Greska", "Pogresno unesen username ili password", "OK");
+                }
             }
             catch (Exception ex)
             {
-
+                await Application.Current.MainPage.DisplayAlert("Greska", ex.Message, "OK");
             }
+
         }
     }
 }

@@ -88,6 +88,11 @@ namespace eZeljeznice.MobileApp.ViewModels
             set { SetProperty(ref _FinalnaCijena, value); }
         }
 
+        public int PutovanjeId
+        {
+            get { return Putovanje.PutovanjeID; }
+        }
+
         public async Task Init()
         {
             var InitCijenaPutovanja = Putovanje.Cijena;

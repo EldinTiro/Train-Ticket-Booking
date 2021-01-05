@@ -6,7 +6,6 @@ namespace eZeljeznice.Model.Requests
 {
     public class ProdaneKarteInsertRequest
     {
-        public int ProdanaKartaId { get; set; }
         public string BrojRacuna { get; set; }
         public DateTime? DatumProdaje { get; set; }
         public int? KorisnikId { get; set; }

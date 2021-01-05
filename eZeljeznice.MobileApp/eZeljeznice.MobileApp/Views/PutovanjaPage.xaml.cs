@@ -1,4 +1,5 @@
-﻿using eZeljeznice.MobileApp.ViewModels;
+﻿using eZeljeznice.MobileApp.Helper;
+using eZeljeznice.MobileApp.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,8 @@ namespace eZeljeznice.MobileApp.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PutovanjaPage : ContentPage
     {
+
+
         private PutovanjaViewModel model = null;
 
         private readonly APIService _putovanjaServiceAPI = new APIService("putovanje");
@@ -36,10 +39,5 @@ namespace eZeljeznice.MobileApp.Views
             model.PutovanjaList.Clear();
             await Navigation.PushAsync(new PutovanjeDetailPage(PutovanjeItem));
         }
-
-        /*async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
-        {
-            await Navigation.PushAsync(new PutovanjeDetailPage());
-        }*/
     }
 }

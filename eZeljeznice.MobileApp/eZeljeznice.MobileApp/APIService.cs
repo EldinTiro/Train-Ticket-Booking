@@ -35,6 +35,13 @@ namespace eZeljeznice.MobileApp
             return await url.GetJsonAsync<T>();
         }
 
+        public async Task<T> Authenticiraj<T>(string username, string password)
+        {
+            var url = $"{_apiUrl}/{_route}/Authenticiraj/{username},{password}";
+
+            return await url.GetJsonAsync<T>();
+        }
+
         public async Task<T> Get<T>(object search)
         {
             var url = $"{_apiUrl}/{_route}";
@@ -47,9 +54,8 @@ namespace eZeljeznice.MobileApp
                     url += await search.ToQueryString();
                 }
 
-                return await url.WithBasicAuth(Username, Password).GetJsonAsync<T>();
+                return await url.GetJsonAsync<T>();
 
-                await Application.Current.MainPage.DisplayAlert("Bravo", "Authentificirani ste", "OK");
             }
             catch (FlurlHttpException ex)
             {
@@ -66,7 +72,7 @@ namespace eZeljeznice.MobileApp
         {
             var url = $"{_apiUrl}/{_route}/{id}";
 
-            return await url.WithBasicAuth(Username, Password).GetJsonAsync<T>();
+            return await url.GetJsonAsync<T>();
         }
 
         public async Task<T> Insert<T>(object request)
@@ -75,7 +81,7 @@ namespace eZeljeznice.MobileApp
 
             try
             {
-                return await url.WithBasicAuth(Username, Password).PostJsonAsync(request).ReceiveJson<T>();
+                return await url.PostJsonAsync(request).ReceiveJson<T>();
             }
             catch (FlurlHttpException ex)
             {
@@ -99,7 +105,7 @@ namespace eZeljeznice.MobileApp
             {
                 var url = $"{_apiUrl}/{_route}/{id}";
 
-                return await url.WithBasicAuth(Username, Password).PutJsonAsync(request).ReceiveJson<T>();
+                return await url.PutJsonAsync(request).ReceiveJson<T>();
             }
             catch (FlurlHttpException ex)
             {

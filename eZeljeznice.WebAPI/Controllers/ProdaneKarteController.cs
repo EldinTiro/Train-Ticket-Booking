@@ -11,12 +11,16 @@ using System.Threading.Tasks;
 
 namespace eZeljeznice.WebAPI.Controllers
 {
-    [Authorize(AuthenticationSchemes = "BasicAuthentication")]
     [Route("api/[controller]")]
     [ApiController]
     public class ProdaneKarteController : ControllerBase
     {
         private readonly IProdaneKarteService _service;
+
+        public ProdaneKarteController(IProdaneKarteService service)
+        {
+            this._service = service;
+        }
 
         [HttpPost]
         public ProdanaKartaVM Insert(ProdaneKarteInsertRequest request)

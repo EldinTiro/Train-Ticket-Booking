@@ -10,7 +10,7 @@ namespace eZeljeznice.MobileApp.ViewModels
 {
     public class RegistracijaViewModel:BaseViewModel
     {
-        private readonly APIService _service = new APIService("Klijenti");
+        private readonly APIService _service = new APIService("Kupci");
         public RegistracijaViewModel()
         {
 
@@ -68,7 +68,9 @@ namespace eZeljeznice.MobileApp.ViewModels
             request.Ime = Ime;
             request.Prezime = Prezime;
             request.Password = Password;
-            request.PasswordConfirmation = Potvrda;
+            request.PasswordPotvrda = Potvrda;
+            request.KorisnickoIme = KorisnickoIme;
+            request.Telefon = Telefon;
 
             await _service.Insert<KupciVM>(request);
 

@@ -7,6 +7,6 @@ namespace eZeljeznice.MobileApp
 {
     public class Global
     {
-        public static KorisniciVM PrijavljeniKorisnik { get; set; }
+        public static KupciVM PrijavljeniKupac { get; set; }
     }
 }

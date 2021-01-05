@@ -13,7 +13,6 @@ namespace eZeljeznice.WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize(AuthenticationSchemes = "BasicAuthentication")]
     public class Gradovi : ControllerBase
     {
         private readonly IGradoviService _service;

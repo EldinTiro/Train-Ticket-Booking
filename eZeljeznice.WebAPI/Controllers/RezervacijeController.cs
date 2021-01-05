@@ -18,7 +18,7 @@ namespace eZeljeznice.WebAPI.Controllers
 
         public RezervacijeController(IRezervacijeService service)
         {
-            _service = service;
+            this._service = service;
         }
 
         [HttpPost]

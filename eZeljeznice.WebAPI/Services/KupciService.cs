@@ -23,9 +23,9 @@ namespace eZeljeznice.WebAPI.Services
             _mapper = mapper;
         }
 
-        public KorisniciVM Authenticiraj(string username, string pass)
+        public KupciVM Authenticiraj(string username, string pass)
         {
-            var user = _context.Korisnici.FirstOrDefault(x => x.KorisnickoIme == username);
+            var user = _context.Kupci.FirstOrDefault(x => x.KorisnickoIme == username);
 
             if (user != null)
             {
@@ -33,7 +33,7 @@ namespace eZeljeznice.WebAPI.Services
 
                 if (hashedPass == user.LozinkaHash)
                 {
-                    return _mapper.Map<KorisniciVM>(user);
+                    return _mapper.Map<KupciVM>(user);
                 }
             }
 
@@ -82,11 +82,11 @@ namespace eZeljeznice.WebAPI.Services
             return _mapper.Map<KupciVM>(entity);
         }
 
-        public KupciVM Insert(KupciInsertRequest request)
+        public void Insert(KupciInsertRequest request)
         {
-            var entity = _mapper.Map<KupciVM>(request);
+            Kupci entity = _mapper.Map<Kupci>(request);
 
-            if (request.Password != request.PasswordConfirmation)
+            if (request.Password != request.PasswordPotvrda)
             {
                 throw new UserException("Passwordi se ne slazu!");
             }
@@ -94,13 +94,12 @@ namespace eZeljeznice.WebAPI.Services
             entity.LozinkaSalt = GenerateSalt();
             entity.LozinkaHash = GenerateHash(entity.LozinkaSalt, request.Password);
 
-            _context.Add(entity);
+            _context.Kupci.Add(entity);
             _context.SaveChanges();
 
-            return _mapper.Map<KupciVM>(entity);
         }
 
-        public KupciVM Update(int id, KupciInsertRequest request)
+        public void Update(int id, KupciInsertRequest request)
         {
             throw new NotImplementedException();
         }

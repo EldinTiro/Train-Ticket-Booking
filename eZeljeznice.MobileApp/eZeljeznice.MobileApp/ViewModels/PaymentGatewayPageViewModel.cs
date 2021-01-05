@@ -151,7 +151,7 @@ namespace eZeljeznice.MobileApp.ViewModels
                         ExpYear = CreditCardModel.ExpYear,
                         ExpMonth = CreditCardModel.ExpMonth,
                         Cvc = CreditCardModel.Cvc,
-                        Name = Global.PrijavljeniKorisnik.KorisnickoIme,
+                        Name = Global.PrijavljeniKupac.KorisnickoIme,
                         AddressLine1 = "Adresa 1",
                         AddressLine2 = "Adresa 2",
                         AddressCity = "Capljina",
@@ -181,7 +181,7 @@ namespace eZeljeznice.MobileApp.ViewModels
                 {
                     Amount = ((long)Iznos) * 100,
                     Currency = "bam",
-                    Description = "Charge for " + Global.PrijavljeniKorisnik.Email,
+                    Description = "Charge for " + Global.PrijavljeniKupac.Email,
                     Source = stripeToken.Id,
                     StatementDescriptor = "Custom descriptor",
                     Capture = true,

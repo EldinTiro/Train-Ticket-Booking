@@ -13,7 +13,6 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace eZeljeznice.WebAPI.Controllers
 {
-    [Authorize(AuthenticationSchemes = "BasicAuthentication")]
     [Route("api/[controller]")]
     [ApiController]
     public class KorisniciController : ControllerBase
