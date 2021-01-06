@@ -8,7 +8,10 @@ namespace eZeljeznice.MobileApp.Models
     {
         Browse,
         About,
-        Putovanja
+        Putovanja,
+        MojProfil,
+        Kontakt,
+        HistorijaRezervacija
     }
     public class HomeMenuItem
     {

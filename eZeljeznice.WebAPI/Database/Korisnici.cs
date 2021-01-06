@@ -5,11 +5,6 @@ namespace eZeljeznice.WebAPI.Database
 {
     public partial class Korisnici
     {
-        public Korisnici()
-        {
-            KupljeneKarte = new HashSet<KupljeneKarte>();
-        }
-
         public int KorisnikId { get; set; }
         public string KorisnickoIme { get; set; }
         public string LozinkaSalt { get; set; }
@@ -22,6 +17,6 @@ namespace eZeljeznice.WebAPI.Database
         public bool? Status { get; set; }
 
         public virtual Gradovi Grad { get; set; }
-        public virtual ICollection<KupljeneKarte> KupljeneKarte { get; set; }
+      
     }
 }

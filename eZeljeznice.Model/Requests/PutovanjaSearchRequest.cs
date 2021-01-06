@@ -9,5 +9,7 @@ namespace eZeljeznice.Model.Requests
         public string ZeljeznickaOdID { get; set; }
         public string ZeljeznickaDoID { get; set; }
 
+        public DateTime VrijemePolaska { get; set; }
+
     }
 }

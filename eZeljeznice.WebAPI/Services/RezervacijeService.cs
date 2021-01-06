@@ -20,6 +20,36 @@ namespace eZeljeznice.WebAPI.Services
             _mapper = mapper;
         }
 
+        public List<RezervacijeVM> Get(int kupacID)
+        {
+            List<RezervacijeVM> kupacRezervacije = new List<RezervacijeVM>();
+
+            List<Rezervacije> kupacRezervacije_db = new List<Rezervacije>();
+
+            kupacRezervacije_db = _context.Rezervacije.Where(w => w.KupacId == kupacID).OrderBy(o=> o.DatumRezervacije).ToList();
+
+            _mapper.Map(kupacRezervacije_db, kupacRezervacije);
+
+            foreach (var item in kupacRezervacije)
+            {
+                item.ImePutovanja = _context.Putovanja.Where(w => w.PutovanjeId == item.PutovanjeId)
+                                            .Select(s => s.Relacija.ZeljeznickaStanicaOd.Naziv +" - "+ s.Relacija.ZeljeznickaStanicaDo.Naziv)
+                                            .FirstOrDefault();
+
+                item.ImePrezimeKupca = _context.Kupci.Where(w => w.KupacId == kupacID)
+                                                     .Select(s => s.Ime + " " + s.Prezime)
+                                                     .FirstOrDefault();
+                item.Polaziste = _context.Putovanja.Where(w => w.PutovanjeId == item.PutovanjeId).Select(s => s.Relacija.ZeljeznickaStanicaOd.Naziv).FirstOrDefault();
+                item.Odrediste = _context.Putovanja.Where(w => w.PutovanjeId == item.PutovanjeId).Select(s => s.Relacija.ZeljeznickaStanicaDo.Naziv).FirstOrDefault();
+                item.VrijemePolaska = _context.Putovanja.Where(w => w.PutovanjeId == item.PutovanjeId).Select(s => s.VrijemePolaska).FirstOrDefault().ToString();
+                item.VrijemeDolaska = _context.Putovanja.Where(w => w.PutovanjeId == item.PutovanjeId).Select(s => s.VrijemeDolaska).FirstOrDefault().ToString();
+                item.KonacnaCijena = _context.KupljeneKarte.Where(w => w.RezervacijaId == item.RezervacijaId).Select(s => s.KonacnaCijena).FirstOrDefault();
+                item.BrojKarte = _context.KupljeneKarte.Where(w => w.RezervacijaId == item.RezervacijaId).Select(s => s.BrojRacuna).FirstOrDefault();
+            }
+
+            return kupacRezervacije;
+        }
+
         public RezervacijeVM Insert(RezervacijeInsertRequest request)
         {
             Rezervacije rezervacije = new Rezervacije();

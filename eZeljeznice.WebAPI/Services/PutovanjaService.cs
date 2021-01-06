@@ -26,6 +26,12 @@ namespace eZeljeznice.WebAPI.Services
         {
             var query = _context.Putovanja.AsQueryable();
 
+
+            if (request.VrijemePolaska != null)
+            {
+                query = query.Where(x => x.DatumPolaska == request.VrijemePolaska.Date);
+            }
+
             if (!string.IsNullOrWhiteSpace(request?.ZeljeznickaOdID) && request.ZeljeznickaOdID != "0")
             {
                 query = query.Where(x => x.Relacija.ZeljeznickaStanicaOdid.ToString() == request.ZeljeznickaOdID);

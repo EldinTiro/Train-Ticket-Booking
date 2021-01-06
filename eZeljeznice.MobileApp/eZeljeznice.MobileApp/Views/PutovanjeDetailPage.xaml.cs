@@ -91,7 +91,7 @@ namespace eZeljeznice.MobileApp.Views
             prodaneKarteInsertRequest.DatumProdaje = DateTime.Now;
             prodaneKarteInsertRequest.RezervacijaId = rezervacijeVM.RezervacijaId;
             prodaneKarteInsertRequest.Popust = 0;
-            prodaneKarteInsertRequest.KorisnikId = Global.PrijavljeniKupac.KupacId; //Dorada (Ubaciti ID od kupca preko Glabal classe)
+            prodaneKarteInsertRequest.KupacId = Global.PrijavljeniKupac.KupacId; //Dorada (Ubaciti ID od kupca preko Glabal classe)
             prodaneKarteInsertRequest.KonacnaCijena = model.FinalnaCijena;
 
             ProdanaKartaVM prodanaKartaVM = new ProdanaKartaVM();

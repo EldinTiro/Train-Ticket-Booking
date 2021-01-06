@@ -117,14 +117,15 @@ namespace eZeljeznice.WebAPI.Database
 
                 entity.Property(e => e.DatumProdaje).HasColumnType("date");
 
-                entity.Property(e => e.KorisnikId).HasColumnName("KorisnikID");
+                entity.Property(e => e.KupacId).HasColumnName("KupacID");
 
                 entity.Property(e => e.RezervacijaId).HasColumnName("RezervacijaID");
 
-                entity.HasOne(d => d.Korisnik)
+                entity.HasOne(d => d.Kupac)
                     .WithMany(p => p.KupljeneKarte)
-                    .HasForeignKey(d => d.KorisnikId)
-                    .HasConstraintName("FK__KupljeneK__Koris__4E88ABD4");
+                    .HasForeignKey(d => d.KupacId)
+                    .HasConstraintName("FK__KupljeneK__Kupac__01142BA1");
+
 
                 entity.HasOne(d => d.Rezervacija)
                     .WithMany(p => p.KupljeneKarte)

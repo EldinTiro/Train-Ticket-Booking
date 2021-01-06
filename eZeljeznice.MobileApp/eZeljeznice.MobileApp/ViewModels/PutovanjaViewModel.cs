@@ -30,6 +30,8 @@ namespace eZeljeznice.MobileApp.ViewModels
 
         string _selectedDjeca = null;
 
+        DateTime _selectedDatumPolaska = DateTime.Now.Date;
+
         double? finalnaCijenaPutovanja;
 
         public PutovanjaViewModel()
@@ -55,6 +57,20 @@ namespace eZeljeznice.MobileApp.ViewModels
             set
             {
                 SetProperty(ref _selectedZSOdrediste, value);
+                if (value != null)
+                {
+                    InitCommand.Execute(null);
+                }
+
+            }
+        }
+
+        public DateTime SelectedDatumpolaska
+        {
+            get { return _selectedDatumPolaska; }
+            set
+            {
+                SetProperty(ref _selectedDatumPolaska, value);
                 if (value != null)
                 {
                     InitCommand.Execute(null);
@@ -128,6 +144,11 @@ namespace eZeljeznice.MobileApp.ViewModels
                 if (SelectedZSOdrediste != null)
                 {
                     search.ZeljeznickaDoID = SelectedZSOdrediste.ZeljeznickaStanicaID.ToString();
+                }
+
+                if(SelectedDatumpolaska !=null)
+                {
+                    search.VrijemePolaska = SelectedDatumpolaska;
                 }
 
             var list = await _putovanjaServiceAPI.Get<IEnumerable<PutovanjaVM>>(search);

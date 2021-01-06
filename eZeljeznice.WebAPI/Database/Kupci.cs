@@ -9,6 +9,7 @@ namespace eZeljeznice.WebAPI.Database
         {
             Pretrage = new HashSet<Pretrage>();
             Rezervacije = new HashSet<Rezervacije>();
+            KupljeneKarte = new HashSet<KupljeneKarte>();
         }
 
         public int KupacId { get; set; }
@@ -22,5 +23,7 @@ namespace eZeljeznice.WebAPI.Database
 
         public virtual ICollection<Pretrage> Pretrage { get; set; }
         public virtual ICollection<Rezervacije> Rezervacije { get; set; }
+
+        public virtual ICollection<KupljeneKarte> KupljeneKarte { get; set; }
     }
 }

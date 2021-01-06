@@ -22,7 +22,10 @@ namespace eZeljeznice.MobileApp.Views
             {
                 new HomeMenuItem {Id = MenuItemType.Browse, Title="Browse" },
                 new HomeMenuItem {Id = MenuItemType.About, Title="About" },
-                 new HomeMenuItem {Id = MenuItemType.Putovanja, Title="Putovanja" }
+                 new HomeMenuItem {Id = MenuItemType.Putovanja, Title="Putovanja" },
+                 new HomeMenuItem {Id = MenuItemType.MojProfil, Title="Moj Profil" },
+                 new HomeMenuItem {Id = MenuItemType.HistorijaRezervacija, Title="Historija rezervacija" },
+                 new HomeMenuItem {Id = MenuItemType.Kontakt, Title="Kontakt" }
             };
 
             ListViewMenu.ItemsSource = menuItems;

@@ -41,7 +41,7 @@ namespace eZeljeznice.WebAPI.Services
             kupljeneKarteVM.BrojRacuna = kupljeneKarte.BrojRacuna;
             kupljeneKarteVM.DatumProdaje = kupljeneKarte.DatumProdaje;
             kupljeneKarteVM.KonacnaCijena = kupljeneKarte.KonacnaCijena;
-            kupljeneKarteVM.KorisnikId = kupljeneKarte.KorisnikId;
+            kupljeneKarteVM.KorisnikId = kupljeneKarte.KupacId;
             kupljeneKarteVM.Popust = kupljeneKarte.Popust;
             kupljeneKarteVM.RezervacijaId = kupljeneKarte.RezervacijaId;
             kupljeneKarteVM.ProdanaKartaId = kupljeneKarte.ProdanaKartaId;

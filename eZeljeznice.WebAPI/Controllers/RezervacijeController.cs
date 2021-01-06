@@ -20,6 +20,13 @@ namespace eZeljeznice.WebAPI.Controllers
         {
             this._service = service;
         }
+        [HttpGet]
+        public List<RezervacijeVM> Get(int id)
+        {
+            var list = _service.Get(id);
+
+            return list;
+        }
 
         [HttpPost]
         public RezervacijeVM Insert(RezervacijeInsertRequest request)

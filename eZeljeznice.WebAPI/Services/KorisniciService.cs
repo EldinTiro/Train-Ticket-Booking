@@ -130,7 +130,7 @@ namespace eZeljeznice.WebAPI.Services
 
         public List<KorisniciLoyaltyResponse> GetLoyalty()
         {
-            var brojKarata = _context.KupljeneKarte.GroupBy(g => g.KorisnikId).Select(s => new { ID = s.Key, Count = s.Count()}).Where(w=> w.Count>5).OrderBy(o => o.Count).ToList();
+            var brojKarata = _context.KupljeneKarte.GroupBy(g => g.KupacId).Select(s => new { ID = s.Key, Count = s.Count()}).Where(w=> w.Count>5).OrderBy(o => o.Count).ToList();
 
             List<KorisniciLoyaltyResponse> loyaltyKorisnici = new List<KorisniciLoyaltyResponse>();
 
@@ -162,7 +162,7 @@ namespace eZeljeznice.WebAPI.Services
                     item.OstvareniPopust = 20;
                 }
 
-                _context.KupljeneKarte.Where(f => f.KorisnikId == item.KorisnikID).ToList().ForEach(cc => cc.Popust = item.OstvareniPopust);
+                _context.KupljeneKarte.Where(f => f.KupacId == item.KorisnikID).ToList().ForEach(cc => cc.Popust = item.OstvareniPopust);
                 _context.SaveChanges();
 
             }

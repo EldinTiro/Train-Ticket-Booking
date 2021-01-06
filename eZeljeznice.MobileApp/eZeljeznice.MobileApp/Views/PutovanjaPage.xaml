@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:ViewModel="clr-namespace:eZeljeznice.MobileApp.ViewModels"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:ViewModel="clr-namespace:eZeljeznice.MobileApp.ViewModels"
              mc:Ignorable="d"
              x:Class="eZeljeznice.MobileApp.Views.PutovanjaPage">
     <ContentPage.BindingContext>
@@ -18,7 +19,7 @@
             <Label>Odaberi krajnju stanicu :</Label>
             <Picker ItemsSource="{Binding ZSOdredisteList}" SelectedItem="{Binding SelectedZSOdrediste}" ItemDisplayBinding="{Binding Naziv}"></Picker>
             <Label>Datum polaska:</Label>
-            <DatePicker x:Name="DatePickerT">
+            <DatePicker x:Name="DatePickerT" Date="{Binding SelectedDatumpolaska, Mode=TwoWay}">
                 <DatePicker.Format>yyyy-MM-dd</DatePicker.Format>
             </DatePicker>
             <ListView ItemsSource="{Binding PutovanjaList}" ItemSelected="ListView_ItemSelected">

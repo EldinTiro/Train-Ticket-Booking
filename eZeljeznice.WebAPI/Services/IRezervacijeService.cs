@@ -10,5 +10,6 @@ namespace eZeljeznice.WebAPI.Services
     public interface IRezervacijeService
     {
         RezervacijeVM Insert(RezervacijeInsertRequest request);
+        List<RezervacijeVM> Get(int kupacID);
     }
 }
