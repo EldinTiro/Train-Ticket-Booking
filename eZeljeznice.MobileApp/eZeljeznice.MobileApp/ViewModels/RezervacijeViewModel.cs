@@ -43,5 +43,33 @@ namespace eZeljeznice.MobileApp.ViewModels
                 RezervacijeList.Add(item);
             }
         }
+
+        public async Task Reminder()
+        {
+            var listaRezervacija = await _rezervacije.Get<List<RezervacijeVM>>(Global.PrijavljeniKupac.KupacId);
+
+
+            int hours;
+            int minutes;
+
+            string vrijemePolaskaString = listaRezervacija[0].VrijemePolaska;
+            string[] array = vrijemePolaskaString.Split(':');
+
+            hours = Int32.Parse(array[0]);
+            minutes = Int32.Parse(array[1]);
+
+            DateTime datum = new DateTime(listaRezervacija[0].DatumPolaska.Value.Year, listaRezervacija[0].DatumPolaska.Value.Month, listaRezervacija[0].DatumPolaska.Value.Day, hours, minutes,0);
+
+            if (datum > DateTime.Now)
+            {
+                TimeSpan datumZaPrikaz = new TimeSpan();
+                datumZaPrikaz = datum - DateTime.Now;
+
+                await Application.Current.MainPage.DisplayAlert("Podsjetnik", "Vaše putovanje " + listaRezervacija[0].ImePutovanja + " polazi za "+ datumZaPrikaz.Days+ " dana, "+ datumZaPrikaz.Hours+" sati, "+ datumZaPrikaz.Minutes+" minuta", "OK");
+
+            }
+
+        }
+
     }
 }

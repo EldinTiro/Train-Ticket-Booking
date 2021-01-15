@@ -37,7 +37,7 @@ namespace eZeljeznice.WebAPI.Controllers
         }
 
         [HttpGet("{id}")]
-        public KupciVM Get(int id)
+        public KupciVM GetContactById(int id)
         {
             return _service.GetById(id);
         }
@@ -49,9 +49,9 @@ namespace eZeljeznice.WebAPI.Controllers
         }
 
         [HttpPut("{id}")]
-        public void Update(int id, KupciInsertRequest request)
+        public KupciVM Update(int id, KupciUpdateRequest request)
         {
-            _service.Update(id, request);
+            return _service.Update(id, request);
         }
     }
 }

@@ -14,5 +14,6 @@ namespace eZeljeznice.Model
         public string Prezime { get; set; }
         public DateTime? DatumRegistracije { get; set; }
         public string Email { get; set; }
+        public int BrojRezervacija { get; set; }
     }
 }

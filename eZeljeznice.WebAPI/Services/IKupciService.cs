@@ -12,7 +12,7 @@ namespace eZeljeznice.WebAPI.Services
         List<KupciVM> Get(KupciSearchRequest request);
         KupciVM GetById(int id);
         void Insert(KupciInsertRequest request);
-        void Update(int id, KupciInsertRequest request);
+        KupciVM Update(int id, KupciUpdateRequest request);
         KupciVM Authenticiraj(string username, string password);
     }
 }

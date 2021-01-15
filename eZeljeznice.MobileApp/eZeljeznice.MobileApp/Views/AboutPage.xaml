@@ -7,7 +7,6 @@
              x:Class="eZeljeznice.MobileApp.Views.AboutPage"
              xmlns:vm="clr-namespace:eZeljeznice.MobileApp.ViewModels"
              Title="{Binding Title}">
-    
     <StackLayout Margin="0,35,0,0"
                  x:Name="stackLayout">
         <Label Text="Click the button below to create a local notification."

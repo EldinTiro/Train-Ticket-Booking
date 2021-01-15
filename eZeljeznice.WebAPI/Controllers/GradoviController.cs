@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using eZeljeznice.Model;
+using eZeljeznice.Model.Requests;
 using eZeljeznice.WebAPI.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -33,6 +34,12 @@ namespace eZeljeznice.WebAPI.Controllers
         public GradoviVM Get(int id)
         {
             return _service.GetById(id);
+        }
+
+        [HttpPost]
+        public GradoviVM Insert(ObavjestenjeInsertRequest request)
+        {
+            return _service.Insert(request);
         }
     }
 }

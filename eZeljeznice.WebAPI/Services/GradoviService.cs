@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using eZeljeznice.Model;
+using eZeljeznice.Model.Requests;
 using eZeljeznice.WebAPI.Database;
 using System;
 using System.Collections.Generic;
@@ -21,9 +22,20 @@ namespace eZeljeznice.WebAPI.Services
 
         public List<GradoviVM> Get()
         {
-            var list = _context.Gradovi.ToList();
+            List<Gradovi> list = _context.Gradovi.OrderByDescending(ord => ord.DatumObjave).ToList();
 
-            return _mapper.Map<List<GradoviVM>>(list);
+            List<GradoviVM> vmList = new List<GradoviVM>();
+
+            foreach (var item in list)
+            {
+                if (item.Sadrzaj != null)
+                {
+                    GradoviVM vmItem = new GradoviVM();
+                    vmList.Add(_mapper.Map(item, vmItem));
+                }
+            }
+
+            return vmList;
         }
 
         public GradoviVM GetById(int gradID)
@@ -31,6 +43,27 @@ namespace eZeljeznice.WebAPI.Services
             var list = _context.Gradovi.Find(gradID);
 
             return _mapper.Map<GradoviVM>(list);
+        }
+
+        public GradoviVM Insert(ObavjestenjeInsertRequest request)
+        {
+            Gradovi novoObavjestenje = new Gradovi();
+
+            GradoviVM gradoviVM = new GradoviVM();
+
+            if (request != null)
+            {
+                novoObavjestenje.Naziv = request.Naziv;
+                novoObavjestenje.Sadrzaj = request.Sadrzaj;
+                novoObavjestenje.DatumObjave = request.DatumObjave;
+
+                _context.Gradovi.Add(novoObavjestenje);
+                _context.SaveChanges();
+
+                return _mapper.Map(novoObavjestenje, gradoviVM);
+            }
+            else
+                return gradoviVM;
         }
     }
 }

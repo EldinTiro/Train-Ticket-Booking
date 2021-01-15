@@ -35,6 +35,13 @@ namespace eZeljeznice.MobileApp
             return await url.GetJsonAsync<T>();
         }
 
+        public async Task<T> GetContactById<T>(int id)
+        {
+            var url = $"{_apiUrl}/{_route}/{id}";
+
+            return await url.GetJsonAsync<T>();
+        }
+
         public async Task<T> Authenticiraj<T>(string username, string password)
         {
             var url = $"{_apiUrl}/{_route}/Authenticiraj/{username},{password}";

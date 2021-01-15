@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace eZeljeznice.Model
+namespace eZeljeznice.Model.Requests
 {
-    public class GradoviVM
+    public class ObavjestenjeInsertRequest
     {
-        public int? GradID { get; set; }
         public string Naziv { get; set; }
         public string Sadrzaj { get; set; }
+
         public DateTime? DatumObjave { get; set; }
+
+
     }
 }

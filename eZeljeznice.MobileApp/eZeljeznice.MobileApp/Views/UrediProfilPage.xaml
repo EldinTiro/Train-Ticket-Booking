@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="eZeljeznice.MobileApp.Views.UrediProfilPage">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand" Margin="10">
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Ime: " Grid.Row="1" FontSize="18" VerticalTextAlignment="Center"></Label>
+                <Entry Grid.Row="1" Grid.Column="1" x:Name="inputIme" Text="{Binding UrediIme}" ></Entry>
+                <Label Grid.Row="2" Grid.ColumnSpan="2"  x:Name="imeError" TextColor="Red" IsVisible="True"></Label>
+
+                <Label Text="Prezime: " Grid.Row="3" FontSize="18" VerticalTextAlignment="Center"></Label>
+                <Entry Grid.Row="3" Grid.Column="1" x:Name="inputPrezime" Text="{Binding UrediPrezime}"></Entry>
+                <Label Grid.Row="4" Grid.ColumnSpan="2" x:Name="prezimeError" TextColor="Red" IsVisible="True"></Label>
+
+
+                <Label Text="Email: " Grid.Row="5" FontSize="18" VerticalTextAlignment="Center"></Label>
+                <Entry Grid.Row="5" Grid.Column="1" x:Name="inputEmail" Text="{Binding UrediEmail}"></Entry>
+                <Label Grid.Row="6" Grid.ColumnSpan="2" x:Name="emailError" TextColor="Red" IsVisible="True"></Label>
+
+                <Button x:Name="Spasi" Grid.Row="15" Grid.Column="1" Text="Spasi" BackgroundColor="Gray"
+                       Clicked="Spasi_Clicked"></Button>
+            </Grid>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

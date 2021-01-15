@@ -1,12 +1,76 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="eZeljeznice.MobileApp.Views.Kontakt">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+             x:Class="eZeljeznice.MobileApp.Views.Kontakt"
+             xmlns:viewModels1="clr-namespace:eZeljeznice.MobileApp.ViewModels"
+             xmlns:local="clr-namespace:eZeljeznice.MobileApp"
+             BackgroundImageSource="backGroundImageTrain.jpg"
+             Title="Kontakt">
+
+
+    <Grid  Padding="10" Margin="20,30,0,0" RowSpacing="1"  >
+        <Grid.RowDefinitions >
+            <RowDefinition Height="Auto" ></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100" ></ColumnDefinition>
+            <ColumnDefinition Width="300"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <!--Phone & SMS-->
+        <Label Text="Područje:" Grid.Row="0"
+                     BackgroundColor="Transparent"
+               TextColor="OrangeRed"
+               FontAttributes="Bold"
+               FontSize="14"/>
+        <Label Grid.Column="1" Grid.Row="0"
+            Text="Sarajevo"
+               TextColor="OrangeRed"
+               FontAttributes="Bold"
+               FontSize="14"/>
+
+        <!--Email-->
+        <Label Text="Email :" Grid.Row="1"
+                     BackgroundColor="Transparent"
+               TextColor="OrangeRed"
+               FontAttributes="Bold"
+               FontSize="14"/>
+        <Label Grid.Column="1" Grid.Row="1"
+            Text="info@zfbh.ba"
+               TextColor="OrangeRed"
+               FontAttributes="Bold"
+               FontSize="14"/>
+
+        <!--Address-->
+        <Label Text="Kontakt telefon :" Grid.Row="2"
+                     BackgroundColor="Transparent"
+               TextColor="OrangeRed"
+               FontAttributes="Bold"
+               FontSize="14"/>
+        <Label Grid.Column="1" Grid.Row="2"
+            Text="033 477 313"
+               TextColor="OrangeRed"
+               FontAttributes="Bold"
+               FontSize="14"/>
+
+
+        <!--Address-->
+        <Label Text="Adresa:" Grid.Row="3"
+                     BackgroundColor="Transparent"
+               TextColor="OrangeRed"
+               FontAttributes="Bold"
+               FontSize="14"/>
+        <Label Grid.Column="1" Grid.Row="3"
+               TextColor="OrangeRed"
+               FontAttributes="Bold"
+               FontSize="14"
+            Text="Musala br.2, 71000 Sarajevo Federacija BiH Bosna i Hercegovina"/>
+
+    </Grid>
+    
 </ContentPage>

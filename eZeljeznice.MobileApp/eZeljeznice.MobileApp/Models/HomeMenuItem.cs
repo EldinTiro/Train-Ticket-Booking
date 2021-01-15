@@ -10,6 +10,7 @@ namespace eZeljeznice.MobileApp.Models
         About,
         Putovanja,
         MojProfil,
+        Obavještenja,
         Kontakt,
         HistorijaRezervacija
     }

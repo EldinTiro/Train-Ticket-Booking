@@ -26,7 +26,7 @@ namespace eZeljeznice.WebAPI.Services
 
             List<Rezervacije> kupacRezervacije_db = new List<Rezervacije>();
 
-            kupacRezervacije_db = _context.Rezervacije.Where(w => w.KupacId == kupacID).OrderBy(o=> o.DatumRezervacije).ToList();
+            kupacRezervacije_db = _context.Rezervacije.Where(w => w.KupacId == kupacID).OrderByDescending(o=> o.Putovanje.DatumPolaska).ThenBy(c=> c.Putovanje.VrijemePolaska).ToList();
 
             _mapper.Map(kupacRezervacije_db, kupacRezervacije);
 
@@ -41,6 +41,7 @@ namespace eZeljeznice.WebAPI.Services
                                                      .FirstOrDefault();
                 item.Polaziste = _context.Putovanja.Where(w => w.PutovanjeId == item.PutovanjeId).Select(s => s.Relacija.ZeljeznickaStanicaOd.Naziv).FirstOrDefault();
                 item.Odrediste = _context.Putovanja.Where(w => w.PutovanjeId == item.PutovanjeId).Select(s => s.Relacija.ZeljeznickaStanicaDo.Naziv).FirstOrDefault();
+                item.DatumPolaska = _context.Putovanja.Where(w => w.PutovanjeId == item.PutovanjeId).Select(s => s.DatumPolaska).FirstOrDefault();
                 item.VrijemePolaska = _context.Putovanja.Where(w => w.PutovanjeId == item.PutovanjeId).Select(s => s.VrijemePolaska).FirstOrDefault().ToString();
                 item.VrijemeDolaska = _context.Putovanja.Where(w => w.PutovanjeId == item.PutovanjeId).Select(s => s.VrijemeDolaska).FirstOrDefault().ToString();
                 item.KonacnaCijena = _context.KupljeneKarte.Where(w => w.RezervacijaId == item.RezervacijaId).Select(s => s.KonacnaCijena).FirstOrDefault();

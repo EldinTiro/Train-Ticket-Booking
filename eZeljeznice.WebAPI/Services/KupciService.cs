@@ -79,7 +79,13 @@ namespace eZeljeznice.WebAPI.Services
         {
             var entity = _context.Kupci.Find(id);
 
-            return _mapper.Map<KupciVM>(entity);
+            var brojRezervacija = _context.Rezervacije.Where(w => w.KupacId == id).Count();
+
+            KupciVM kupciVM = _mapper.Map<KupciVM>(entity);
+
+            kupciVM.BrojRezervacija = brojRezervacija;
+
+            return kupciVM;
         }
 
         public void Insert(KupciInsertRequest request)
@@ -99,9 +105,24 @@ namespace eZeljeznice.WebAPI.Services
 
         }
 
-        public void Update(int id, KupciInsertRequest request)
+        public KupciVM Update(int id, KupciUpdateRequest request)
         {
-            throw new NotImplementedException();
+            var kupacUpdate = _context.Kupci.Find(id);
+
+            KupciVM kupciVM = new KupciVM();
+
+            if (kupacUpdate != null && request != null)
+            {
+                kupacUpdate.Ime = request.Ime;
+                kupacUpdate.Prezime = request.Prezime;
+                kupacUpdate.Email = request.Email;
+
+                _context.SaveChanges();
+            }
+
+            kupciVM = _mapper.Map<KupciVM>(kupacUpdate);
+
+            return kupciVM;
         }
     }
 }

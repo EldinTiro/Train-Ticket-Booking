@@ -28,7 +28,8 @@ namespace eZeljeznice.WebAPI.Mappers
             CreateMap<Karte, KartaInsertRequest>().ReverseMap();
             CreateMap<KupljeneKarte, ProdanaKartaVM>();
             CreateMap<KupljeneKarte, ProdaneKarteInsertRequest>().ReverseMap();
-            
+            CreateMap<Obavjestenja, ObavjestenjeVM>();
+
         }
     }
 }

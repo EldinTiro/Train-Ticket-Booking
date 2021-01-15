@@ -1,4 +1,5 @@
 ﻿using eZeljeznice.MobileApp.Models;
+using eZeljeznice.MobileApp.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,8 @@ namespace eZeljeznice.MobileApp.Views
     {
         MainPage RootPage { get => Application.Current.MainPage as MainPage; }
         List<HomeMenuItem> menuItems;
+
+        private RezervacijeViewModel model = new RezervacijeViewModel();
         public MenuPage()
         {
             InitializeComponent();
@@ -22,6 +25,7 @@ namespace eZeljeznice.MobileApp.Views
             {
                 new HomeMenuItem {Id = MenuItemType.Browse, Title="Browse" },
                 new HomeMenuItem {Id = MenuItemType.About, Title="About" },
+                new HomeMenuItem {Id = MenuItemType.Obavještenja, Title="Obavještenja" },
                  new HomeMenuItem {Id = MenuItemType.Putovanja, Title="Putovanja" },
                  new HomeMenuItem {Id = MenuItemType.MojProfil, Title="Moj Profil" },
                  new HomeMenuItem {Id = MenuItemType.HistorijaRezervacija, Title="Historija rezervacija" },
@@ -39,6 +43,14 @@ namespace eZeljeznice.MobileApp.Views
                 var id = (int)((HomeMenuItem)e.SelectedItem).Id;
                 await RootPage.NavigateFromMenu(id);
             };
+
+
+        }
+
+        protected async override void OnAppearing()
+        {
+            base.OnAppearing();
+            await model.Reminder();
         }
     }
 }

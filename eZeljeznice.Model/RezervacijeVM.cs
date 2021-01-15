@@ -11,6 +11,7 @@ namespace eZeljeznice.Model
         public int? PutovanjeId { get; set; }
         public int? KartaId { get; set; }
         public DateTime? DatumRezervacije { get; set; }
+        public DateTime? DatumPolaska { get; set; }
         public bool? Kompletirana { get; set; }
         public string ImePutovanja { get; set; }
 

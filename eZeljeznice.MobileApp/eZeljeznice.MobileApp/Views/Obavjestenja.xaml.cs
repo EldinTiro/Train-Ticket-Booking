@@ -11,27 +11,19 @@ using Xamarin.Forms.Xaml;
 namespace eZeljeznice.MobileApp.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MojProfil : ContentPage
+    public partial class Obavjestenja : ContentPage
     {
-        private KupacViewModel model = null;
-        public MojProfil()
+        private ObavjestenjaViewModel model = null;
+        public Obavjestenja()
         {
             InitializeComponent();
-            BindingContext = model = new KupacViewModel();
+            BindingContext = model = new ObavjestenjaViewModel();
         }
 
-        protected override async void OnAppearing()
+        protected async override void OnAppearing()
         {
-
             base.OnAppearing();
             await model.Init();
-
-        }
-
-        private async void Uredi_Clicked(object sender, EventArgs e)
-        {
-
-            await Navigation.PushAsync(new UrediProfilPage(model));
         }
     }
 }

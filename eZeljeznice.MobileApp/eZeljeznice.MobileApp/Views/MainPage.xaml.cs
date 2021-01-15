@@ -48,6 +48,9 @@ namespace eZeljeznice.MobileApp.Views
                     case (int)MenuItemType.Kontakt:
                         MenuPages.Add(id, new NavigationPage(new Kontakt()));
                         break;
+                    case (int)MenuItemType.Obavještenja:
+                        MenuPages.Add(id, new NavigationPage(new Obavjestenja()));
+                        break;
                 }
             }
 

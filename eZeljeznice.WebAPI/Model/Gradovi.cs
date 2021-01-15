@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace eZeljeznice.WebAPI.Database
+namespace eZeljeznice.WebAPI.Model
 {
     public partial class Gradovi
     {
@@ -11,14 +13,15 @@ namespace eZeljeznice.WebAPI.Database
             ZeljeznickeStanice = new HashSet<ZeljeznickeStanice>();
         }
 
+        [Key]
+        [Column("GradID")]
         public int GradId { get; set; }
+        [StringLength(30)]
         public string Naziv { get; set; }
 
-        public string Sadrzaj { get; set; }
-
-        public DateTime? DatumObjave { get; set; }
-
+        [InverseProperty("Grad")]
         public virtual ICollection<Korisnici> Korisnici { get; set; }
+        [InverseProperty("Grad")]
         public virtual ICollection<ZeljeznickeStanice> ZeljeznickeStanice { get; set; }
     }
 }
