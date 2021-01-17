@@ -1,4 +1,5 @@
 ﻿using eZeljeznice.Model;
+using eZeljeznice.Model.Requests;
 using eZeljeznice.WebAPI.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -27,6 +28,18 @@ namespace eZeljeznice.WebAPI.Controllers
             var list = _service.Get();
 
             return list;
+        }
+
+        [HttpPost]
+        public PretragaVM Insert(PretragaInsertRequest request)
+        {
+            return _service.Insert(request);
+        }
+
+        [HttpPut("{id}")]
+        public PretragaVM Update(int id, PretragaInsertRequest request)
+        {
+            return _service.Update(id, request);
         }
     }
 }

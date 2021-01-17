@@ -21,6 +21,7 @@ namespace eZeljeznice.MobileApp.Views
 
         private APIService _RezervacijeService = new APIService("Rezervacije");
         private APIService _ProdaneKarteService = new APIService("ProdaneKarte");
+        private APIService _PretrageService = new APIService("Pretrage");
         private APIService _KarteService = new APIService("Karte");
         public PutovanjeDetailPage(Model.PutovanjaVM putovanje)
         {
@@ -97,6 +98,18 @@ namespace eZeljeznice.MobileApp.Views
             ProdanaKartaVM prodanaKartaVM = new ProdanaKartaVM();
             prodanaKartaVM = await _ProdaneKarteService.Insert<ProdanaKartaVM>(prodaneKarteInsertRequest);
             //Insertanje Prodane karte - End
+
+            //Insertanje Pretrage - Begin
+
+            PretragaInsertRequest pretragaInsertRequest = new PretragaInsertRequest();
+
+            pretragaInsertRequest.RezervacijaID = rezervacijeVM.RezervacijaId; ;
+            pretragaInsertRequest.RelacijaId = model.Putovanje.RelacijaID;
+            pretragaInsertRequest.KupacId = Global.PrijavljeniKupac.KupacId;
+
+            PretragaVM pretragaVM = new PretragaVM();
+            pretragaVM = await _PretrageService.Insert<PretragaVM>(pretragaInsertRequest);
+            //Insertanje Pretrage -  End
 
 
 

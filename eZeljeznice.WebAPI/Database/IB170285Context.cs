@@ -153,6 +153,8 @@ namespace eZeljeznice.WebAPI.Database
 
                 entity.Property(e => e.RelacijaId).HasColumnName("RelacijaID");
 
+                entity.Property(e => e.RezervacijaID).HasColumnName("RezervacijaID");
+
                 entity.Property(e => e.Ocjena).HasColumnName("Ocjena");
 
                 entity.HasOne(d => d.Kupac)
@@ -164,6 +166,11 @@ namespace eZeljeznice.WebAPI.Database
                     .WithMany(p => p.Pretrage)
                     .HasForeignKey(d => d.RelacijaId)
                     .HasConstraintName("FK__Pretrage__Relaci__31EC6D26");
+
+                entity.HasOne(d => d.Rezervacije)
+                    .WithMany(p => p.Pretrage)
+                    .HasForeignKey(d => d.RezervacijaID)
+                    .HasConstraintName("FK__Pretrage__Rezervacije__01142BA1");
             });
 
             modelBuilder.Entity<Putovanja>(entity =>

@@ -52,7 +52,33 @@
 
                     </Grid>
 
+                    <StackLayout Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
+
+                        <Label  HorizontalOptions="Center">Ocijeni putovanje:</Label>
+                        <Grid HorizontalOptions="Center" VerticalOptions="Center">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="35" ></RowDefinition>
+
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="40"></ColumnDefinition>
+                                <ColumnDefinition Width="40"></ColumnDefinition>
+                                <ColumnDefinition Width="40"></ColumnDefinition>
+                                <ColumnDefinition Width="40"></ColumnDefinition>
+                                <ColumnDefinition Width="40"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Button Command="{Binding OcijeniSa1Command}" Grid.Row="0" Grid.Column="0" FontSize="Micro" Text="1" WidthRequest="30" HeightRequest="30" BorderRadius="100" BackgroundColor="Wheat"></Button>
+                            <Button Command="{Binding OcijeniSa2Command}" Grid.Row="0" Grid.Column="1" FontSize="Micro" Text="2" WidthRequest="30" HeightRequest="30" BorderRadius="100" BackgroundColor="Wheat"></Button>
+                            <Button Command="{Binding OcijeniSa3Command}" Grid.Row="0" Grid.Column="2" FontSize="Micro" Text="3" WidthRequest="30" HeightRequest="30" BorderRadius="100" BackgroundColor="Wheat"></Button>
+                            <Button Command="{Binding OcijeniSa4Command}" Grid.Row="0" Grid.Column="3" FontSize="Micro" Text="4" WidthRequest="30" HeightRequest="30" BorderRadius="100" BackgroundColor="Wheat"></Button>
+                            <Button Command="{Binding OcijeniSa5Command}" Grid.Row="0" Grid.Column="4" FontSize="Micro" Text="5" WidthRequest="30" HeightRequest="30" BorderRadius="100" BackgroundColor="Wheat"></Button>
+
+                        </Grid>
+                    </StackLayout>
+
                 </StackLayout>
+
+
 
             </Grid>
         </ScrollView>
