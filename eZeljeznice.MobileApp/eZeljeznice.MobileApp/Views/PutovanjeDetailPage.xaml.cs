@@ -113,7 +113,7 @@ namespace eZeljeznice.MobileApp.Views
 
 
 
-            await Navigation.PushAsync(new StripePaymentGatwayPage());
+            await Navigation.PushAsync(new StripePaymentGatwayPage(model.FinalnaCijena));
         }
     }
 }

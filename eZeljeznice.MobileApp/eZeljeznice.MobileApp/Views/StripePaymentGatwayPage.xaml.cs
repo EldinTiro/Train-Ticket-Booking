@@ -13,10 +13,19 @@ namespace eZeljeznice.MobileApp.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class StripePaymentGatwayPage : ContentPage
     {
+
         PaymentGatwayPageViewModel model = null;
-        public StripePaymentGatwayPage()
+        public StripePaymentGatwayPage(double? Iznos=123)
         {
             InitializeComponent();
+            BindingContext = model = new PaymentGatwayPageViewModel()
+            {
+                Iznos = Iznos
+            };
+
+            NavigationPage.SetHasBackButton(this, false);
+            NavigationPage.SetHasNavigationBar(this, false);
+
         }
         protected override void OnAppearing()
         {
@@ -160,9 +169,9 @@ namespace eZeljeznice.MobileApp.Views
             return text;
         }
 
-        private void Submit_Button_Clicked(object sender, EventArgs e)
+       /* private void Submit_Button_Clicked(object sender, EventArgs e)
         {
             Application.Current.MainPage = new MainPage();
-        }
+        }*/
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Acr.UserDialogs;
+using eZeljeznice.MobileApp.Views;
 using eZeljeznice.Model;
 using Prism.Commands;
 using Prism.Mvvm;
@@ -8,7 +9,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-
+using Xamarin.Forms;
 
 namespace eZeljeznice.MobileApp.ViewModels
 {
@@ -60,8 +61,8 @@ namespace eZeljeznice.MobileApp.ViewModels
             get { return _expYear; }
             set { SetProperty(ref _expYear, value); }
         }
-        decimal _iznos = 0;
-        public decimal Iznos
+        double? _iznos = 0;
+        public double? Iznos
         {
             get { return _iznos; }
             set { SetProperty(ref _iznos, value); }
@@ -76,11 +77,16 @@ namespace eZeljeznice.MobileApp.ViewModels
         #endregion Public Property
 
         #region Constructor
-
-        public PaymentGatwayPageViewModel()
+        public INavigation Navigation { get; set; }
+        public PaymentGatwayPageViewModel(INavigation navigation)
         {
             CreditCardModel = new CreditCardModel();
             Title = "Card Details";
+            this.Navigation = navigation;
+        }
+
+        public PaymentGatwayPageViewModel()
+        {
         }
 
         #endregion Constructor
@@ -116,20 +122,25 @@ namespace eZeljeznice.MobileApp.ViewModels
                 UserDialogs.Instance.HideLoading();
                 UserDialogs.Instance.Alert(ex.Message, null, "OK");
                 Console.Write("Payment Gatway" + ex.Message);
+
             }
-                if (IsTransectionSuccess)
-                {
-                    Console.Write("Payment Gateway" + "Payment Successful ");
 
-                    UserDialogs.Instance.HideLoading();
-                }
-                else
-                {
+            if (IsTransectionSuccess)
+            {
+                Console.Write("Payment Gateway" + "Payment Successful ");
+                UserDialogs.Instance.Alert("Your payment was successfull", "Payment success", "OK");
+                UserDialogs.Instance.HideLoading();
 
-                    UserDialogs.Instance.HideLoading();
-                    UserDialogs.Instance.Alert("Oops, something went wrong", "Payment failed", "OK");
-                    Console.Write("Payment Gateway" + "Payment Failure ");
-                }
+
+            }
+            else
+            {
+
+                UserDialogs.Instance.HideLoading();
+                UserDialogs.Instance.Alert("Oops, something went wrong", "Payment failed", "OK");
+                Console.Write("Payment Gateway" + "Payment Failure ");
+            }
+
 
         });
 
