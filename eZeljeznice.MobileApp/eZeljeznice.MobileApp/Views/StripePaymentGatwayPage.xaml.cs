@@ -164,7 +164,7 @@ namespace eZeljeznice.MobileApp.Views
         }
         private string RemoveLastCharacter(string str)
         {
-            int l = str.Length;
+            int l = str.Length; 
             string text = str.Remove(l - 1, 1);
             return text;
         }

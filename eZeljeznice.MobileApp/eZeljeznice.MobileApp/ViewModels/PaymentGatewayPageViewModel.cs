@@ -77,16 +77,11 @@ namespace eZeljeznice.MobileApp.ViewModels
         #endregion Public Property
 
         #region Constructor
-        public INavigation Navigation { get; set; }
-        public PaymentGatwayPageViewModel(INavigation navigation)
+        public PaymentGatwayPageViewModel()
         {
             CreditCardModel = new CreditCardModel();
             Title = "Card Details";
-            this.Navigation = navigation;
-        }
 
-        public PaymentGatwayPageViewModel()
-        {
         }
 
         #endregion Constructor
