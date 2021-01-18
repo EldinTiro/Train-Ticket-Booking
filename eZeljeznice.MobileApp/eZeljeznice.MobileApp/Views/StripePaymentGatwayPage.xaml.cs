@@ -164,14 +164,15 @@ namespace eZeljeznice.MobileApp.Views
         }
         private string RemoveLastCharacter(string str)
         {
-            int l = str.Length;
+            int l = str.Length; 
             string text = str.Remove(l - 1, 1);
             return text;
         }
 
-       /* private void Submit_Button_Clicked(object sender, EventArgs e)
+        private async void Submit_Button_Clicked(object sender, EventArgs e)
         {
+            await Task.Delay(3000);
             Application.Current.MainPage = new MainPage();
-        }*/
+        }
     }
 }

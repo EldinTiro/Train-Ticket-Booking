@@ -52,6 +52,7 @@ namespace eZeljeznice.WebAPI.Services
                 item.Odrediste = _context.Relacije.Where(w => w.RelacijaId == item.RelacijaID).Select(s => s.ZeljeznickaStanicaDo.Naziv).FirstOrDefault();
                 item.VrijemePolaska = _context.Putovanja.Where(w => w.PutovanjeId == item.PutovanjeID).Select(e => e.VrijemePolaska).FirstOrDefault().ToString();
                 item.VrijemeDolaska = _context.Putovanja.Where(w => w.PutovanjeId == item.PutovanjeID).Select(e => e.VrijemeDolaska).FirstOrDefault().ToString();
+                //item.ProsjecnaOcjena = _context.Pretrage.Where(p => p.RelacijaId == item.RelacijaID).Select(s => s.Ocjena).ToList().Average();
             }
 
             return result;

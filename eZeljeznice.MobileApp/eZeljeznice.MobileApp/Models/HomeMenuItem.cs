@@ -6,8 +6,6 @@ namespace eZeljeznice.MobileApp.Models
 {
     public enum MenuItemType
     {
-        Browse,
-        About,
         Putovanja,
         MojProfil,
         Obavještenja,

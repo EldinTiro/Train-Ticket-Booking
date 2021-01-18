@@ -39,6 +39,7 @@ namespace eZeljeznice.MobileApp.Views
             base.OnAppearing();
             await model.Init();
             await model.Recommender();
+            Rezervisi.IsEnabled = false;
 
         }
 
@@ -48,6 +49,38 @@ namespace eZeljeznice.MobileApp.Views
 
             model.RecommenderList.Clear();
             await Navigation.PushAsync(new PutovanjeDetailPage(PutovanjeItem));
+        }
+
+        private void EnableRezervisiButton()
+        {
+            if (model.FinalnaCijena > 0)
+            {
+                Rezervisi.IsEnabled = true;
+            }
+            else
+            {
+                Rezervisi.IsEnabled = false;
+            }
+        }
+
+        private void SmanjiBrojOdraslih(object sender, EventArgs e)
+        {
+            EnableRezervisiButton();
+        }
+
+        private void PovecajBrojOdraslih(object sender, EventArgs e)
+        {
+            EnableRezervisiButton();
+        }
+
+        private void SmanjiBrojDjece(object sender, EventArgs e)
+        {
+            EnableRezervisiButton();
+        }
+
+        private void PovecajBrojDjece(object sender, EventArgs e)
+        {
+            EnableRezervisiButton();
         }
 
         private async void Rezervisi_Clicked(object sender, EventArgs e)
