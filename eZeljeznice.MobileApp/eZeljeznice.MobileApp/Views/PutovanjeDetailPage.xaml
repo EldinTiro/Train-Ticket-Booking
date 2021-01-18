@@ -47,12 +47,12 @@
                     <Label Grid.Row="4" Grid.Column="1" FontAttributes="Bold" Text="{Binding Putovanje.VrijemeDolaska, StringFormat='{0:HH:mm}'}"  ></Label>
                     <Label Grid.Row="5" Grid.Column="0">Broj odraslih</Label>
                     <Label Grid.Row="5" Grid.Column="1" FontAttributes="Bold" Text="{Binding BrojOdraslih}"  ></Label>
-                    <Button Command="{Binding SmanjiBrojOdraslih}" Grid.Row="5" Grid.Column="2" FontSize="Micro" Text="Smanji" WidthRequest="30" HeightRequest="30" BackgroundColor="RosyBrown"></Button>
-                    <Button Command="{Binding PovecajBrojOdraslih}" Grid.Row="5" Grid.Column="3" FontSize="Micro" Text="Povećaj" WidthRequest="30" HeightRequest="30" BackgroundColor="Wheat"></Button>
+                        <Button Command="{Binding SmanjiBrojOdraslih}" Grid.Row="5" Grid.Column="2" FontSize="Micro" Text="Smanji" WidthRequest="30" HeightRequest="30" BackgroundColor="RosyBrown" Clicked="SmanjiBrojOdraslih"></Button>
+                        <Button Command="{Binding PovecajBrojOdraslih}" Grid.Row="5" Grid.Column="3" FontSize="Micro" Text="Povećaj" WidthRequest="30" HeightRequest="30" BackgroundColor="Wheat" Clicked="PovecajBrojOdraslih"></Button>
                     <Label Grid.Row="6" Grid.Column="0">Broj djece (50% popust)</Label>
                     <Label Grid.Row="6" Grid.Column="1" FontAttributes="Bold" Text="{Binding BrojDjece}"  ></Label>
-                    <Button Command="{Binding SmanjiBrojDjece}" Grid.Row="6" Grid.Column="2" FontSize="Micro" Text="Smanji" WidthRequest="30" HeightRequest="30" BackgroundColor="RosyBrown"></Button>
-                    <Button Command="{Binding PovecajBrojDjece}" Grid.Row="6" Grid.Column="3" FontSize="Micro" Text="Povećaj" WidthRequest="30" HeightRequest="30" BackgroundColor="Wheat"></Button>
+                        <Button Command="{Binding SmanjiBrojDjece}" Grid.Row="6" Grid.Column="2" FontSize="Micro" Text="Smanji" WidthRequest="30" HeightRequest="30" BackgroundColor="RosyBrown" Clicked="SmanjiBrojDjece"></Button>
+                        <Button Command="{Binding PovecajBrojDjece}" Grid.Row="6" Grid.Column="3" FontSize="Micro" Text="Povećaj" WidthRequest="30" HeightRequest="30" BackgroundColor="Wheat" Clicked="PovecajBrojDjece"></Button>
                     <Label Grid.Row="7" Grid.Column="0">Ukupna cijena</Label>
                     <Label Grid.Row="7" Grid.Column="1" FontAttributes="Bold" Text="{Binding FinalnaCijena}"></Label>
                         <StackLayout Grid.Row="8" Grid.Column="2"
@@ -93,6 +93,9 @@
                                             <Label Text="{Binding VrijemePolaska, StringFormat='Polazak: {0:HH:mm}'}" TextColor="ForestGreen"
                                      Style="{DynamicResource ListItemTextStyle}" 
                                      FontSize="12"/>
+                                            <Label Text="{Binding DatumPolaska, StringFormat='{0:dd/MM/yyyy}'}" TextColor="ForestGreen"
+                                     Style="{DynamicResource ListItemTextStyle}" 
+                                     FontSize="12"/>
                                         </StackLayout>
                                         <StackLayout>
                                             <Label Text="{Binding Cijena,StringFormat='Cijena: {0} KM'}" 
@@ -103,6 +106,16 @@
                                 VerticalOptions="CenterAndExpand" 
                                 HorizontalOptions="CenterAndExpand"
                                 FontSize="16" />
+                                        </StackLayout>
+                                        <StackLayout>
+                                            <Label Text="{Binding ProsjecnaOcjena,StringFormat='Prosjecna ocjena {0}'}" 
+                                            LineBreakMode="NoWrap" 
+                                            Style="{DynamicResource ListItemTextStyle}" 
+                                            TextColor="Orange"
+                                            FontAttributes="Bold"
+                                            VerticalOptions="CenterAndExpand" 
+                                            HorizontalOptions="CenterAndExpand"
+                                            FontSize="16" />
                                         </StackLayout>
                                     </StackLayout>
 

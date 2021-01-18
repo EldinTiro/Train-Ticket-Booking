@@ -169,9 +169,10 @@ namespace eZeljeznice.MobileApp.Views
             return text;
         }
 
-       /* private void Submit_Button_Clicked(object sender, EventArgs e)
+        private async void Submit_Button_Clicked(object sender, EventArgs e)
         {
+            await Task.Delay(3000);
             Application.Current.MainPage = new MainPage();
-        }*/
+        }
     }
 }
