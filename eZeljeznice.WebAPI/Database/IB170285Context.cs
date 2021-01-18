@@ -25,6 +25,7 @@ namespace eZeljeznice.WebAPI.Database
         public virtual DbSet<Relacije> Relacije { get; set; }
         public virtual DbSet<Rezervacije> Rezervacije { get; set; }
         public virtual DbSet<ZeljeznickeStanice> ZeljeznickeStanice { get; set; }
+        public virtual DbSet<Obavjestenja> Obavjestenja { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -53,6 +54,14 @@ namespace eZeljeznice.WebAPI.Database
                     .HasName("PK__Karte__EC3FA98E79DF499B");
 
                 entity.Property(e => e.KartaId).HasColumnName("KartaID");
+            });
+
+            modelBuilder.Entity<Obavjestenja>(entity =>
+            {
+                entity.HasKey(e => e.ObavjestenjaID)
+                    .HasName("PK__Obavjest__C87A815D68EC0B31");
+
+                entity.Property(e => e.ObavjestenjaID).HasColumnName("ObavjestenjaID");
             });
 
             modelBuilder.Entity<Korisnici>(entity =>
@@ -117,14 +126,15 @@ namespace eZeljeznice.WebAPI.Database
 
                 entity.Property(e => e.DatumProdaje).HasColumnType("date");
 
-                entity.Property(e => e.KorisnikId).HasColumnName("KorisnikID");
+                entity.Property(e => e.KupacId).HasColumnName("KupacID");
 
                 entity.Property(e => e.RezervacijaId).HasColumnName("RezervacijaID");
 
-                entity.HasOne(d => d.Korisnik)
+                entity.HasOne(d => d.Kupac)
                     .WithMany(p => p.KupljeneKarte)
-                    .HasForeignKey(d => d.KorisnikId)
-                    .HasConstraintName("FK__KupljeneK__Koris__4E88ABD4");
+                    .HasForeignKey(d => d.KupacId)
+                    .HasConstraintName("FK__KupljeneK__Kupac__01142BA1");
+
 
                 entity.HasOne(d => d.Rezervacija)
                     .WithMany(p => p.KupljeneKarte)
@@ -143,6 +153,10 @@ namespace eZeljeznice.WebAPI.Database
 
                 entity.Property(e => e.RelacijaId).HasColumnName("RelacijaID");
 
+                entity.Property(e => e.RezervacijaID).HasColumnName("RezervacijaID");
+
+                entity.Property(e => e.Ocjena).HasColumnName("Ocjena");
+
                 entity.HasOne(d => d.Kupac)
                     .WithMany(p => p.Pretrage)
                     .HasForeignKey(d => d.KupacId)
@@ -152,6 +166,11 @@ namespace eZeljeznice.WebAPI.Database
                     .WithMany(p => p.Pretrage)
                     .HasForeignKey(d => d.RelacijaId)
                     .HasConstraintName("FK__Pretrage__Relaci__31EC6D26");
+
+                entity.HasOne(d => d.Rezervacije)
+                    .WithMany(p => p.Pretrage)
+                    .HasForeignKey(d => d.RezervacijaID)
+                    .HasConstraintName("FK__Pretrage__Rezervacije__01142BA1");
             });
 
             modelBuilder.Entity<Putovanja>(entity =>

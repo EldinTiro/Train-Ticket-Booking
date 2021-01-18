@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:ViewModel="clr-namespace:eZeljeznice.MobileApp.ViewModels"
+             mc:Ignorable="d"
+             x:Class="eZeljeznice.MobileApp.Views.Obavjestenja">
+    <ContentPage.BindingContext>
+        <ViewModel:ObavjestenjaViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Obavjestenja"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                   FontSize="20"/>
+            <ListView ItemsSource="{Binding ObavjestenjaList}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="10" Orientation="Horizontal">
+                                <StackLayout>
+                                    <StackLayout>
+                                        <Label Text="{Binding Naziv}" TextColor="DarkBlue"
+                                        Style="{DynamicResource ListItemTextStyle}" 
+                                        FontSize="15" />
+                                        <Label Text="{Binding Sadrzaj}" TextColor="#4d5296"
+                                        Style="{DynamicResource ListItemTextStyle}"
+                                        FontSize="12" />
+                                    </StackLayout>
+                                    <Label Text="{Binding DatumObjave, StringFormat='Objavljeno: {0:dd/MM/yyyy/hh/mm}'}" TextColor="ForestGreen"
+                                     Style="{DynamicResource ListItemTextStyle}" 
+                                     FontSize="12"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

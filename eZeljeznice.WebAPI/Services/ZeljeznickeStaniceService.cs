@@ -1,4 +1,5 @@
-﻿using eZeljeznice.Model;
+﻿using AutoMapper;
+using eZeljeznice.Model;
 using eZeljeznice.WebAPI.Database;
 using System;
 using System.Collections.Generic;
@@ -10,29 +11,26 @@ namespace eZeljeznice.WebAPI.Services
     public class ZeljeznickeStaniceService : IZeljeznickeStaniceService
     {
         private readonly IB170285Context _context;
+        private readonly IMapper _mapper;
 
-        public ZeljeznickeStaniceService (IB170285Context context)
+        public ZeljeznickeStaniceService (IB170285Context context, IMapper mapper)
         {
             this._context = context;
+            this._mapper = mapper;
         }
-        public List<Database.ZeljeznickeStanice> Get()
+        public ZeljeznickeStaniceVM GetById(int ZeljeznickaStanicaID)
         {
-            //var list = new List<ZeljeznickeStanice>()
-            //{
-            //    new ZeljeznickeStanice()
-            //    {
-            //        Naziv="Sarajevo",
-            //        ZeljeznickaStanicaID = 1
-            //    },
-            //    new ZeljeznickeStanice()
-            //    {
-            //        Naziv ="Mostar",
-            //        ZeljeznickaStanicaID = 2
-            //    }
-            //};
 
-            
-            return _context.ZeljeznickeStanice.ToList();
+            var list = _context.ZeljeznickeStanice.Find(ZeljeznickaStanicaID);
+
+            return _mapper.Map<ZeljeznickeStaniceVM>(list);
+        }
+
+        List<ZeljeznickeStaniceVM> IZeljeznickeStaniceService.Get()
+        {
+            var list = _context.ZeljeznickeStanice.ToList();
+
+            return _mapper.Map<List<ZeljeznickeStaniceVM>>(list);
         }
     }
 }

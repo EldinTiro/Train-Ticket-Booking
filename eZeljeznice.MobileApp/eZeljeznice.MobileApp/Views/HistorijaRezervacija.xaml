@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="eZeljeznice.MobileApp.Views.HistorijaRezervacija"
+             xmlns:ViewModel="clr-namespace:eZeljeznice.MobileApp.ViewModels">
+
+    <ContentPage.BindingContext>
+        <ViewModel:RezervacijeViewModel/>
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+        <StackLayout>
+        <StackLayout>
+                <Label Text="{Binding SelectImePrezimeKupca}, StringFormat='Prikaz svih rezervacija za klijenta : {0}.'}"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                FontSize="16"
+                FontAttributes="Bold"/>
+        </StackLayout>
+
+            <ListView ItemsSource="{Binding RezervacijeList}" ItemSelected="ListView_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="10" Orientation="Horizontal">
+                                <StackLayout>
+                                    <StackLayout>
+                                        <Label Text="{Binding ImePutovanja}" TextColor="#4d5296"
+                                        Style="{DynamicResource ListItemTextStyle}"
+                                        FontSize="12" />
+                                    </StackLayout>
+                                    <Label Text="{Binding DatumRezervacije, StringFormat='{0:dd/MM/yyyy}'}" TextColor="ForestGreen"
+                                     Style="{DynamicResource ListItemTextStyle}" 
+                                     FontSize="12"/>
+                                    <Label Text="{Binding VrijemePolaska, StringFormat='Polazak: {0:HH:mm}'}" TextColor="ForestGreen"
+                                     Style="{DynamicResource ListItemTextStyle}" 
+                                     FontSize="12"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

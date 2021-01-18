@@ -14,6 +14,10 @@ namespace eZeljeznice.WebAPI.Database
         public int GradId { get; set; }
         public string Naziv { get; set; }
 
+        public string Sadrzaj { get; set; }
+
+        public DateTime? DatumObjave { get; set; }
+
         public virtual ICollection<Korisnici> Korisnici { get; set; }
         public virtual ICollection<ZeljeznickeStanice> ZeljeznickeStanice { get; set; }
     }

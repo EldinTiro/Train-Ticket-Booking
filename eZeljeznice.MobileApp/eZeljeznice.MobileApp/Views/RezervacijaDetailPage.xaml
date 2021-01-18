@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="eZeljeznice.MobileApp.Views.RezervacijaDetailPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid  Padding="10" Margin="10" HorizontalOptions="End">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="500" ></RowDefinition>
+                    <RowDefinition Height="600"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200" ></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <StackLayout Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="White">
+                    <Grid  Padding="10" Margin="20,30,0,0" RowSpacing="20"  >
+                        <Grid.RowDefinitions >
+                            <RowDefinition Height="*" ></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" ></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <BoxView Margin="110,0,0,0" Grid.Column="0" Grid.Row="0" Grid.RowSpan="7"  BackgroundColor="Gray" WidthRequest="3" VerticalOptions="FillAndExpand" HorizontalOptions="EndAndExpand" 	/>
+                        <BoxView Margin="110,0,0,0" Grid.Column="1" Grid.Row="0" Grid.RowSpan="7"  BackgroundColor="Gray" WidthRequest="3" VerticalOptions="FillAndExpand" HorizontalOptions="EndAndExpand" 	/>
+                        <Label Grid.Row="0" Grid.Column="0">Datum rezervacije</Label>
+                        <Label Grid.Row="0" Grid.Column="1" FontAttributes="Bold" Text="{Binding Rezervacija.DatumRezervacije}"  ></Label>
+                        <Label Grid.Row="1" Grid.Column="0">Polazište</Label>
+                        <Label Grid.Row="1" Grid.Column="1" FontAttributes="Bold" Text="{Binding Rezervacija.Polaziste}"></Label>
+                        <Label Grid.Row="2" Grid.Column="0">Odrediste</Label>
+                        <Label Grid.Row="2" Grid.Column="1" FontAttributes="Bold" Text="{Binding Rezervacija.Odrediste}"></Label>
+                        <Label Grid.Row="3" Grid.Column="0">Vrijeme polaska</Label>
+                        <Label Grid.Row="3" Grid.Column="1" FontAttributes="Bold" Text="{Binding Rezervacija.VrijemePolaska,StringFormat='{}{0:hh\\:mm}'}"  ></Label>
+                        <Label Grid.Row="4" Grid.Column="0">Vrijeme dolaska</Label>
+                        <Label Grid.Row="4" Grid.Column="1" FontAttributes="Bold" Text="{Binding Rezervacija.VrijemeDolaska, StringFormat='{0:HH:mm}'}"  ></Label>
+                        <Label Grid.Row="5" Grid.Column="0">Cijena karte</Label>
+                        <Label Grid.Row="5" Grid.Column="1" FontAttributes="Bold" Text="{Binding Rezervacija.KonacnaCijena}"></Label>
+                        <Label Grid.Row="6" Grid.Column="0">Broj karte</Label>
+                        <Label Grid.Row="6" Grid.Column="1" FontAttributes="Bold" Text="{Binding Rezervacija.BrojKarte}" FontSize="15"></Label>
+
+                    </Grid>
+
+                    <StackLayout Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
+
+                        <Label  HorizontalOptions="Center">Ocijeni putovanje:</Label>
+                        <Grid HorizontalOptions="Center" VerticalOptions="Center">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="35" ></RowDefinition>
+
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="40"></ColumnDefinition>
+                                <ColumnDefinition Width="40"></ColumnDefinition>
+                                <ColumnDefinition Width="40"></ColumnDefinition>
+                                <ColumnDefinition Width="40"></ColumnDefinition>
+                                <ColumnDefinition Width="40"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Button Command="{Binding OcijeniSa1Command}" Grid.Row="0" Grid.Column="0" FontSize="Micro" Text="1" WidthRequest="30" HeightRequest="30" BorderRadius="100" BackgroundColor="Wheat"></Button>
+                            <Button Command="{Binding OcijeniSa2Command}" Grid.Row="0" Grid.Column="1" FontSize="Micro" Text="2" WidthRequest="30" HeightRequest="30" BorderRadius="100" BackgroundColor="Wheat"></Button>
+                            <Button Command="{Binding OcijeniSa3Command}" Grid.Row="0" Grid.Column="2" FontSize="Micro" Text="3" WidthRequest="30" HeightRequest="30" BorderRadius="100" BackgroundColor="Wheat"></Button>
+                            <Button Command="{Binding OcijeniSa4Command}" Grid.Row="0" Grid.Column="3" FontSize="Micro" Text="4" WidthRequest="30" HeightRequest="30" BorderRadius="100" BackgroundColor="Wheat"></Button>
+                            <Button Command="{Binding OcijeniSa5Command}" Grid.Row="0" Grid.Column="4" FontSize="Micro" Text="5" WidthRequest="30" HeightRequest="30" BorderRadius="100" BackgroundColor="Wheat"></Button>
+
+                        </Grid>
+                    </StackLayout>
+
+                </StackLayout>
+
+
+
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

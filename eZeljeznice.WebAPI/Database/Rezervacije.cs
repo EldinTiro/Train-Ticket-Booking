@@ -20,6 +20,7 @@ namespace eZeljeznice.WebAPI.Database
         public virtual Karte Karta { get; set; }
         public virtual Kupci Kupac { get; set; }
         public virtual Putovanja Putovanje { get; set; }
+        public virtual ICollection<Pretrage> Pretrage { get; set; }
         public virtual ICollection<KupljeneKarte> KupljeneKarte { get; set; }
     }
 }

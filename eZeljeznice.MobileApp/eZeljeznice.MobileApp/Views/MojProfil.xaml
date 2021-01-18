@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="eZeljeznice.MobileApp.Views.MojProfil">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid  Padding="10" Margin="10" HorizontalOptions="End">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="500" ></RowDefinition>
+                    <RowDefinition Height="600"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200" ></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <StackLayout Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="White">
+                    <Grid  Padding="10" Margin="20,30,0,0" RowSpacing="20"  >
+                        <Grid.RowDefinitions >
+                            <RowDefinition Height="*" ></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" ></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <BoxView Margin="110,0,0,0" Grid.Column="0" Grid.Row="0" Grid.RowSpan="5"  BackgroundColor="Gray" WidthRequest="3" VerticalOptions="FillAndExpand" HorizontalOptions="EndAndExpand" 	/>
+                        <BoxView Margin="110,0,0,0" Grid.Column="1" Grid.Row="0" Grid.RowSpan="5"  BackgroundColor="Gray" WidthRequest="3" VerticalOptions="FillAndExpand" HorizontalOptions="EndAndExpand" 	/>
+                        <Label Grid.Row="0" Grid.Column="0">Ime</Label>
+                        <Label Grid.Row="0" Grid.Column="1" FontAttributes="Bold" Text="{Binding ImeKupca}"></Label>
+                        <Label Grid.Row="1" Grid.Column="0">Prezime</Label>
+                        <Label Grid.Row="1" Grid.Column="1" FontAttributes="Bold" Text="{Binding PrezimeKupca}"></Label>
+                        <Label Grid.Row="2" Grid.Column="0">Korisničko ime</Label>
+                        <Label Grid.Row="2" Grid.Column="1" FontAttributes="Bold" Text="{Binding KorisnickoImeKupca}"></Label>
+                        <Label Grid.Row="3" Grid.Column="0">Datum registracije</Label>
+                        <Label Grid.Row="3" Grid.Column="1" FontAttributes="Bold" Text="{Binding DatumRegistracije,StringFormat='{0:dd/MM/yyyy}'}"  ></Label>
+                        <Label Grid.Row="4" Grid.Column="0">Email</Label>
+                        <Label Grid.Row="4" Grid.Column="1" FontAttributes="Bold" Text="{Binding Email}"  ></Label>
+                        <Label Grid.Row="5" Grid.Column="0">Broj rezervacija</Label>
+                        <Label Grid.Row="5" Grid.Column="1" FontAttributes="Bold" Text="{Binding BrojRezervacija}"></Label>
+
+                        <StackLayout Grid.Row="8" Grid.Column="2"
+                         VerticalOptions="CenterAndExpand" 
+                     HorizontalOptions="CenterAndExpand">
+                            <Button x:Name="Uredi" Text="Uredi" BackgroundColor="ForestGreen" FontSize="Small" Clicked="Uredi_Clicked"></Button>
+                        </StackLayout>
+
+                    </Grid>
+
+                </StackLayout>
+
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
