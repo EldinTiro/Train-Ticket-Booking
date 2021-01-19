@@ -1,7 +1,7 @@
     version: '3'
 services:
 #mssql docker
-  vgfeed-sql:
+  ezeljeznice-sql:
     image: mcr.microsoft.com/mssql/server:2017-latest-ubuntu
     restart: unless-stopped
     environment:
@@ -13,7 +13,7 @@ services:
     networks:
       - ezeljeznicenet
 
-  vgfeed-api:
+  ezeljeznice-api:
     restart: unless-stopped
     build:
       context: .
