@@ -27,7 +27,7 @@ namespace eZeljeznice.WebAPI.Services
             var query = _context.Putovanja.AsQueryable();
 
 
-            if (request.VrijemePolaska != null)
+            if (request.VrijemePolaska != null && request.WindowsIndikator == null)
             {
                 query = query.Where(x => x.DatumPolaska == request.VrijemePolaska.Date);
             }

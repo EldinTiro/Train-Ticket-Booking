@@ -28,7 +28,8 @@ namespace eZeljeznice.WinUI.Putovanja
             var search = new PutovanjaSearchRequest()
             {
                 ZeljeznickaOdID = (cmbOD.SelectedIndex).ToString(),
-                ZeljeznickaDoID = (cmbDO.SelectedIndex).ToString()
+                ZeljeznickaDoID = (cmbDO.SelectedIndex).ToString(),
+                WindowsIndikator = "X"
             };
 
             var result = await _apiService.Get<List<PutovanjaVM>>(search);

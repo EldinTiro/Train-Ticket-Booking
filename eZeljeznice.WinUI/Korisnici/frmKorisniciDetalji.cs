@@ -57,12 +57,20 @@ namespace eZeljeznice.WinUI.Korisnici
         private async void frmKorisniciDetalji_Load(object sender, EventArgs e)
         {
             var gradovi = await _apiServiceGradovi.Get<List<GradoviVM>>();
+            List <GradoviVM> gradoviFilter = new List<GradoviVM>();
+
+            foreach (var item in gradovi)
+            {
+                if (item.Sadrzaj == null)
+                    gradoviFilter.Add(item);
+            }
+
             if (gradovi != null)
             {
                 gradovi.Insert(0, new GradoviVM());
                 cbxGradovi.DisplayMember = "Naziv";
                 cbxGradovi.ValueMember = "GradID";
-                cbxGradovi.DataSource = gradovi;
+                cbxGradovi.DataSource = gradoviFilter;
             }
 
             if (_id.HasValue)
