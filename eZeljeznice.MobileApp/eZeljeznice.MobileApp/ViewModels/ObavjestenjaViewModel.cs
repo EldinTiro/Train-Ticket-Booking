@@ -36,9 +36,13 @@ namespace eZeljeznice.MobileApp.ViewModels
 
             ObavjestenjaList.Clear();
 
+
             foreach (var item in listaObavijestenja)
             {
-                ObavjestenjaList.Add(item);
+                if (item.Sadrzaj != null)
+                {
+                    ObavjestenjaList.Add(item);
+                }     
             }
         }
     }

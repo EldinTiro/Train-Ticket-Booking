@@ -83,7 +83,9 @@ namespace eZeljeznice.WebAPI
             services.AddScoped<IProdaneKarteService, ProdaneKarteService>();
             services.AddScoped<IObavjestenjaService, ObavjestenjeService>();
 
-            services.AddDbContext<IB170285Context>(options => options.UseSqlServer(Configuration.GetConnectionString("ZeljeznickeDB")));
+            var connection = Configuration.GetConnectionString("ZeljeznickeDB");
+
+            services.AddDbContext<IB170285Context>(options => options.UseSqlServer(connection));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

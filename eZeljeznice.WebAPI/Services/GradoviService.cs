@@ -28,11 +28,8 @@ namespace eZeljeznice.WebAPI.Services
 
             foreach (var item in list)
             {
-                if (item.Sadrzaj != null)
-                {
                     GradoviVM vmItem = new GradoviVM();
                     vmList.Add(_mapper.Map(item, vmItem));
-                }
             }
 
             return vmList;

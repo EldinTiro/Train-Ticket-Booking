@@ -11,5 +11,7 @@ namespace eZeljeznice.Model.Requests
 
         public DateTime VrijemePolaska { get; set; }
 
+        public string WindowsIndikator { get; set; }
+
     }
 }
