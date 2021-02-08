@@ -64,6 +64,7 @@
             this.comboBoxVrijednostAkcije.Name = "comboBoxVrijednostAkcije";
             this.comboBoxVrijednostAkcije.Size = new System.Drawing.Size(77, 21);
             this.comboBoxVrijednostAkcije.TabIndex = 2;
+            //this.comboBoxVrijednostAkcije.Validating += new System.ComponentModel.CancelEventHandler(this.comboBoxVrijednostAkcije_Validating);
             // 
             // label1
             // 
@@ -151,6 +152,7 @@
             this.Controls.Add(this.cmbxOdredisteAkcija);
             this.Controls.Add(this.cmbxPolazisteAkcija);
             this.Name = "frmPutovanjaAkcije";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmPutovanjaAkcije";
             this.Load += new System.EventHandler(this.frmPutovanjaAkcije_Load);
             this.ResumeLayout(false);

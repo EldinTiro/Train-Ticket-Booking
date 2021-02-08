@@ -9,7 +9,7 @@ namespace eZeljeznice.Model.Responses
         public int KorisnikID { get; set; }
         public string Ime { get; set; }
         public string Prezime { get; set; }
-        public DateTime? DatumRodjenja { get; set; }
+        public DateTime? DatumRegistracije { get; set; }
         public string Email { get; set; }
         public int BrojKupljenihKarata { get; set; }
         public int OstvareniPopust { get; set; }

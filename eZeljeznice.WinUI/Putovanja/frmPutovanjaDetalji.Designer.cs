@@ -88,6 +88,7 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(201, 20);
             this.dateTimePicker1.TabIndex = 4;
+            this.dateTimePicker1.Validating += new System.ComponentModel.CancelEventHandler(this.dateTimePicker1_Validating);
             // 
             // label3
             // 
@@ -113,6 +114,7 @@
             this.timePickerPolazak.Location = new System.Drawing.Point(425, 54);
             this.timePickerPolazak.MinDate = new System.DateTime(1753, 1, 24, 0, 0, 0, 0);
             this.timePickerPolazak.Name = "timePickerPolazak";
+            this.timePickerPolazak.ShowUpDown = true;
             this.timePickerPolazak.Size = new System.Drawing.Size(201, 20);
             this.timePickerPolazak.TabIndex = 6;
             // 
@@ -130,6 +132,7 @@
             this.timePickerDolazak.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.timePickerDolazak.Location = new System.Drawing.Point(425, 109);
             this.timePickerDolazak.Name = "timePickerDolazak";
+            this.timePickerDolazak.ShowUpDown = true;
             this.timePickerDolazak.Size = new System.Drawing.Size(201, 20);
             this.timePickerDolazak.TabIndex = 8;
             // 

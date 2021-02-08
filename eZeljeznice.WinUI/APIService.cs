@@ -78,7 +78,7 @@ namespace eZeljeznice.WinUI
 
         public async Task<T> Update<T>(object id, object request)
         {
-            var url = $"{_apiUrl}/{id}";
+            var url = $"{_apiUrl}/{_route}/{id}";
 
             return await url.WithBasicAuth(Username, Password).PutJsonAsync(request).ReceiveJson<T>();
 
@@ -90,6 +90,13 @@ namespace eZeljeznice.WinUI
 
             return await url.WithBasicAuth(Username, Password).PutJsonAsync(request).ReceiveJson<T>();
 
+        }
+
+        public async Task<T> Authenticiraj<T>(string username, string password)
+        {
+            var url = $"{_apiUrl}/{_route}/Authenticiraj/{username},{password}";
+
+            return await url.GetJsonAsync<T>();
         }
     }
 }

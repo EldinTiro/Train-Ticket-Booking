@@ -22,6 +22,14 @@ namespace eZeljeznice.WebAPI.Controllers
             this._service = service;
         }
 
+        [HttpGet]
+        public List<ProdanaKartaVM> Get([FromQuery]ProdaneKarteSearchRequest request)
+        {
+            var list = _service.Get(request);
+
+            return list;
+        }
+
         [HttpPost]
         public ProdanaKartaVM Insert(ProdaneKarteInsertRequest request)
         {

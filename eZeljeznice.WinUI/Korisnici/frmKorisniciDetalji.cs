@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -26,6 +27,8 @@ namespace eZeljeznice.WinUI.Korisnici
 
         private async void btnSnimi_Click(object sender, EventArgs e)
         {
+            KorisniciVM korisnik = new KorisniciVM();
+
             if (this.ValidateChildren())
             {
                 var request = new KorisniciInsertRequest()
@@ -41,16 +44,31 @@ namespace eZeljeznice.WinUI.Korisnici
                     Status = Convert.ToInt32(cboxAktivan.Checked)
                 };
 
-                if (_id.HasValue)
+                try
                 {
-                    await _service.Update<KorisniciVM>(_id, request);
+                    korisnik = await _service.Insert<KorisniciVM>(request);
                 }
-                else
+                catch (Exception ex)
                 {
-                    await _service.Insert<KorisniciVM>(request);
+                    MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                MessageBox.Show("Operacija uspješna");
+
+
+                if (korisnik.KorisnikId == 100)
+                {
+                    MessageBox.Show("Paswordi se ne slažu");
+                }
+                else if(korisnik.KorisnikId == 200)
+                {
+                    MessageBox.Show("Korisnik pod korisničkim imenom " + request.KorisnickoIme + " već postoji");
+                }
+                else if(korisnik.KorisnickoIme!=null && korisnik.Email!=null)
+                {
+                    MessageBox.Show("Korisnik je uspješno kreiran");
+                }
             }
+                        
+
             
         }
 
@@ -103,7 +121,7 @@ namespace eZeljeznice.WinUI.Korisnici
         {
             if (string.IsNullOrWhiteSpace(txtPrezime.Text))
             {
-                errorProvider.SetError(txtPrezime, Properties.Resources.Validation_RequiredField);
+                errorProvider.SetError(txtPrezime, "Obavezno polje");
                 e.Cancel = true;
             }
             else
@@ -116,7 +134,12 @@ namespace eZeljeznice.WinUI.Korisnici
         {
             if (string.IsNullOrWhiteSpace(txtEmail.Text))
             {
-                errorProvider.SetError(txtEmail, Properties.Resources.Validation_RequiredField);
+                errorProvider.SetError(txtEmail, "Obavezno polje");
+                e.Cancel = true;
+            }
+            else if (!IsValidEmail(txtEmail.Text))
+            {
+                errorProvider.SetError(txtEmail, "Neispravan email format");
                 e.Cancel = true;
             }
             else
@@ -127,9 +150,9 @@ namespace eZeljeznice.WinUI.Korisnici
 
         private void txtDatumRodjenja_Validating(object sender, CancelEventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtDatumRodjenja.Text))
+            if (string.IsNullOrWhiteSpace(txtDatumRodjenja.Text) || txtDatumRodjenja.Value>DateTime.Now)
             {
-                errorProvider.SetError(txtDatumRodjenja, Properties.Resources.Validation_RequiredField);
+                errorProvider.SetError(txtDatumRodjenja, "Previsok datum");
                 e.Cancel = true;
             }
             else
@@ -140,14 +163,28 @@ namespace eZeljeznice.WinUI.Korisnici
 
         private void txtKorisnickoIme_Validating(object sender, CancelEventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtKorisnickoIme.Text))
+            if (string.IsNullOrWhiteSpace(txtKorisnickoIme.Text) || txtKorisnickoIme.Text.Length < 3)
             {
-                errorProvider.SetError(txtKorisnickoIme, Properties.Resources.Validation_RequiredField);
+                errorProvider.SetError(txtKorisnickoIme, "Obavezno polje");
                 e.Cancel = true;
             }
             else
             {
                 errorProvider.SetError(txtKorisnickoIme, null);
+            }
+        }
+
+        public bool IsValidEmail(string emailaddress)
+        {
+            try
+            {
+                MailAddress m = new MailAddress(emailaddress);
+
+                return true;
+            }
+            catch (FormatException)
+            {
+                return false;
             }
         }
     }

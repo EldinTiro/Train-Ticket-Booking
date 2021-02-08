@@ -31,6 +31,14 @@ namespace eZeljeznice.WebAPI.Controllers
 
             return list;
         }
+
+        [HttpGet]
+        [Route("Authenticiraj/{username},{password}")]
+        public KorisniciVM Authenticiraj(string username, string password)
+        {
+            return _service.Authenticiraj(username, password);
+        }
+
         [HttpGet("Loyalty")]
         public List<KorisniciLoyaltyResponse> GetLoyalty()
         {

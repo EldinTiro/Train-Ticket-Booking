@@ -30,9 +30,9 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvKorisnici = new System.Windows.Forms.DataGridView();
+            this.KorisnikID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnPrikazi = new System.Windows.Forms.Button();
             this.txtPretraga = new System.Windows.Forms.TextBox();
-            this.KorisnikID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKorisnici)).BeginInit();
             this.SuspendLayout();
@@ -64,6 +64,14 @@
             this.dgvKorisnici.TabIndex = 0;
             this.dgvKorisnici.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvKorisnici_MouseDoubleClick);
             // 
+            // KorisnikID
+            // 
+            this.KorisnikID.DataPropertyName = "KorisnikID";
+            this.KorisnikID.HeaderText = "KorisnikID";
+            this.KorisnikID.Name = "KorisnikID";
+            this.KorisnikID.ReadOnly = true;
+            this.KorisnikID.Visible = false;
+            // 
             // btnPrikazi
             // 
             this.btnPrikazi.Location = new System.Drawing.Point(725, 24);
@@ -81,14 +89,6 @@
             this.txtPretraga.Size = new System.Drawing.Size(355, 20);
             this.txtPretraga.TabIndex = 2;
             // 
-            // KorisnikID
-            // 
-            this.KorisnikID.DataPropertyName = "KorisnikID";
-            this.KorisnikID.HeaderText = "KorisnikID";
-            this.KorisnikID.Name = "KorisnikID";
-            this.KorisnikID.ReadOnly = true;
-            this.KorisnikID.Visible = false;
-            // 
             // frmKorisnici
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -98,6 +98,7 @@
             this.Controls.Add(this.btnPrikazi);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmKorisnici";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmKorisnici";
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvKorisnici)).EndInit();

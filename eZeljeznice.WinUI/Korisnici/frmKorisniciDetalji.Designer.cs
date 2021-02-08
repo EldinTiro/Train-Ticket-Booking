@@ -233,6 +233,7 @@
             this.Controls.Add(this.Ime);
             this.Controls.Add(this.txtIme);
             this.Name = "frmKorisniciDetalji";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmKorisniciDetalji";
             this.Load += new System.EventHandler(this.frmKorisniciDetalji_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();

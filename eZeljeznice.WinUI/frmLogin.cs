@@ -1,4 +1,5 @@
-﻿using System;
+﻿using eZeljeznice.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,18 +23,26 @@ namespace eZeljeznice.WinUI
         {
             try
             {
-                APIService.Username = txtUsername.Text;
-                APIService.Password = txtPassword.Text;
+                KorisniciVM korisnik = await _service.Authenticiraj<KorisniciVM>(txtUsername.Text, txtPassword.Text);
 
-                await _service.Get<dynamic>(null);
+                if (korisnik != null)
+                {
 
-                frmIndex frm = new frmIndex();
-                frm.Show();
+                    MessageBox.Show("Dobrodosli " + korisnik.Ime + " " + korisnik.Prezime);
+                    DialogResult = DialogResult.OK;
+                    frmIndex frm = new frmIndex();
+                    frm.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Pogresan username ili password", "Autentifikacija", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Authentikacija", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
         }
     }
 }

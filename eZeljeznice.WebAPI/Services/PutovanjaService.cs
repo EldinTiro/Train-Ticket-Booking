@@ -121,7 +121,24 @@ namespace eZeljeznice.WebAPI.Services
 
         public PutovanjaVM Update(int id, PutovanjaInsertRequest request)
         {
-            throw new NotImplementedException();
+            Putovanja putovanjaDB = _context.Putovanja.Find(id);
+
+            PutovanjaVM putovanjaVM = new PutovanjaVM();
+
+            if (putovanjaDB != null)
+            {
+                putovanjaDB.Cijena = request.Cijena;
+                putovanjaDB.DatumPolaska = request.DatumPolaska;
+                putovanjaDB.VrijemeDolaska = request.VrijemeDolaska.Value.TimeOfDay;
+                putovanjaDB.VrijemePolaska = request.VrijemePolaska.Value.TimeOfDay;
+
+                _context.SaveChanges();
+
+                return _mapper.Map<PutovanjaVM>(putovanjaDB);
+            }
+
+            return putovanjaVM;
+
         }
 
         public List<string> UpdateAkcija(PutovanjaAkcijaRequest request)

@@ -20,6 +20,7 @@ namespace eZeljeznice.WebAPI.Controllers
         {
             this._service = service;
         }
+
         [HttpGet]
         public List<RezervacijeVM> Get(int id)
         {

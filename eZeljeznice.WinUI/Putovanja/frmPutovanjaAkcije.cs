@@ -23,24 +23,17 @@ namespace eZeljeznice.WinUI.Putovanja
 
         private async void btnKreirajAkciju_Click(object sender, EventArgs e)
         {
-            var search = new PutovanjaAkcijaRequest
+            if (this.ValidateChildren())
             {
-                ZeljeznickaStanicaODID = (cmbxPolazisteAkcija.SelectedIndex),
-                ZeljeznickaStanicaDOID = (cmbxOdredisteAkcija.SelectedIndex),
-                AkcijaOD = datetimePickerPocetkaAkcije.Value,
-                AkcijaDO = dateTimePickerZavrsetkaAkcije.Value,
-                VrijednostAkcije = (int)comboBoxVrijednostAkcije.SelectedValue
-            };
-
-            if ((int)comboBoxVrijednostAkcije.SelectedValue == 0)
-            {
-                MessageBox.Show("Niste odabrali validnu vrijednost akcije");
-            }
-            else
-            {
-
-                try
+                var search = new PutovanjaAkcijaRequest
                 {
+                    ZeljeznickaStanicaODID = (cmbxPolazisteAkcija.SelectedIndex),
+                    ZeljeznickaStanicaDOID = (cmbxOdredisteAkcija.SelectedIndex),
+                    AkcijaOD = datetimePickerPocetkaAkcije.Value,
+                    AkcijaDO = dateTimePickerZavrsetkaAkcije.Value,
+                    VrijednostAkcije = (int)comboBoxVrijednostAkcije.SelectedValue
+                };
+
                     var result = await _apiService.Update<List<string>>(search);
                     if (result != null && result.Count!=0)
                     {
@@ -51,11 +44,6 @@ namespace eZeljeznice.WinUI.Putovanja
                         MessageBox.Show("Za odabranu akciju nema adekvatnih putovanja");
                     }
 
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
             }
 
         }
@@ -71,7 +59,6 @@ namespace eZeljeznice.WinUI.Putovanja
                 zeljezniceListDO.Insert(0, "");
 
                 var listOfActionValue = new List<int>();
-                listOfActionValue.Add(0);
                 listOfActionValue.Add(10);
                 listOfActionValue.Add(20);
                 listOfActionValue.Add(30);
@@ -83,5 +70,14 @@ namespace eZeljeznice.WinUI.Putovanja
                 comboBoxVrijednostAkcije.DataSource = listOfActionValue;
             
         }
+
+        /*private void comboBoxVrijednostAkcije_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(comboBoxVrijednostAkcije.SelectedText))
+            {
+                errorProvider.SetError(comboBoxVrijednostAkcije, );
+                e.Cancel = true;
+            }
+        }*/
     }
 }

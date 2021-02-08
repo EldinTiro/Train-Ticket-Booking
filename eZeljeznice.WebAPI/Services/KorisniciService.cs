@@ -92,13 +92,25 @@ namespace eZeljeznice.WebAPI.Services
         {
             var entity = _mapper.Map<Korisnici>(request);
 
+            KorisniciVM korisnik = new KorisniciVM(); 
+
             if (request.Password != request.PasswordConfirmation)
             {
-                throw new UserException("Passwordi se ne slazu!");
+                korisnik.KorisnikId = 100;
+                return korisnik;
             }
 
             entity.LozinkaSalt = GenerateSalt();
             entity.LozinkaHash = GenerateHash(entity.LozinkaSalt, request.Password);
+
+            Korisnici checkExists = _context.Korisnici.Where(w => w.KorisnickoIme == request.KorisnickoIme).FirstOrDefault();
+
+            if (checkExists != null)
+            {
+                korisnik.KorisnikId = 200;
+                return korisnik;
+                //throw new UserException("Korisnik pod korisničkim imenom : " + request.KorisnickoIme + " već postoji!");
+            }
 
             _context.Add(entity);
             _context.SaveChanges();
@@ -140,10 +152,10 @@ namespace eZeljeznice.WebAPI.Services
                 {
                     KorisnikID = (int)item.ID,
                     BrojKupljenihKarata = item.Count,
-                    DatumRodjenja = _context.Korisnici.Where(w => w.KorisnikId == item.ID).Select(s => s.DatumRodjenja).FirstOrDefault(),
-                    Email = _context.Korisnici.Where(w => w.KorisnikId == item.ID).Select(s => s.Email).FirstOrDefault(),
-                    Ime = _context.Korisnici.Where(w => w.KorisnikId == item.ID).Select(s => s.Ime).FirstOrDefault(),
-                    Prezime = _context.Korisnici.Where(w => w.KorisnikId == item.ID).Select(s => s.Prezime).FirstOrDefault()
+                    DatumRegistracije = _context.Kupci.Where(w => w.KupacId == item.ID).Select(s => s.DatumRegistracije).FirstOrDefault(),
+                    Email = _context.Kupci.Where(w => w.KupacId == item.ID).Select(s => s.Email).FirstOrDefault(),
+                    Ime = _context.Kupci.Where(w => w.KupacId == item.ID).Select(s => s.Ime).FirstOrDefault(),
+                    Prezime = _context.Kupci.Where(w => w.KupacId == item.ID).Select(s => s.Prezime).FirstOrDefault()
                 });
             }
 

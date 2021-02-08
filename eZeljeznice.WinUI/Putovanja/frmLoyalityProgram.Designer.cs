@@ -34,6 +34,9 @@ namespace eZeljeznice.WinUI.Putovanja
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoyality)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,7 +59,7 @@ namespace eZeljeznice.WinUI.Putovanja
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(20, 330);
+            this.label2.Location = new System.Drawing.Point(32, 475);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(243, 13);
             this.label2.TabIndex = 5;
@@ -64,7 +67,7 @@ namespace eZeljeznice.WinUI.Putovanja
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(332, 363);
+            this.button1.Location = new System.Drawing.Point(343, 466);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(135, 31);
             this.button1.TabIndex = 6;
@@ -72,11 +75,41 @@ namespace eZeljeznice.WinUI.Putovanja
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(32, 333);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(279, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Svi kupci koji su kupili vise 5 karata ostvaruju popust 10%";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(32, 355);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(285, 13);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Svi kupci koji su kupili vise 10 karata ostvaruju popust 15%";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(32, 377);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(285, 13);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Svi kupci koji su kupili vise 20 karata ostvaruju popust 20%";
+            // 
             // frmLoyalityProgram
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(690, 422);
+            this.ClientSize = new System.Drawing.Size(674, 550);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -95,5 +128,8 @@ namespace eZeljeznice.WinUI.Putovanja
         private System.Windows.Forms.Label label1;
         private Label label2;
         private Button button1;
+        private Label label3;
+        private Label label4;
+        private Label label5;
     }
 }

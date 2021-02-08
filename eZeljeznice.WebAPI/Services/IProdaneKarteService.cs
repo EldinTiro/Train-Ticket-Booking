@@ -10,5 +10,6 @@ namespace eZeljeznice.WebAPI.Services
     public interface IProdaneKarteService
     {
         ProdanaKartaVM Insert(ProdaneKarteInsertRequest request);
+        List<ProdanaKartaVM> Get(ProdaneKarteSearchRequest request);
     }
 }
