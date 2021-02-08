@@ -1386,43 +1386,43 @@ namespace eZeljeznice.WebAPI.Migrations
                 table: "Rezervacije",
                 keyColumn: "RezervacijaID",
                 keyValue: 25,
-                columns: new[] { "DatumRezervacije", "PutovanjeID" },
-                values: new object[] { new DateTime(2021, 1, 19, 21, 6, 3, 567, DateTimeKind.Local).AddTicks(7167), 77 });
+                columns: new[] { "DatumRezervacije", "PutovanjeID", "Kompletirana" },
+                values: new object[] { new DateTime(2021, 1, 19, 21, 6, 3, 567, DateTimeKind.Local).AddTicks(7167), 77, false });
 
             migrationBuilder.UpdateData(
                 table: "Rezervacije",
                 keyColumn: "RezervacijaID",
                 keyValue: 26,
-                columns: new[] { "DatumRezervacije", "PutovanjeID" },
-                values: new object[] { new DateTime(2021, 1, 19, 21, 6, 3, 567, DateTimeKind.Local).AddTicks(7240), 59 });
+                columns: new[] { "DatumRezervacije", "PutovanjeID", "Kompletirana" },
+                values: new object[] { new DateTime(2021, 1, 19, 21, 6, 3, 567, DateTimeKind.Local).AddTicks(7240), 59, false });
 
             migrationBuilder.UpdateData(
                 table: "Rezervacije",
                 keyColumn: "RezervacijaID",
                 keyValue: 27,
-                columns: new[] { "DatumRezervacije", "PutovanjeID" },
-                values: new object[] { new DateTime(2021, 1, 19, 21, 6, 3, 567, DateTimeKind.Local).AddTicks(7312), 24 });
+                columns: new[] { "DatumRezervacije", "PutovanjeID", "Kompletirana" },
+                values: new object[] { new DateTime(2021, 1, 19, 21, 6, 3, 567, DateTimeKind.Local).AddTicks(7312), 24, false });
 
             migrationBuilder.UpdateData(
                 table: "Rezervacije",
                 keyColumn: "RezervacijaID",
                 keyValue: 28,
-                columns: new[] { "DatumRezervacije", "PutovanjeID" },
-                values: new object[] { new DateTime(2021, 1, 19, 21, 6, 3, 567, DateTimeKind.Local).AddTicks(7383), 38 });
+                columns: new[] { "DatumRezervacije", "PutovanjeID", "Kompletirana" },
+                values: new object[] { new DateTime(2021, 1, 19, 21, 6, 3, 567, DateTimeKind.Local).AddTicks(7383), 38, false });
 
             migrationBuilder.UpdateData(
                 table: "Rezervacije",
                 keyColumn: "RezervacijaID",
                 keyValue: 29,
-                columns: new[] { "DatumRezervacije", "PutovanjeID" },
-                values: new object[] { new DateTime(2021, 1, 19, 21, 6, 3, 567, DateTimeKind.Local).AddTicks(7454), 19 });
+                columns: new[] { "DatumRezervacije", "PutovanjeID", "Kompletirana" },
+                values: new object[] { new DateTime(2021, 1, 19, 21, 6, 3, 567, DateTimeKind.Local).AddTicks(7454), 19, false });
 
             migrationBuilder.UpdateData(
                 table: "Rezervacije",
                 keyColumn: "RezervacijaID",
                 keyValue: 30,
-                columns: new[] { "DatumRezervacije", "PutovanjeID" },
-                values: new object[] { new DateTime(2021, 1, 19, 21, 6, 3, 567, DateTimeKind.Local).AddTicks(7526), 122 });
+                columns: new[] { "DatumRezervacije", "PutovanjeID", "Kompletirana" },
+                values: new object[] { new DateTime(2021, 1, 19, 21, 6, 3, 567, DateTimeKind.Local).AddTicks(7526), 122,false });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
