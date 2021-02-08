@@ -47,6 +47,7 @@ namespace eZeljeznice.WebAPI.Controllers
         {
             return _service.Insert(request);
         }
+
         [HttpPut("{id}")]
         public PutovanjaVM Update(int id, PutovanjaInsertRequest request)
         {

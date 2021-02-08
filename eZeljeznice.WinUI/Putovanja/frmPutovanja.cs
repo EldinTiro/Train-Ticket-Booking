@@ -18,6 +18,8 @@ namespace eZeljeznice.WinUI.Putovanja
     {
         private readonly APIService _apiService = new APIService("putovanje");
         private readonly APIService _apiServiceZeljeznicke = new APIService("ZeljeznickeStanice");
+
+        private List<PutovanjaVM> putovanja;
         public frmPutovanja()
         {
             InitializeComponent();
@@ -32,12 +34,19 @@ namespace eZeljeznice.WinUI.Putovanja
                 WindowsIndikator = "X"
             };
 
-            var result = await _apiService.Get<List<PutovanjaVM>>(search);
+            putovanja = await _apiService.Get<List<PutovanjaVM>>(search);
 
-            dgvPutovanja.DataSource = result;
+            dgvPutovanja.DataSource = putovanja;
+            dgvPutovanja.AutoResizeColumns();
 
             dgvPutovanja.Columns[0].Visible = false;
             dgvPutovanja.Columns[1].Visible = false;
+            dgvPutovanja.Columns[8].Visible = false;
+
+            if (dgvPutovanja.DataSource != null)
+            {
+                btnPrint.Enabled = true;
+            }
 
         }
 
@@ -53,16 +62,79 @@ namespace eZeljeznice.WinUI.Putovanja
 
             cmbOD.DataSource = zeljezniceListOD;
             cmbDO.DataSource = zeljezniceListDO;
+
+            buttonIzmjeni.Enabled = false;
+            btnPrint.Enabled = false;
         }
 
-        private void cmbOD_SelectedIndexChanged(object sender, EventArgs e)
+        private void dgvPutovanja_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            textBoxDestOD.Text = dgvPutovanja.SelectedRows[0].Cells[2].Value.ToString();
+            textBoxDestDO.Text = dgvPutovanja.SelectedRows[0].Cells[3].Value.ToString();
+            dateTimePickerDatumPolaska.Value = Convert.ToDateTime(dgvPutovanja.SelectedRows[0].Cells[4].Value.ToString());
+            dateTimePickerPolazak.Value = Convert.ToDateTime(dgvPutovanja.SelectedRows[0].Cells[6].Value.ToString());
+            dateTimePickerDolazak.Value = Convert.ToDateTime(dgvPutovanja.SelectedRows[0].Cells[7].Value.ToString());
+            textBoxCijena.Text = dgvPutovanja.SelectedRows[0].Cells[5].Value.ToString();
 
+            if (textBoxDestOD.Text == null || textBoxCijena.Text == null)
+            {
+                buttonIzmjeni.Enabled = false;
+            }
+            else
+                buttonIzmjeni.Enabled = true;
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private async void buttonIzmjeni_Click(object sender, EventArgs e)
         {
+            if (this.ValidateChildren())
+            {
+                var updatePutovanja = new PutovanjaInsertRequest()
+                {
+                    Cijena = Convert.ToDouble(textBoxCijena.Text),
+                    DatumPolaska = dateTimePickerDatumPolaska.Value,
+                    VrijemeDolaska = dateTimePickerDolazak.Value,
+                    VrijemePolaska = dateTimePickerPolazak.Value,
+                    RelacijaId = Convert.ToInt32(dgvPutovanja.SelectedRows[0].Cells[0].Value.ToString())
+                };
 
+                try
+                {
+                    await _apiService.Update<PutovanjaVM>(updatePutovanja.RelacijaId, updatePutovanja);
+                    MessageBox.Show("Putovanje je uspješno uređeno!");
+
+                    frmPutovanja_Load(sender, e);
+
+                    textBoxDestOD.Text = null;
+                    textBoxDestDO.Text = null;
+                    textBoxCijena.Text = null;
+
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            };
         }
+
+        private void textBoxCijena_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            frmReportPutovanja frmReportPutovanja = new frmReportPutovanja(putovanja);
+            frmReportPutovanja.Show();
+        }
+
     }
 }

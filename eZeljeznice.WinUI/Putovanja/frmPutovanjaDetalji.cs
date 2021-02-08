@@ -38,12 +38,14 @@ namespace eZeljeznice.WinUI.Putovanja
             cmbKrajnja.DisplayMember = "Naziv";
             cmbKrajnja.ValueMember = "ZeljeznickaStanicaID";
             cmbKrajnja.DataSource = resultKrajnje;
+
         }
 
         private async void btnSacuvaj_Click(object sender, EventArgs e)
         {
             if (this.ValidateChildren()) 
-            { 
+            {
+
                 var request = new PutovanjaInsertRequest()
                 {
                     Cijena = Convert.ToDouble(txtBoxCijena.Text),
@@ -62,6 +64,10 @@ namespace eZeljeznice.WinUI.Putovanja
                     await _apiServicePutovanje.Insert<PutovanjaVM>(request);
                 }
                 MessageBox.Show("Operacija uspješna");
+            }
+            else
+            {
+                MessageBox.Show("Niste sva polja unijeli korektno");
             }
         }
 
@@ -95,7 +101,7 @@ namespace eZeljeznice.WinUI.Putovanja
         {
             if (cmbPocetna.SelectedIndex == 0)
             {
-                errorProvider.SetError(cmbPocetna, Properties.Resources.Validation_RequiredField);
+                errorProvider.SetError(cmbPocetna, "Obavezno polje");
                 e.Cancel = true;
             }
             else
@@ -108,12 +114,25 @@ namespace eZeljeznice.WinUI.Putovanja
         {
             if (cmbKrajnja.SelectedIndex == 0)
             {
-                errorProvider.SetError(cmbPocetna, Properties.Resources.Validation_RequiredField);
+                errorProvider.SetError(cmbKrajnja, "Obavezno polje");
                 e.Cancel = true;
             }
             else
             {
                 errorProvider.SetError(cmbKrajnja, null);
+            }
+        }
+
+        private void dateTimePicker1_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(dateTimePicker1.Text) || dateTimePicker1.Value < DateTime.Now)
+            {
+                errorProvider.SetError(dateTimePicker1, "Datum ne može biti u prošlosti");
+                e.Cancel = true;
+            }
+            else
+            {
+                errorProvider.SetError(dateTimePicker1, null);
             }
         }
     }

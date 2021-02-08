@@ -21,7 +21,8 @@ namespace eZeljeznice.WebAPI.Database
 
 
             //KORISNICI
-            modelBuilder.Entity<Korisnici>().HasData(new Korisnici() {
+            modelBuilder.Entity<Korisnici>().HasData(new Korisnici()
+            {
                 KorisnikId = 1,
                 Email = "desktop@mail.com",
                 Ime = "test",
@@ -207,15 +208,15 @@ namespace eZeljeznice.WebAPI.Database
             {
                 for (int zdo = 1; zdo < 8; zdo++)
                 {
-                    if (zod != zdo) 
-                    { 
-                    modelBuilder.Entity<Relacije>().HasData(new Relacije()
+                    if (zod != zdo)
                     {
-                        RelacijaId = RelacijaID++,
-                        ZeljeznickaStanicaOdid = zod,
-                        ZeljeznickaStanicaDoid = zdo
+                        modelBuilder.Entity<Relacije>().HasData(new Relacije()
+                        {
+                            RelacijaId = RelacijaID++,
+                            ZeljeznickaStanicaOdid = zod,
+                            ZeljeznickaStanicaDoid = zdo
 
-                    });
+                        });
                     }
                 }
             }
@@ -280,7 +281,7 @@ namespace eZeljeznice.WebAPI.Database
                     DatumPolaska = DateTime.Today.AddDays(2),
                     VrijemePolaska = new TimeSpan(4, 30, 0),
                     VrijemeDolaska = new TimeSpan(11, 30, 0),
-                    Cijena = cijena2 
+                    Cijena = cijena2
                 });
             }
 
@@ -343,7 +344,7 @@ namespace eZeljeznice.WebAPI.Database
                     KartaId = i,
                     RedniBrojSjedista = rnd.Next(1, 30),
                     RedniBrojVagona = rnd.Next(1, 10)
-            });
+                });
             }
 
             //REZERVACIJE
@@ -365,14 +366,14 @@ namespace eZeljeznice.WebAPI.Database
             {
                 modelBuilder.Entity<KupljeneKarte>().HasData(new KupljeneKarte()
                 {
-                ProdanaKartaId = i,
-                BrojRacuna = BrojRacunaHelper.GenerisiBrojRacuna(),
-                DatumProdaje = DateTime.Now,
-                RezervacijaId = rnd.Next(1, 30),
-                Popust = 0,
-                KupacId = 1, 
-                KonacnaCijena = rnd.Next(1, 77)
-            });
+                    ProdanaKartaId = i,
+                    BrojRacuna = BrojRacunaHelper.GenerisiBrojRacuna(),
+                    DatumProdaje = DateTime.Now,
+                    RezervacijaId = rnd.Next(1, 30),
+                    Popust = 0,
+                    KupacId = 1,
+                    KonacnaCijena = rnd.Next(1, 77)
+                });
 
             }
 

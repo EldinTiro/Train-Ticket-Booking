@@ -1,5 +1,7 @@
 ﻿using eZeljeznice.WinUI.Korisnici;
+using eZeljeznice.WinUI.Kupljene_Karte;
 using eZeljeznice.WinUI.Putovanja;
+using eZeljeznice.WinUI.Rezervacije;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -151,5 +153,23 @@ namespace eZeljeznice.WinUI
             frmLoyalityProgram frm = new frmLoyalityProgram();
             frm.Show();
         }
+
+        private void prodaneKarteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmKupljeneKarte frm = new frmKupljeneKarte();
+            frm.Show();
+        }
+
+        private void nekompletiraneToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            frmRezervacije frm = new frmRezervacije();
+            frm.Show();
+        }
+
+        /*private void kupljeneKarteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReportKupljeneKarte frm = new frmReportKupljeneKarte();
+            frm.Show();
+        }*/
     }
 }
