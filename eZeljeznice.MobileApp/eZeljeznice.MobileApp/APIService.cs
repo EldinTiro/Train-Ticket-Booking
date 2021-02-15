@@ -17,10 +17,10 @@ namespace eZeljeznice.MobileApp
         private readonly string _route;
 
 #if DEBUG
-        private string _apiUrl = "http://localhost:50186/api";
+        string _apiUrl = "http://localhost:5000/api";
 #endif
 #if RELEASE
-        private string _apiUrl = "https://mywebsite.azure.com/api/";
+        string _apiUrl = "https://linktoapi.com/api";
 #endif
 
         public APIService(string route)
