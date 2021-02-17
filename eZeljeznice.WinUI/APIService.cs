@@ -16,7 +16,7 @@ namespace eZeljeznice.WinUI
         private string _route = null;
 
 #if DEBUG
-        private string _apiUrl = "http://localhost:50186/api";
+        private string _apiUrl = "http://localhost:5000/api";
 #endif
         public APIService(string route)
         {
