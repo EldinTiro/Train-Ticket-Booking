@@ -17,7 +17,7 @@ namespace eZeljeznice.MobileApp
         private readonly string _route;
 
 #if DEBUG
-        string _apiUrl = "http://localhost:5000/api";
+        private string _apiUrl = "http://localhost:5000/api";
 #endif
 #if RELEASE
         string _apiUrl = "https://linktoapi.com/api";
