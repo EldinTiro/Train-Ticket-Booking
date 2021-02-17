@@ -348,7 +348,7 @@ namespace eZeljeznice.WebAPI.Database
             }
 
             //REZERVACIJE
-            for (int i = 1; i < 31; i++)
+            for (int i = 1; i < 20; i++)
             {
                 modelBuilder.Entity<Rezervacije>().HasData(new Rezervacije()
                 {
@@ -361,8 +361,22 @@ namespace eZeljeznice.WebAPI.Database
                 });
             }
 
+            //nekompletirane
+            for (int i = 20; i < 31; i++)
+            {
+                modelBuilder.Entity<Rezervacije>().HasData(new Rezervacije()
+                {
+                    RezervacijaId = i,
+                    KartaId = i,
+                    DatumRezervacije = DateTime.Now,
+                    KupacId = 1,
+                    PutovanjeId = rnd.Next(1, 126),
+                    Kompletirana = false
+                });
+            }
+
             //PRODANE KARTE
-            for (int i = 1; i < 31; i++)
+            for (int i = 1; i < 20; i++)
             {
                 modelBuilder.Entity<KupljeneKarte>().HasData(new KupljeneKarte()
                 {
@@ -370,6 +384,22 @@ namespace eZeljeznice.WebAPI.Database
                     BrojRacuna = BrojRacunaHelper.GenerisiBrojRacuna(),
                     DatumProdaje = DateTime.Now,
                     RezervacijaId = rnd.Next(1, 30),
+                    Popust = 0,
+                    KupacId = 1,
+                    KonacnaCijena = rnd.Next(1, 77)
+                });
+
+            }
+
+            //nekompletirane
+            for (int i = 20; i < 31; i++)
+            {
+                modelBuilder.Entity<KupljeneKarte>().HasData(new KupljeneKarte()
+                {
+                    ProdanaKartaId = i,
+                    BrojRacuna = BrojRacunaHelper.GenerisiBrojRacuna(),
+                    DatumProdaje = DateTime.Now,
+                    RezervacijaId = i,
                     Popust = 0,
                     KupacId = 1,
                     KonacnaCijena = rnd.Next(1, 77)
