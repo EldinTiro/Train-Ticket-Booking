@@ -2,7 +2,9 @@
 # Train-Ticket-Booking
 Pristupni podaci/Acess info:
 
-desktop/winforms: username : desktop
+desktop/winforms: 
+
+username : desktop
 
 password : test
 
@@ -11,6 +13,51 @@ mobile/xamarinforms:
 username : mobile
 
 password : test
+
+
+TEST DATA:
+
+PRODANE KARTE:
+Today date
+
+PUTOVANJA
+Today date +1 day, Today date +2 day , Today date +3 day
+
+Implementirane su slijedeće funkcionalnosti
+
+UI (Windows forms)
+-	Prijava korisnika
+-	Dodavanje novih korisnika
+-	Pretraga korisnika 
+-	Dodavanje novih putovanja
+-	Izmjena podataka o putovanjima
+-	Pretraga putovanja
+-	Pregled dolaznih i odlaznih putovanja po stanicama
+-	Pregled kupljenih karata
+-	Kreiranje izvještaja
+-	Pregled neprocesiranih rezervacija
+-	Procesiranje rezervacija
+- Loyality program (dodatna)
+- Akcije na putovanja u odabranom periodu (dodatna)
+- Prikaz top relacija - 5 najprometnijih ruta (dodatna)
+
+Mobilna
+-	Prijava kupca
+-	Registracija kupca
+-	Pretaga putovanja
+-	Kupovina karata 
+-	Upravljanje ličnim podacima
+-	Pregled kupljenih karata kupca
+-	Prikaz preporučenih putovanja 
+- Notifikacija/Alert prilikom približavanja putovanja za kojeg je kupljena karta (dodatna)
+- Obavještenja (dodatna)
+- Ocjenjivanje putovanja koja su prošla (dodatna)
+-	Popust na djecu prilikom kupovine karata (dodatna)
+- Generički code karte (dodatna)
+-	Payment servis - Stripe(dodatna)
+-	Info (dodatna)
+
+
 
 About
 This project is made in C# using .NET Core and contains a WebAPI, Xamarin Forms app and a WinForms app for administration.
