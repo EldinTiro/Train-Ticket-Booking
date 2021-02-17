@@ -18,6 +18,9 @@ namespace eZeljeznice.WinUI
 #if DEBUG
         private string _apiUrl = "http://localhost:5000/api";
 #endif
+#if RELEASE
+        string _apiUrl = "https://linktoapi.com/api";
+#endif
         public APIService(string route)
         {
             _route = route;
