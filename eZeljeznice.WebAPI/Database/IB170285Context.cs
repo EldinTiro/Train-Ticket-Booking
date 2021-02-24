@@ -26,6 +26,7 @@ namespace eZeljeznice.WebAPI.Database
         public virtual DbSet<Rezervacije> Rezervacije { get; set; }
         public virtual DbSet<ZeljeznickeStanice> ZeljeznickeStanice { get; set; }
         public virtual DbSet<Obavjestenja> Obavjestenja { get; set; }
+        public virtual DbSet <RSII> RSII { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -171,6 +172,24 @@ namespace eZeljeznice.WebAPI.Database
                     .WithMany(p => p.Pretrage)
                     .HasForeignKey(d => d.RezervacijaID)
                     .HasConstraintName("FK__Pretrage__Rezervacije__01142BA1");
+            });
+
+            modelBuilder.Entity<RSII>(entity =>
+            {
+                entity.HasKey(e => e.RSIIId)
+                    .HasName("PK__RSII__75C8FA1B23B7AAC2");
+
+                entity.Property(e => e.RSIIId).HasColumnName("RSIIId");
+
+                entity.Property(e => e.KupacID).HasColumnName("KupacID");
+
+                entity.Property(e => e.Maliciozan).HasColumnName("Maliciozan");
+
+                entity.HasOne(d => d.Kupac)
+                    .WithMany(p => p.RsII)
+                    .HasForeignKey(d => d.KupacID)
+                    .HasConstraintName("FK__RSII__KupacI__32E0915F");
+
             });
 
             modelBuilder.Entity<Putovanja>(entity =>

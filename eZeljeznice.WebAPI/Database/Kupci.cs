@@ -23,7 +23,7 @@ namespace eZeljeznice.WebAPI.Database
 
         public virtual ICollection<Pretrage> Pretrage { get; set; }
         public virtual ICollection<Rezervacije> Rezervacije { get; set; }
-
         public virtual ICollection<KupljeneKarte> KupljeneKarte { get; set; }
+        public virtual ICollection<RSII> RsII { get; set; }
     }
 }

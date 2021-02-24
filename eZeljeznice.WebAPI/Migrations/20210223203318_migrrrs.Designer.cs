@@ -10,8 +10,8 @@ using eZeljeznice.WebAPI.Database;
 namespace eZeljeznice.WebAPI.Migrations
 {
     [DbContext(typeof(IB170285Context))]
-    [Migration("20210217204723_initialMigration")]
-    partial class initialMigration
+    [Migration("20210223203318_migrrrs")]
+    partial class migrrrs
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -48,63 +48,63 @@ namespace eZeljeznice.WebAPI.Migrations
                         new
                         {
                             GradId = 1,
-                            DatumObjave = new DateTime(2021, 2, 17, 21, 47, 23, 154, DateTimeKind.Local).AddTicks(2206),
+                            DatumObjave = new DateTime(2021, 2, 23, 21, 33, 17, 477, DateTimeKind.Local).AddTicks(4471),
                             Naziv = "Sarajevo"
                         },
                         new
                         {
                             GradId = 2,
-                            DatumObjave = new DateTime(2021, 2, 17, 21, 47, 23, 154, DateTimeKind.Local).AddTicks(3102),
+                            DatumObjave = new DateTime(2021, 2, 23, 21, 33, 17, 477, DateTimeKind.Local).AddTicks(6025),
                             Naziv = "Mostar"
                         },
                         new
                         {
                             GradId = 3,
-                            DatumObjave = new DateTime(2021, 2, 17, 21, 47, 23, 154, DateTimeKind.Local).AddTicks(3166),
+                            DatumObjave = new DateTime(2021, 2, 23, 21, 33, 17, 477, DateTimeKind.Local).AddTicks(6154),
                             Naziv = "Tuzla"
                         },
                         new
                         {
                             GradId = 4,
-                            DatumObjave = new DateTime(2021, 2, 17, 21, 47, 23, 154, DateTimeKind.Local).AddTicks(3193),
+                            DatumObjave = new DateTime(2021, 2, 23, 21, 33, 17, 477, DateTimeKind.Local).AddTicks(6217),
                             Naziv = "Banja luka"
                         },
                         new
                         {
                             GradId = 5,
-                            DatumObjave = new DateTime(2021, 2, 17, 21, 47, 23, 154, DateTimeKind.Local).AddTicks(3218),
+                            DatumObjave = new DateTime(2021, 2, 23, 21, 33, 17, 477, DateTimeKind.Local).AddTicks(6275),
                             Naziv = "Beograd"
                         },
                         new
                         {
                             GradId = 6,
-                            DatumObjave = new DateTime(2021, 2, 17, 21, 47, 23, 154, DateTimeKind.Local).AddTicks(3248),
+                            DatumObjave = new DateTime(2021, 2, 23, 21, 33, 17, 477, DateTimeKind.Local).AddTicks(6339),
                             Naziv = "Zagreb"
                         },
                         new
                         {
                             GradId = 7,
-                            DatumObjave = new DateTime(2021, 2, 17, 21, 47, 23, 154, DateTimeKind.Local).AddTicks(3272),
+                            DatumObjave = new DateTime(2021, 2, 23, 21, 33, 17, 477, DateTimeKind.Local).AddTicks(6396),
                             Naziv = "Split"
                         },
                         new
                         {
                             GradId = 8,
-                            DatumObjave = new DateTime(2021, 2, 17, 21, 47, 23, 154, DateTimeKind.Local).AddTicks(3912),
+                            DatumObjave = new DateTime(2021, 2, 23, 21, 33, 17, 477, DateTimeKind.Local).AddTicks(7630),
                             Naziv = "Obavještenje za putnike",
                             Sadrzaj = "Željeznice FBiH obavještavaju putnike da BH vozovi koji redovno saobraćaju na relacijama Sarajevo-Bihać-Sarajevo i Sarajevo- Banja Luka- Sarajevo do daljnjeg saobraćaju samo na relaciji Sarajevo-Doboj- Sarajevo, zbog vanrednog događaja na dijelu pruge Željeznica Republike Srpske između Doboja i Banja Luke 05.01.2019. godine, kada je došlo do iskakanje iz šina lokalnog putničkog voza Željeznica RS.    Po okončanju posljedica izazvanih ovim vanrednim događajem, ponovo će biti uspostavljena linija Sarajevo-Bihać- Sarajevo i Sarajevo –Banja Luka- Sarajevo.    Putnički saobraćaj na ostalim relacijama odvija se po Redu vožnje ŽFBiH."
                         },
                         new
                         {
                             GradId = 9,
-                            DatumObjave = new DateTime(2021, 2, 19, 21, 47, 23, 154, DateTimeKind.Local).AddTicks(4015),
+                            DatumObjave = new DateTime(2021, 2, 25, 21, 33, 17, 477, DateTimeKind.Local).AddTicks(7889),
                             Naziv = "Putnički voz 2154",
                             Sadrzaj = "Željeznice FBiH obavještavaju putnike da se do daljnjeg otkazuje saobraćaj lokalnog putničkog voza 2154 koji je saobraćao na relaciji Sarajevo-Zenica sa polaskom iz Sarajeva u 11:02 h i lokalnog putničkog voza 2155 koji je saobraćao na relaciji Zenica-Sarajevo sa polaskom iz Zenice u 11:07 h.    Saobraćaj ovih vozova otkazuje se zbog izvođenja radova na pruzi, odnosno, zbog radova na ugradnji optičkog kabla na pomenutoj dionici.    O ponovnoj uspostavi saobraćaja navedenih vozova, putnici će biti blagovremeno obaviješteni."
                         },
                         new
                         {
                             GradId = 10,
-                            DatumObjave = new DateTime(2021, 2, 18, 21, 47, 23, 154, DateTimeKind.Local).AddTicks(4081),
+                            DatumObjave = new DateTime(2021, 2, 24, 21, 33, 17, 477, DateTimeKind.Local).AddTicks(8044),
                             Naziv = "Info o saobraćaju",
                             Sadrzaj = "Željeznice Federacije Bosne i Hercegovine od 01.06.2020. godine uspostavljaju željeznički putnički prevoz u lokalnom saobraćaju, a vozovi će voziti u skladu sa izmijenjenim Redom vožnje."
                         });
@@ -133,182 +133,182 @@ namespace eZeljeznice.WebAPI.Migrations
                         new
                         {
                             KartaId = 1,
-                            RedniBrojSjedista = 24,
-                            RedniBrojVagona = 3
+                            RedniBrojSjedista = 2,
+                            RedniBrojVagona = 1
                         },
                         new
                         {
                             KartaId = 2,
-                            RedniBrojSjedista = 25,
-                            RedniBrojVagona = 4
+                            RedniBrojSjedista = 18,
+                            RedniBrojVagona = 2
                         },
                         new
                         {
                             KartaId = 3,
-                            RedniBrojSjedista = 3,
-                            RedniBrojVagona = 7
+                            RedniBrojSjedista = 16,
+                            RedniBrojVagona = 6
                         },
                         new
                         {
                             KartaId = 4,
-                            RedniBrojSjedista = 3,
+                            RedniBrojSjedista = 16,
                             RedniBrojVagona = 4
                         },
                         new
                         {
                             KartaId = 5,
-                            RedniBrojSjedista = 17,
-                            RedniBrojVagona = 8
-                        },
-                        new
-                        {
-                            KartaId = 6,
-                            RedniBrojSjedista = 6,
-                            RedniBrojVagona = 4
-                        },
-                        new
-                        {
-                            KartaId = 7,
-                            RedniBrojSjedista = 16,
+                            RedniBrojSjedista = 12,
                             RedniBrojVagona = 3
                         },
                         new
                         {
-                            KartaId = 8,
-                            RedniBrojSjedista = 13,
-                            RedniBrojVagona = 6
-                        },
-                        new
-                        {
-                            KartaId = 9,
-                            RedniBrojSjedista = 12,
+                            KartaId = 6,
+                            RedniBrojSjedista = 2,
                             RedniBrojVagona = 8
                         },
                         new
                         {
+                            KartaId = 7,
+                            RedniBrojSjedista = 26,
+                            RedniBrojVagona = 8
+                        },
+                        new
+                        {
+                            KartaId = 8,
+                            RedniBrojSjedista = 18,
+                            RedniBrojVagona = 9
+                        },
+                        new
+                        {
+                            KartaId = 9,
+                            RedniBrojSjedista = 22,
+                            RedniBrojVagona = 1
+                        },
+                        new
+                        {
                             KartaId = 10,
-                            RedniBrojSjedista = 19,
+                            RedniBrojSjedista = 22,
                             RedniBrojVagona = 5
                         },
                         new
                         {
                             KartaId = 11,
-                            RedniBrojSjedista = 13,
-                            RedniBrojVagona = 1
+                            RedniBrojSjedista = 9,
+                            RedniBrojVagona = 2
                         },
                         new
                         {
                             KartaId = 12,
-                            RedniBrojSjedista = 13,
-                            RedniBrojVagona = 6
+                            RedniBrojSjedista = 10,
+                            RedniBrojVagona = 3
                         },
                         new
                         {
                             KartaId = 13,
-                            RedniBrojSjedista = 26,
-                            RedniBrojVagona = 6
+                            RedniBrojSjedista = 28,
+                            RedniBrojVagona = 2
                         },
                         new
                         {
                             KartaId = 14,
-                            RedniBrojSjedista = 14,
-                            RedniBrojVagona = 1
+                            RedniBrojSjedista = 6,
+                            RedniBrojVagona = 9
                         },
                         new
                         {
                             KartaId = 15,
                             RedniBrojSjedista = 5,
-                            RedniBrojVagona = 2
+                            RedniBrojVagona = 9
                         },
                         new
                         {
                             KartaId = 16,
-                            RedniBrojSjedista = 26,
-                            RedniBrojVagona = 7
+                            RedniBrojSjedista = 22,
+                            RedniBrojVagona = 5
                         },
                         new
                         {
                             KartaId = 17,
-                            RedniBrojSjedista = 24,
-                            RedniBrojVagona = 6
+                            RedniBrojSjedista = 1,
+                            RedniBrojVagona = 7
                         },
                         new
                         {
                             KartaId = 18,
+                            RedniBrojSjedista = 10,
+                            RedniBrojVagona = 5
+                        },
+                        new
+                        {
+                            KartaId = 19,
+                            RedniBrojSjedista = 23,
+                            RedniBrojVagona = 7
+                        },
+                        new
+                        {
+                            KartaId = 20,
+                            RedniBrojSjedista = 24,
+                            RedniBrojVagona = 2
+                        },
+                        new
+                        {
+                            KartaId = 21,
+                            RedniBrojSjedista = 27,
+                            RedniBrojVagona = 6
+                        },
+                        new
+                        {
+                            KartaId = 22,
                             RedniBrojSjedista = 12,
                             RedniBrojVagona = 9
                         },
                         new
                         {
-                            KartaId = 19,
-                            RedniBrojSjedista = 6,
+                            KartaId = 23,
+                            RedniBrojSjedista = 24,
                             RedniBrojVagona = 1
                         },
                         new
                         {
-                            KartaId = 20,
-                            RedniBrojSjedista = 3,
-                            RedniBrojVagona = 8
-                        },
-                        new
-                        {
-                            KartaId = 21,
-                            RedniBrojSjedista = 26,
-                            RedniBrojVagona = 9
-                        },
-                        new
-                        {
-                            KartaId = 22,
-                            RedniBrojSjedista = 3,
+                            KartaId = 24,
+                            RedniBrojSjedista = 2,
                             RedniBrojVagona = 4
                         },
                         new
                         {
-                            KartaId = 23,
-                            RedniBrojSjedista = 17,
-                            RedniBrojVagona = 6
-                        },
-                        new
-                        {
-                            KartaId = 24,
-                            RedniBrojSjedista = 18,
-                            RedniBrojVagona = 3
-                        },
-                        new
-                        {
                             KartaId = 25,
-                            RedniBrojSjedista = 20,
-                            RedniBrojVagona = 7
+                            RedniBrojSjedista = 15,
+                            RedniBrojVagona = 3
                         },
                         new
                         {
                             KartaId = 26,
-                            RedniBrojSjedista = 13,
-                            RedniBrojVagona = 3
+                            RedniBrojSjedista = 23,
+                            RedniBrojVagona = 5
                         },
                         new
                         {
                             KartaId = 27,
-                            RedniBrojSjedista = 15,
-                            RedniBrojVagona = 7
+                            RedniBrojSjedista = 7,
+                            RedniBrojVagona = 6
                         },
                         new
                         {
                             KartaId = 28,
-                            RedniBrojSjedista = 26,
-                            RedniBrojVagona = 8
+                            RedniBrojSjedista = 15,
+                            RedniBrojVagona = 9
                         },
                         new
                         {
                             KartaId = 29,
-                            RedniBrojSjedista = 25,
-                            RedniBrojVagona = 2
+                            RedniBrojSjedista = 23,
+                            RedniBrojVagona = 3
                         },
                         new
                         {
                             KartaId = 30,
-                            RedniBrojSjedista = 15,
-                            RedniBrojVagona = 5
+                            RedniBrojSjedista = 6,
+                            RedniBrojVagona = 4
                         });
                 });
 
@@ -365,12 +365,12 @@ namespace eZeljeznice.WebAPI.Migrations
                         new
                         {
                             KorisnikId = 1,
-                            DatumRodjenja = new DateTime(2021, 2, 17, 21, 47, 23, 146, DateTimeKind.Local).AddTicks(8013),
+                            DatumRodjenja = new DateTime(2021, 2, 23, 21, 33, 17, 467, DateTimeKind.Local).AddTicks(7633),
                             Email = "desktop@mail.com",
                             Ime = "test",
                             KorisnickoIme = "desktop",
-                            LozinkaHash = "Hiuk6f7xUlL8CBZ6lGhCmZYK7Q4=",
-                            LozinkaSalt = "G9Vwm9faoCdyOBrImx1D4w==",
+                            LozinkaHash = "mnQFx7PvpQchZzQfP5N89LJ7fhU=",
+                            LozinkaSalt = "HDLl38/f/MVlxPKL79jJBg==",
                             Prezime = "test"
                         });
                 });
@@ -419,12 +419,12 @@ namespace eZeljeznice.WebAPI.Migrations
                         new
                         {
                             KupacId = 1,
-                            DatumRegistracije = new DateTime(2021, 2, 17, 21, 47, 23, 153, DateTimeKind.Local).AddTicks(5791),
+                            DatumRegistracije = new DateTime(2021, 2, 23, 21, 33, 17, 476, DateTimeKind.Local).AddTicks(2671),
                             Email = "mobile@mail.com",
                             Ime = "test",
                             KorisnickoIme = "mobile",
-                            LozinkaHash = "MHW8BA6eNK25EKwvC/4VB7sKfSo=",
-                            LozinkaSalt = "4ty4Z/sPFgFNjYCccKS21Q==",
+                            LozinkaHash = "/oIgjmIlrxtSPLLtTNcv1OVqpCI=",
+                            LozinkaSalt = "Y3jfzdhYV+/8SFae85G0zw==",
                             Prezime = "test"
                         });
                 });
@@ -471,49 +471,49 @@ namespace eZeljeznice.WebAPI.Migrations
                         new
                         {
                             ProdanaKartaId = 1,
-                            BrojRacuna = "2/17/2195",
-                            DatumProdaje = new DateTime(2021, 2, 17, 21, 47, 23, 159, DateTimeKind.Local).AddTicks(2657),
-                            KonacnaCijena = 76.0,
+                            BrojRacuna = "2/23/2190",
+                            DatumProdaje = new DateTime(2021, 2, 22, 0, 0, 0, 0, DateTimeKind.Local),
+                            KonacnaCijena = 39.0,
                             KupacId = 1,
                             Popust = 0,
-                            RezervacijaId = 3
+                            RezervacijaId = 20
                         },
                         new
                         {
                             ProdanaKartaId = 2,
-                            BrojRacuna = "2/17/2107",
-                            DatumProdaje = new DateTime(2021, 2, 17, 21, 47, 23, 159, DateTimeKind.Local).AddTicks(6388),
-                            KonacnaCijena = 47.0,
+                            BrojRacuna = "2/23/2138",
+                            DatumProdaje = new DateTime(2021, 2, 22, 0, 0, 0, 0, DateTimeKind.Local),
+                            KonacnaCijena = 34.0,
                             KupacId = 1,
                             Popust = 0,
-                            RezervacijaId = 17
+                            RezervacijaId = 16
                         },
                         new
                         {
                             ProdanaKartaId = 3,
-                            BrojRacuna = "2/17/2145",
-                            DatumProdaje = new DateTime(2021, 2, 17, 21, 47, 23, 159, DateTimeKind.Local).AddTicks(6578),
-                            KonacnaCijena = 65.0,
+                            BrojRacuna = "2/23/2107",
+                            DatumProdaje = new DateTime(2021, 2, 22, 0, 0, 0, 0, DateTimeKind.Local),
+                            KonacnaCijena = 23.0,
                             KupacId = 1,
                             Popust = 0,
-                            RezervacijaId = 18
+                            RezervacijaId = 23
                         },
                         new
                         {
                             ProdanaKartaId = 4,
-                            BrojRacuna = "2/17/2173",
-                            DatumProdaje = new DateTime(2021, 2, 17, 21, 47, 23, 159, DateTimeKind.Local).AddTicks(6646),
-                            KonacnaCijena = 55.0,
+                            BrojRacuna = "2/23/2163",
+                            DatumProdaje = new DateTime(2021, 2, 22, 0, 0, 0, 0, DateTimeKind.Local),
+                            KonacnaCijena = 68.0,
                             KupacId = 1,
                             Popust = 0,
-                            RezervacijaId = 19
+                            RezervacijaId = 13
                         },
                         new
                         {
                             ProdanaKartaId = 5,
-                            BrojRacuna = "2/17/2167",
-                            DatumProdaje = new DateTime(2021, 2, 17, 21, 47, 23, 159, DateTimeKind.Local).AddTicks(6704),
-                            KonacnaCijena = 10.0,
+                            BrojRacuna = "2/23/2191",
+                            DatumProdaje = new DateTime(2021, 2, 22, 0, 0, 0, 0, DateTimeKind.Local),
+                            KonacnaCijena = 22.0,
                             KupacId = 1,
                             Popust = 0,
                             RezervacijaId = 11
@@ -521,149 +521,149 @@ namespace eZeljeznice.WebAPI.Migrations
                         new
                         {
                             ProdanaKartaId = 6,
-                            BrojRacuna = "2/17/2149",
-                            DatumProdaje = new DateTime(2021, 2, 17, 21, 47, 23, 159, DateTimeKind.Local).AddTicks(6768),
-                            KonacnaCijena = 48.0,
-                            KupacId = 1,
-                            Popust = 0,
-                            RezervacijaId = 29
-                        },
-                        new
-                        {
-                            ProdanaKartaId = 7,
-                            BrojRacuna = "2/17/2178",
-                            DatumProdaje = new DateTime(2021, 2, 17, 21, 47, 23, 159, DateTimeKind.Local).AddTicks(6899),
-                            KonacnaCijena = 17.0,
-                            KupacId = 1,
-                            Popust = 0,
-                            RezervacijaId = 10
-                        },
-                        new
-                        {
-                            ProdanaKartaId = 8,
-                            BrojRacuna = "2/17/2119",
-                            DatumProdaje = new DateTime(2021, 2, 17, 21, 47, 23, 159, DateTimeKind.Local).AddTicks(6962),
-                            KonacnaCijena = 8.0,
-                            KupacId = 1,
-                            Popust = 0,
-                            RezervacijaId = 9
-                        },
-                        new
-                        {
-                            ProdanaKartaId = 9,
-                            BrojRacuna = "2/17/2130",
-                            DatumProdaje = new DateTime(2021, 2, 17, 21, 47, 23, 159, DateTimeKind.Local).AddTicks(7019),
-                            KonacnaCijena = 57.0,
-                            KupacId = 1,
-                            Popust = 0,
-                            RezervacijaId = 14
-                        },
-                        new
-                        {
-                            ProdanaKartaId = 10,
-                            BrojRacuna = "2/17/2114",
-                            DatumProdaje = new DateTime(2021, 2, 17, 21, 47, 23, 159, DateTimeKind.Local).AddTicks(7080),
-                            KonacnaCijena = 30.0,
-                            KupacId = 1,
-                            Popust = 0,
-                            RezervacijaId = 5
-                        },
-                        new
-                        {
-                            ProdanaKartaId = 11,
-                            BrojRacuna = "2/17/2103",
-                            DatumProdaje = new DateTime(2021, 2, 17, 21, 47, 23, 159, DateTimeKind.Local).AddTicks(7135),
-                            KonacnaCijena = 60.0,
-                            KupacId = 1,
-                            Popust = 0,
-                            RezervacijaId = 24
-                        },
-                        new
-                        {
-                            ProdanaKartaId = 12,
-                            BrojRacuna = "2/17/2109",
-                            DatumProdaje = new DateTime(2021, 2, 17, 21, 47, 23, 159, DateTimeKind.Local).AddTicks(7191),
-                            KonacnaCijena = 16.0,
-                            KupacId = 1,
-                            Popust = 0,
-                            RezervacijaId = 5
-                        },
-                        new
-                        {
-                            ProdanaKartaId = 13,
-                            BrojRacuna = "2/17/2186",
-                            DatumProdaje = new DateTime(2021, 2, 17, 21, 47, 23, 159, DateTimeKind.Local).AddTicks(7246),
-                            KonacnaCijena = 5.0,
-                            KupacId = 1,
-                            Popust = 0,
-                            RezervacijaId = 16
-                        },
-                        new
-                        {
-                            ProdanaKartaId = 14,
-                            BrojRacuna = "2/17/2135",
-                            DatumProdaje = new DateTime(2021, 2, 17, 21, 47, 23, 159, DateTimeKind.Local).AddTicks(7302),
+                            BrojRacuna = "2/23/2160",
+                            DatumProdaje = new DateTime(2021, 2, 22, 0, 0, 0, 0, DateTimeKind.Local),
                             KonacnaCijena = 68.0,
-                            KupacId = 1,
-                            Popust = 0,
-                            RezervacijaId = 20
-                        },
-                        new
-                        {
-                            ProdanaKartaId = 15,
-                            BrojRacuna = "2/17/2174",
-                            DatumProdaje = new DateTime(2021, 2, 17, 21, 47, 23, 159, DateTimeKind.Local).AddTicks(7355),
-                            KonacnaCijena = 29.0,
-                            KupacId = 1,
-                            Popust = 0,
-                            RezervacijaId = 17
-                        },
-                        new
-                        {
-                            ProdanaKartaId = 16,
-                            BrojRacuna = "2/17/2170",
-                            DatumProdaje = new DateTime(2021, 2, 17, 21, 47, 23, 159, DateTimeKind.Local).AddTicks(7412),
-                            KonacnaCijena = 42.0,
                             KupacId = 1,
                             Popust = 0,
                             RezervacijaId = 6
                         },
                         new
                         {
-                            ProdanaKartaId = 17,
-                            BrojRacuna = "2/17/2185",
-                            DatumProdaje = new DateTime(2021, 2, 17, 21, 47, 23, 159, DateTimeKind.Local).AddTicks(7467),
-                            KonacnaCijena = 24.0,
+                            ProdanaKartaId = 7,
+                            BrojRacuna = "2/23/2187",
+                            DatumProdaje = new DateTime(2021, 2, 22, 0, 0, 0, 0, DateTimeKind.Local),
+                            KonacnaCijena = 28.0,
                             KupacId = 1,
                             Popust = 0,
-                            RezervacijaId = 9
+                            RezervacijaId = 23
                         },
                         new
                         {
-                            ProdanaKartaId = 18,
-                            BrojRacuna = "2/17/2113",
-                            DatumProdaje = new DateTime(2021, 2, 17, 21, 47, 23, 159, DateTimeKind.Local).AddTicks(7648),
-                            KonacnaCijena = 36.0,
+                            ProdanaKartaId = 8,
+                            BrojRacuna = "2/23/2158",
+                            DatumProdaje = new DateTime(2021, 2, 22, 0, 0, 0, 0, DateTimeKind.Local),
+                            KonacnaCijena = 57.0,
                             KupacId = 1,
                             Popust = 0,
-                            RezervacijaId = 11
+                            RezervacijaId = 6
                         },
                         new
                         {
-                            ProdanaKartaId = 19,
-                            BrojRacuna = "2/17/2136",
-                            DatumProdaje = new DateTime(2021, 2, 17, 21, 47, 23, 159, DateTimeKind.Local).AddTicks(7705),
-                            KonacnaCijena = 14.0,
+                            ProdanaKartaId = 9,
+                            BrojRacuna = "2/23/2104",
+                            DatumProdaje = new DateTime(2021, 2, 22, 0, 0, 0, 0, DateTimeKind.Local),
+                            KonacnaCijena = 55.0,
+                            KupacId = 1,
+                            Popust = 0,
+                            RezervacijaId = 7
+                        },
+                        new
+                        {
+                            ProdanaKartaId = 10,
+                            BrojRacuna = "2/23/2130",
+                            DatumProdaje = new DateTime(2021, 2, 22, 0, 0, 0, 0, DateTimeKind.Local),
+                            KonacnaCijena = 62.0,
+                            KupacId = 1,
+                            Popust = 0,
+                            RezervacijaId = 28
+                        },
+                        new
+                        {
+                            ProdanaKartaId = 11,
+                            BrojRacuna = "2/23/2138",
+                            DatumProdaje = new DateTime(2021, 2, 22, 0, 0, 0, 0, DateTimeKind.Local),
+                            KonacnaCijena = 31.0,
+                            KupacId = 1,
+                            Popust = 0,
+                            RezervacijaId = 4
+                        },
+                        new
+                        {
+                            ProdanaKartaId = 12,
+                            BrojRacuna = "2/23/2106",
+                            DatumProdaje = new DateTime(2021, 2, 22, 0, 0, 0, 0, DateTimeKind.Local),
+                            KonacnaCijena = 23.0,
                             KupacId = 1,
                             Popust = 0,
                             RezervacijaId = 22
                         },
                         new
                         {
+                            ProdanaKartaId = 13,
+                            BrojRacuna = "2/23/2149",
+                            DatumProdaje = new DateTime(2021, 2, 22, 0, 0, 0, 0, DateTimeKind.Local),
+                            KonacnaCijena = 46.0,
+                            KupacId = 1,
+                            Popust = 0,
+                            RezervacijaId = 8
+                        },
+                        new
+                        {
+                            ProdanaKartaId = 14,
+                            BrojRacuna = "2/23/2127",
+                            DatumProdaje = new DateTime(2021, 2, 22, 0, 0, 0, 0, DateTimeKind.Local),
+                            KonacnaCijena = 29.0,
+                            KupacId = 1,
+                            Popust = 0,
+                            RezervacijaId = 6
+                        },
+                        new
+                        {
+                            ProdanaKartaId = 15,
+                            BrojRacuna = "2/23/2108",
+                            DatumProdaje = new DateTime(2021, 2, 22, 0, 0, 0, 0, DateTimeKind.Local),
+                            KonacnaCijena = 27.0,
+                            KupacId = 1,
+                            Popust = 0,
+                            RezervacijaId = 11
+                        },
+                        new
+                        {
+                            ProdanaKartaId = 16,
+                            BrojRacuna = "2/23/2184",
+                            DatumProdaje = new DateTime(2021, 2, 22, 0, 0, 0, 0, DateTimeKind.Local),
+                            KonacnaCijena = 33.0,
+                            KupacId = 1,
+                            Popust = 0,
+                            RezervacijaId = 7
+                        },
+                        new
+                        {
+                            ProdanaKartaId = 17,
+                            BrojRacuna = "2/23/2101",
+                            DatumProdaje = new DateTime(2021, 2, 22, 0, 0, 0, 0, DateTimeKind.Local),
+                            KonacnaCijena = 9.0,
+                            KupacId = 1,
+                            Popust = 0,
+                            RezervacijaId = 28
+                        },
+                        new
+                        {
+                            ProdanaKartaId = 18,
+                            BrojRacuna = "2/23/2101",
+                            DatumProdaje = new DateTime(2021, 2, 22, 0, 0, 0, 0, DateTimeKind.Local),
+                            KonacnaCijena = 48.0,
+                            KupacId = 1,
+                            Popust = 0,
+                            RezervacijaId = 14
+                        },
+                        new
+                        {
+                            ProdanaKartaId = 19,
+                            BrojRacuna = "2/23/2178",
+                            DatumProdaje = new DateTime(2021, 2, 22, 0, 0, 0, 0, DateTimeKind.Local),
+                            KonacnaCijena = 65.0,
+                            KupacId = 1,
+                            Popust = 0,
+                            RezervacijaId = 15
+                        },
+                        new
+                        {
                             ProdanaKartaId = 20,
-                            BrojRacuna = "2/17/2129",
-                            DatumProdaje = new DateTime(2021, 2, 17, 21, 47, 23, 159, DateTimeKind.Local).AddTicks(7761),
-                            KonacnaCijena = 10.0,
+                            BrojRacuna = "2/23/2189",
+                            DatumProdaje = new DateTime(2021, 2, 22, 0, 0, 0, 0, DateTimeKind.Local),
+                            KonacnaCijena = 58.0,
                             KupacId = 1,
                             Popust = 0,
                             RezervacijaId = 20
@@ -671,9 +671,9 @@ namespace eZeljeznice.WebAPI.Migrations
                         new
                         {
                             ProdanaKartaId = 21,
-                            BrojRacuna = "2/17/2132",
-                            DatumProdaje = new DateTime(2021, 2, 17, 21, 47, 23, 159, DateTimeKind.Local).AddTicks(7818),
-                            KonacnaCijena = 54.0,
+                            BrojRacuna = "2/23/2189",
+                            DatumProdaje = new DateTime(2021, 2, 22, 0, 0, 0, 0, DateTimeKind.Local),
+                            KonacnaCijena = 26.0,
                             KupacId = 1,
                             Popust = 0,
                             RezervacijaId = 21
@@ -681,9 +681,9 @@ namespace eZeljeznice.WebAPI.Migrations
                         new
                         {
                             ProdanaKartaId = 22,
-                            BrojRacuna = "2/17/2108",
-                            DatumProdaje = new DateTime(2021, 2, 17, 21, 47, 23, 159, DateTimeKind.Local).AddTicks(7874),
-                            KonacnaCijena = 65.0,
+                            BrojRacuna = "2/23/2111",
+                            DatumProdaje = new DateTime(2021, 2, 22, 0, 0, 0, 0, DateTimeKind.Local),
+                            KonacnaCijena = 20.0,
                             KupacId = 1,
                             Popust = 0,
                             RezervacijaId = 22
@@ -691,9 +691,9 @@ namespace eZeljeznice.WebAPI.Migrations
                         new
                         {
                             ProdanaKartaId = 23,
-                            BrojRacuna = "2/17/2114",
-                            DatumProdaje = new DateTime(2021, 2, 17, 21, 47, 23, 159, DateTimeKind.Local).AddTicks(7930),
-                            KonacnaCijena = 19.0,
+                            BrojRacuna = "2/23/2171",
+                            DatumProdaje = new DateTime(2021, 2, 22, 0, 0, 0, 0, DateTimeKind.Local),
+                            KonacnaCijena = 67.0,
                             KupacId = 1,
                             Popust = 0,
                             RezervacijaId = 23
@@ -701,9 +701,9 @@ namespace eZeljeznice.WebAPI.Migrations
                         new
                         {
                             ProdanaKartaId = 24,
-                            BrojRacuna = "2/17/2180",
-                            DatumProdaje = new DateTime(2021, 2, 17, 21, 47, 23, 159, DateTimeKind.Local).AddTicks(7985),
-                            KonacnaCijena = 53.0,
+                            BrojRacuna = "2/23/2160",
+                            DatumProdaje = new DateTime(2021, 2, 22, 0, 0, 0, 0, DateTimeKind.Local),
+                            KonacnaCijena = 76.0,
                             KupacId = 1,
                             Popust = 0,
                             RezervacijaId = 24
@@ -711,9 +711,9 @@ namespace eZeljeznice.WebAPI.Migrations
                         new
                         {
                             ProdanaKartaId = 25,
-                            BrojRacuna = "2/17/2104",
-                            DatumProdaje = new DateTime(2021, 2, 17, 21, 47, 23, 159, DateTimeKind.Local).AddTicks(8042),
-                            KonacnaCijena = 71.0,
+                            BrojRacuna = "2/23/2174",
+                            DatumProdaje = new DateTime(2021, 2, 22, 0, 0, 0, 0, DateTimeKind.Local),
+                            KonacnaCijena = 19.0,
                             KupacId = 1,
                             Popust = 0,
                             RezervacijaId = 25
@@ -721,9 +721,9 @@ namespace eZeljeznice.WebAPI.Migrations
                         new
                         {
                             ProdanaKartaId = 26,
-                            BrojRacuna = "2/17/2119",
-                            DatumProdaje = new DateTime(2021, 2, 17, 21, 47, 23, 159, DateTimeKind.Local).AddTicks(8096),
-                            KonacnaCijena = 24.0,
+                            BrojRacuna = "2/23/2114",
+                            DatumProdaje = new DateTime(2021, 2, 22, 0, 0, 0, 0, DateTimeKind.Local),
+                            KonacnaCijena = 54.0,
                             KupacId = 1,
                             Popust = 0,
                             RezervacijaId = 26
@@ -731,9 +731,9 @@ namespace eZeljeznice.WebAPI.Migrations
                         new
                         {
                             ProdanaKartaId = 27,
-                            BrojRacuna = "2/17/2185",
-                            DatumProdaje = new DateTime(2021, 2, 17, 21, 47, 23, 159, DateTimeKind.Local).AddTicks(8151),
-                            KonacnaCijena = 27.0,
+                            BrojRacuna = "2/23/2192",
+                            DatumProdaje = new DateTime(2021, 2, 22, 0, 0, 0, 0, DateTimeKind.Local),
+                            KonacnaCijena = 16.0,
                             KupacId = 1,
                             Popust = 0,
                             RezervacijaId = 27
@@ -741,9 +741,9 @@ namespace eZeljeznice.WebAPI.Migrations
                         new
                         {
                             ProdanaKartaId = 28,
-                            BrojRacuna = "2/17/2162",
-                            DatumProdaje = new DateTime(2021, 2, 17, 21, 47, 23, 159, DateTimeKind.Local).AddTicks(8256),
-                            KonacnaCijena = 67.0,
+                            BrojRacuna = "2/23/2193",
+                            DatumProdaje = new DateTime(2021, 2, 22, 0, 0, 0, 0, DateTimeKind.Local),
+                            KonacnaCijena = 6.0,
                             KupacId = 1,
                             Popust = 0,
                             RezervacijaId = 28
@@ -751,9 +751,9 @@ namespace eZeljeznice.WebAPI.Migrations
                         new
                         {
                             ProdanaKartaId = 29,
-                            BrojRacuna = "2/17/2171",
-                            DatumProdaje = new DateTime(2021, 2, 17, 21, 47, 23, 159, DateTimeKind.Local).AddTicks(8315),
-                            KonacnaCijena = 12.0,
+                            BrojRacuna = "2/23/2196",
+                            DatumProdaje = new DateTime(2021, 2, 22, 0, 0, 0, 0, DateTimeKind.Local),
+                            KonacnaCijena = 3.0,
                             KupacId = 1,
                             Popust = 0,
                             RezervacijaId = 29
@@ -761,9 +761,9 @@ namespace eZeljeznice.WebAPI.Migrations
                         new
                         {
                             ProdanaKartaId = 30,
-                            BrojRacuna = "2/17/2101",
-                            DatumProdaje = new DateTime(2021, 2, 17, 21, 47, 23, 159, DateTimeKind.Local).AddTicks(8369),
-                            KonacnaCijena = 9.0,
+                            BrojRacuna = "2/23/2156",
+                            DatumProdaje = new DateTime(2021, 2, 22, 0, 0, 0, 0, DateTimeKind.Local),
+                            KonacnaCijena = 50.0,
                             KupacId = 1,
                             Popust = 0,
                             RezervacijaId = 30
@@ -831,12 +831,268 @@ namespace eZeljeznice.WebAPI.Migrations
                             PretragaId = 1,
                             KupacId = 1,
                             Ocjena = 4,
-                            RelacijaId = 7,
-                            RezervacijaID = 20
+                            RelacijaId = 1,
+                            RezervacijaID = 12
                         },
                         new
                         {
                             PretragaId = 2,
+                            KupacId = 1,
+                            Ocjena = 3,
+                            RelacijaId = 18,
+                            RezervacijaID = 15
+                        },
+                        new
+                        {
+                            PretragaId = 3,
+                            KupacId = 1,
+                            Ocjena = 3,
+                            RelacijaId = 32,
+                            RezervacijaID = 8
+                        },
+                        new
+                        {
+                            PretragaId = 4,
+                            KupacId = 1,
+                            Ocjena = 3,
+                            RelacijaId = 7,
+                            RezervacijaID = 5
+                        },
+                        new
+                        {
+                            PretragaId = 5,
+                            KupacId = 1,
+                            Ocjena = 3,
+                            RelacijaId = 22,
+                            RezervacijaID = 2
+                        },
+                        new
+                        {
+                            PretragaId = 6,
+                            KupacId = 1,
+                            Ocjena = 4,
+                            RelacijaId = 32,
+                            RezervacijaID = 2
+                        },
+                        new
+                        {
+                            PretragaId = 7,
+                            KupacId = 1,
+                            Ocjena = 4,
+                            RelacijaId = 37,
+                            RezervacijaID = 20
+                        },
+                        new
+                        {
+                            PretragaId = 8,
+                            KupacId = 1,
+                            Ocjena = 4,
+                            RelacijaId = 15,
+                            RezervacijaID = 8
+                        },
+                        new
+                        {
+                            PretragaId = 9,
+                            KupacId = 1,
+                            Ocjena = 3,
+                            RelacijaId = 23,
+                            RezervacijaID = 18
+                        },
+                        new
+                        {
+                            PretragaId = 10,
+                            KupacId = 1,
+                            Ocjena = 4,
+                            RelacijaId = 20,
+                            RezervacijaID = 12
+                        },
+                        new
+                        {
+                            PretragaId = 11,
+                            KupacId = 1,
+                            Ocjena = 3,
+                            RelacijaId = 22,
+                            RezervacijaID = 2
+                        },
+                        new
+                        {
+                            PretragaId = 12,
+                            KupacId = 1,
+                            Ocjena = 3,
+                            RelacijaId = 41,
+                            RezervacijaID = 21
+                        },
+                        new
+                        {
+                            PretragaId = 13,
+                            KupacId = 1,
+                            Ocjena = 4,
+                            RelacijaId = 39,
+                            RezervacijaID = 19
+                        },
+                        new
+                        {
+                            PretragaId = 14,
+                            KupacId = 1,
+                            Ocjena = 4,
+                            RelacijaId = 8,
+                            RezervacijaID = 23
+                        },
+                        new
+                        {
+                            PretragaId = 15,
+                            KupacId = 1,
+                            Ocjena = 4,
+                            RelacijaId = 29,
+                            RezervacijaID = 8
+                        },
+                        new
+                        {
+                            PretragaId = 16,
+                            KupacId = 1,
+                            Ocjena = 3,
+                            RelacijaId = 9,
+                            RezervacijaID = 7
+                        },
+                        new
+                        {
+                            PretragaId = 17,
+                            KupacId = 1,
+                            Ocjena = 4,
+                            RelacijaId = 8,
+                            RezervacijaID = 29
+                        },
+                        new
+                        {
+                            PretragaId = 18,
+                            KupacId = 1,
+                            Ocjena = 3,
+                            RelacijaId = 17,
+                            RezervacijaID = 8
+                        },
+                        new
+                        {
+                            PretragaId = 19,
+                            KupacId = 1,
+                            Ocjena = 4,
+                            RelacijaId = 6,
+                            RezervacijaID = 3
+                        },
+                        new
+                        {
+                            PretragaId = 20,
+                            KupacId = 1,
+                            Ocjena = 4,
+                            RelacijaId = 37,
+                            RezervacijaID = 18
+                        },
+                        new
+                        {
+                            PretragaId = 21,
+                            KupacId = 1,
+                            Ocjena = 3,
+                            RelacijaId = 36,
+                            RezervacijaID = 3
+                        },
+                        new
+                        {
+                            PretragaId = 22,
+                            KupacId = 1,
+                            Ocjena = 4,
+                            RelacijaId = 5,
+                            RezervacijaID = 19
+                        },
+                        new
+                        {
+                            PretragaId = 23,
+                            KupacId = 1,
+                            Ocjena = 4,
+                            RelacijaId = 14,
+                            RezervacijaID = 28
+                        },
+                        new
+                        {
+                            PretragaId = 24,
+                            KupacId = 1,
+                            Ocjena = 4,
+                            RelacijaId = 18,
+                            RezervacijaID = 20
+                        },
+                        new
+                        {
+                            PretragaId = 25,
+                            KupacId = 1,
+                            Ocjena = 4,
+                            RelacijaId = 37,
+                            RezervacijaID = 13
+                        },
+                        new
+                        {
+                            PretragaId = 26,
+                            KupacId = 1,
+                            Ocjena = 4,
+                            RelacijaId = 41,
+                            RezervacijaID = 21
+                        },
+                        new
+                        {
+                            PretragaId = 27,
+                            KupacId = 1,
+                            Ocjena = 3,
+                            RelacijaId = 15,
+                            RezervacijaID = 11
+                        },
+                        new
+                        {
+                            PretragaId = 28,
+                            KupacId = 1,
+                            Ocjena = 3,
+                            RelacijaId = 19,
+                            RezervacijaID = 26
+                        },
+                        new
+                        {
+                            PretragaId = 29,
+                            KupacId = 1,
+                            Ocjena = 3,
+                            RelacijaId = 34,
+                            RezervacijaID = 20
+                        },
+                        new
+                        {
+                            PretragaId = 30,
+                            KupacId = 1,
+                            Ocjena = 4,
+                            RelacijaId = 26,
+                            RezervacijaID = 1
+                        },
+                        new
+                        {
+                            PretragaId = 31,
+                            KupacId = 1,
+                            Ocjena = 3,
+                            RelacijaId = 1,
+                            RezervacijaID = 21
+                        },
+                        new
+                        {
+                            PretragaId = 32,
+                            KupacId = 1,
+                            Ocjena = 3,
+                            RelacijaId = 30,
+                            RezervacijaID = 19
+                        },
+                        new
+                        {
+                            PretragaId = 33,
+                            KupacId = 1,
+                            Ocjena = 4,
+                            RelacijaId = 26,
+                            RezervacijaID = 17
+                        },
+                        new
+                        {
+                            PretragaId = 34,
                             KupacId = 1,
                             Ocjena = 4,
                             RelacijaId = 12,
@@ -844,322 +1100,66 @@ namespace eZeljeznice.WebAPI.Migrations
                         },
                         new
                         {
-                            PretragaId = 3,
-                            KupacId = 1,
-                            Ocjena = 3,
-                            RelacijaId = 35,
-                            RezervacijaID = 10
-                        },
-                        new
-                        {
-                            PretragaId = 4,
-                            KupacId = 1,
-                            Ocjena = 3,
-                            RelacijaId = 23,
-                            RezervacijaID = 3
-                        },
-                        new
-                        {
-                            PretragaId = 5,
-                            KupacId = 1,
-                            Ocjena = 4,
-                            RelacijaId = 6,
-                            RezervacijaID = 22
-                        },
-                        new
-                        {
-                            PretragaId = 6,
-                            KupacId = 1,
-                            Ocjena = 3,
-                            RelacijaId = 18,
-                            RezervacijaID = 27
-                        },
-                        new
-                        {
-                            PretragaId = 7,
-                            KupacId = 1,
-                            Ocjena = 4,
-                            RelacijaId = 35,
-                            RezervacijaID = 1
-                        },
-                        new
-                        {
-                            PretragaId = 8,
-                            KupacId = 1,
-                            Ocjena = 4,
-                            RelacijaId = 13,
-                            RezervacijaID = 11
-                        },
-                        new
-                        {
-                            PretragaId = 9,
-                            KupacId = 1,
-                            Ocjena = 4,
-                            RelacijaId = 23,
-                            RezervacijaID = 13
-                        },
-                        new
-                        {
-                            PretragaId = 10,
-                            KupacId = 1,
-                            Ocjena = 4,
-                            RelacijaId = 10,
-                            RezervacijaID = 3
-                        },
-                        new
-                        {
-                            PretragaId = 11,
-                            KupacId = 1,
-                            Ocjena = 4,
-                            RelacijaId = 8,
-                            RezervacijaID = 6
-                        },
-                        new
-                        {
-                            PretragaId = 12,
-                            KupacId = 1,
-                            Ocjena = 3,
-                            RelacijaId = 37,
-                            RezervacijaID = 23
-                        },
-                        new
-                        {
-                            PretragaId = 13,
-                            KupacId = 1,
-                            Ocjena = 3,
-                            RelacijaId = 25,
-                            RezervacijaID = 21
-                        },
-                        new
-                        {
-                            PretragaId = 14,
-                            KupacId = 1,
-                            Ocjena = 4,
-                            RelacijaId = 3,
-                            RezervacijaID = 15
-                        },
-                        new
-                        {
-                            PretragaId = 15,
-                            KupacId = 1,
-                            Ocjena = 4,
-                            RelacijaId = 4,
-                            RezervacijaID = 11
-                        },
-                        new
-                        {
-                            PretragaId = 16,
-                            KupacId = 1,
-                            Ocjena = 3,
-                            RelacijaId = 4,
-                            RezervacijaID = 16
-                        },
-                        new
-                        {
-                            PretragaId = 17,
-                            KupacId = 1,
-                            Ocjena = 4,
-                            RelacijaId = 1,
-                            RezervacijaID = 21
-                        },
-                        new
-                        {
-                            PretragaId = 18,
-                            KupacId = 1,
-                            Ocjena = 3,
-                            RelacijaId = 35,
-                            RezervacijaID = 1
-                        },
-                        new
-                        {
-                            PretragaId = 19,
-                            KupacId = 1,
-                            Ocjena = 4,
-                            RelacijaId = 14,
-                            RezervacijaID = 9
-                        },
-                        new
-                        {
-                            PretragaId = 20,
-                            KupacId = 1,
-                            Ocjena = 4,
-                            RelacijaId = 21,
-                            RezervacijaID = 26
-                        },
-                        new
-                        {
-                            PretragaId = 21,
-                            KupacId = 1,
-                            Ocjena = 4,
-                            RelacijaId = 9,
-                            RezervacijaID = 6
-                        },
-                        new
-                        {
-                            PretragaId = 22,
-                            KupacId = 1,
-                            Ocjena = 3,
-                            RelacijaId = 38,
-                            RezervacijaID = 15
-                        },
-                        new
-                        {
-                            PretragaId = 23,
-                            KupacId = 1,
-                            Ocjena = 3,
-                            RelacijaId = 41,
-                            RezervacijaID = 19
-                        },
-                        new
-                        {
-                            PretragaId = 24,
-                            KupacId = 1,
-                            Ocjena = 4,
-                            RelacijaId = 10,
-                            RezervacijaID = 22
-                        },
-                        new
-                        {
-                            PretragaId = 25,
-                            KupacId = 1,
-                            Ocjena = 4,
-                            RelacijaId = 22,
-                            RezervacijaID = 10
-                        },
-                        new
-                        {
-                            PretragaId = 26,
-                            KupacId = 1,
-                            Ocjena = 3,
-                            RelacijaId = 1,
-                            RezervacijaID = 6
-                        },
-                        new
-                        {
-                            PretragaId = 27,
-                            KupacId = 1,
-                            Ocjena = 3,
-                            RelacijaId = 38,
-                            RezervacijaID = 2
-                        },
-                        new
-                        {
-                            PretragaId = 28,
-                            KupacId = 1,
-                            Ocjena = 3,
-                            RelacijaId = 17,
-                            RezervacijaID = 15
-                        },
-                        new
-                        {
-                            PretragaId = 29,
-                            KupacId = 1,
-                            Ocjena = 3,
-                            RelacijaId = 7,
-                            RezervacijaID = 1
-                        },
-                        new
-                        {
-                            PretragaId = 30,
-                            KupacId = 1,
-                            Ocjena = 4,
-                            RelacijaId = 21,
-                            RezervacijaID = 7
-                        },
-                        new
-                        {
-                            PretragaId = 31,
-                            KupacId = 1,
-                            Ocjena = 3,
-                            RelacijaId = 34,
-                            RezervacijaID = 12
-                        },
-                        new
-                        {
-                            PretragaId = 32,
-                            KupacId = 1,
-                            Ocjena = 4,
-                            RelacijaId = 13,
-                            RezervacijaID = 9
-                        },
-                        new
-                        {
-                            PretragaId = 33,
-                            KupacId = 1,
-                            Ocjena = 3,
-                            RelacijaId = 35,
-                            RezervacijaID = 2
-                        },
-                        new
-                        {
-                            PretragaId = 34,
-                            KupacId = 1,
-                            Ocjena = 3,
-                            RelacijaId = 37,
-                            RezervacijaID = 7
-                        },
-                        new
-                        {
                             PretragaId = 35,
                             KupacId = 1,
                             Ocjena = 4,
-                            RelacijaId = 39,
-                            RezervacijaID = 25
+                            RelacijaId = 13,
+                            RezervacijaID = 24
                         },
                         new
                         {
                             PretragaId = 36,
                             KupacId = 1,
-                            Ocjena = 3,
-                            RelacijaId = 29,
-                            RezervacijaID = 2
+                            Ocjena = 4,
+                            RelacijaId = 33,
+                            RezervacijaID = 3
                         },
                         new
                         {
                             PretragaId = 37,
                             KupacId = 1,
                             Ocjena = 3,
-                            RelacijaId = 5,
-                            RezervacijaID = 16
+                            RelacijaId = 16,
+                            RezervacijaID = 13
                         },
                         new
                         {
                             PretragaId = 38,
                             KupacId = 1,
                             Ocjena = 4,
-                            RelacijaId = 35,
-                            RezervacijaID = 19
+                            RelacijaId = 11,
+                            RezervacijaID = 29
                         },
                         new
                         {
                             PretragaId = 39,
                             KupacId = 1,
-                            Ocjena = 4,
-                            RelacijaId = 30,
-                            RezervacijaID = 8
+                            Ocjena = 3,
+                            RelacijaId = 8,
+                            RezervacijaID = 16
                         },
                         new
                         {
                             PretragaId = 40,
                             KupacId = 1,
-                            Ocjena = 4,
-                            RelacijaId = 21,
-                            RezervacijaID = 11
+                            Ocjena = 3,
+                            RelacijaId = 41,
+                            RezervacijaID = 29
                         },
                         new
                         {
                             PretragaId = 41,
                             KupacId = 1,
-                            Ocjena = 3,
-                            RelacijaId = 18,
-                            RezervacijaID = 1
+                            Ocjena = 4,
+                            RelacijaId = 39,
+                            RezervacijaID = 16
                         },
                         new
                         {
                             PretragaId = 42,
                             KupacId = 1,
                             Ocjena = 3,
-                            RelacijaId = 16,
+                            RelacijaId = 41,
                             RezervacijaID = 20
                         },
                         new
@@ -1167,8 +1167,8 @@ namespace eZeljeznice.WebAPI.Migrations
                             PretragaId = 43,
                             KupacId = 1,
                             Ocjena = 3,
-                            RelacijaId = 2,
-                            RezervacijaID = 22
+                            RelacijaId = 33,
+                            RezervacijaID = 23
                         },
                         new
                         {
@@ -1176,85 +1176,85 @@ namespace eZeljeznice.WebAPI.Migrations
                             KupacId = 1,
                             Ocjena = 3,
                             RelacijaId = 6,
-                            RezervacijaID = 27
+                            RezervacijaID = 11
                         },
                         new
                         {
                             PretragaId = 45,
                             KupacId = 1,
                             Ocjena = 3,
-                            RelacijaId = 34,
-                            RezervacijaID = 1
+                            RelacijaId = 18,
+                            RezervacijaID = 3
                         },
                         new
                         {
                             PretragaId = 46,
                             KupacId = 1,
                             Ocjena = 3,
-                            RelacijaId = 26,
-                            RezervacijaID = 11
+                            RelacijaId = 4,
+                            RezervacijaID = 13
                         },
                         new
                         {
                             PretragaId = 47,
                             KupacId = 1,
                             Ocjena = 3,
-                            RelacijaId = 40,
-                            RezervacijaID = 14
+                            RelacijaId = 24,
+                            RezervacijaID = 16
                         },
                         new
                         {
                             PretragaId = 48,
                             KupacId = 1,
                             Ocjena = 3,
-                            RelacijaId = 28,
-                            RezervacijaID = 1
+                            RelacijaId = 24,
+                            RezervacijaID = 19
                         },
                         new
                         {
                             PretragaId = 49,
                             KupacId = 1,
                             Ocjena = 4,
-                            RelacijaId = 31,
-                            RezervacijaID = 8
+                            RelacijaId = 30,
+                            RezervacijaID = 21
                         },
                         new
                         {
                             PretragaId = 50,
                             KupacId = 1,
                             Ocjena = 4,
-                            RelacijaId = 1,
+                            RelacijaId = 5,
                             RezervacijaID = 16
                         },
                         new
                         {
                             PretragaId = 51,
                             KupacId = 1,
-                            Ocjena = 3,
-                            RelacijaId = 28,
-                            RezervacijaID = 1
+                            Ocjena = 4,
+                            RelacijaId = 25,
+                            RezervacijaID = 27
                         },
                         new
                         {
                             PretragaId = 52,
                             KupacId = 1,
                             Ocjena = 3,
-                            RelacijaId = 9,
-                            RezervacijaID = 13
+                            RelacijaId = 18,
+                            RezervacijaID = 9
                         },
                         new
                         {
                             PretragaId = 53,
                             KupacId = 1,
-                            Ocjena = 4,
-                            RelacijaId = 8,
-                            RezervacijaID = 19
+                            Ocjena = 3,
+                            RelacijaId = 6,
+                            RezervacijaID = 7
                         },
                         new
                         {
                             PretragaId = 54,
                             KupacId = 1,
-                            Ocjena = 4,
+                            Ocjena = 3,
                             RelacijaId = 13,
                             RezervacijaID = 11
                         },
@@ -1262,361 +1262,361 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PretragaId = 55,
                             KupacId = 1,
-                            Ocjena = 4,
-                            RelacijaId = 26,
-                            RezervacijaID = 4
+                            Ocjena = 3,
+                            RelacijaId = 3,
+                            RezervacijaID = 10
                         },
                         new
                         {
                             PretragaId = 56,
                             KupacId = 1,
-                            Ocjena = 3,
-                            RelacijaId = 26,
-                            RezervacijaID = 4
+                            Ocjena = 4,
+                            RelacijaId = 36,
+                            RezervacijaID = 23
                         },
                         new
                         {
                             PretragaId = 57,
                             KupacId = 1,
                             Ocjena = 3,
-                            RelacijaId = 38,
-                            RezervacijaID = 16
+                            RelacijaId = 5,
+                            RezervacijaID = 13
                         },
                         new
                         {
                             PretragaId = 58,
                             KupacId = 1,
-                            Ocjena = 4,
-                            RelacijaId = 37,
-                            RezervacijaID = 11
+                            Ocjena = 3,
+                            RelacijaId = 18,
+                            RezervacijaID = 9
                         },
                         new
                         {
                             PretragaId = 59,
                             KupacId = 1,
-                            Ocjena = 4,
-                            RelacijaId = 40,
-                            RezervacijaID = 9
+                            Ocjena = 3,
+                            RelacijaId = 37,
+                            RezervacijaID = 8
                         },
                         new
                         {
                             PretragaId = 60,
                             KupacId = 1,
-                            Ocjena = 4,
-                            RelacijaId = 17,
-                            RezervacijaID = 3
+                            Ocjena = 3,
+                            RelacijaId = 41,
+                            RezervacijaID = 13
                         },
                         new
                         {
                             PretragaId = 61,
                             KupacId = 1,
-                            Ocjena = 3,
-                            RelacijaId = 9,
-                            RezervacijaID = 14
+                            Ocjena = 4,
+                            RelacijaId = 11,
+                            RezervacijaID = 19
                         },
                         new
                         {
                             PretragaId = 62,
                             KupacId = 1,
-                            Ocjena = 3,
-                            RelacijaId = 37,
+                            Ocjena = 4,
+                            RelacijaId = 20,
                             RezervacijaID = 19
                         },
                         new
                         {
                             PretragaId = 63,
                             KupacId = 1,
-                            Ocjena = 4,
-                            RelacijaId = 25,
-                            RezervacijaID = 24
+                            Ocjena = 3,
+                            RelacijaId = 33,
+                            RezervacijaID = 21
                         },
                         new
                         {
                             PretragaId = 64,
                             KupacId = 1,
-                            Ocjena = 3,
-                            RelacijaId = 30,
-                            RezervacijaID = 18
+                            Ocjena = 4,
+                            RelacijaId = 10,
+                            RezervacijaID = 21
                         },
                         new
                         {
                             PretragaId = 65,
                             KupacId = 1,
-                            Ocjena = 4,
-                            RelacijaId = 4,
-                            RezervacijaID = 26
+                            Ocjena = 3,
+                            RelacijaId = 8,
+                            RezervacijaID = 25
                         },
                         new
                         {
                             PretragaId = 66,
                             KupacId = 1,
-                            Ocjena = 3,
-                            RelacijaId = 38,
-                            RezervacijaID = 24
+                            Ocjena = 4,
+                            RelacijaId = 13,
+                            RezervacijaID = 1
                         },
                         new
                         {
                             PretragaId = 67,
                             KupacId = 1,
-                            Ocjena = 3,
-                            RelacijaId = 6,
-                            RezervacijaID = 13
+                            Ocjena = 4,
+                            RelacijaId = 38,
+                            RezervacijaID = 29
                         },
                         new
                         {
                             PretragaId = 68,
                             KupacId = 1,
                             Ocjena = 3,
-                            RelacijaId = 40,
+                            RelacijaId = 4,
                             RezervacijaID = 28
                         },
                         new
                         {
                             PretragaId = 69,
                             KupacId = 1,
-                            Ocjena = 4,
-                            RelacijaId = 27,
-                            RezervacijaID = 15
+                            Ocjena = 3,
+                            RelacijaId = 26,
+                            RezervacijaID = 13
                         },
                         new
                         {
                             PretragaId = 70,
                             KupacId = 1,
-                            Ocjena = 3,
-                            RelacijaId = 7,
-                            RezervacijaID = 25
+                            Ocjena = 4,
+                            RelacijaId = 2,
+                            RezervacijaID = 7
                         },
                         new
                         {
                             PretragaId = 71,
                             KupacId = 1,
-                            Ocjena = 4,
-                            RelacijaId = 22,
-                            RezervacijaID = 20
+                            Ocjena = 3,
+                            RelacijaId = 32,
+                            RezervacijaID = 1
                         },
                         new
                         {
                             PretragaId = 72,
                             KupacId = 1,
                             Ocjena = 3,
-                            RelacijaId = 38,
-                            RezervacijaID = 28
+                            RelacijaId = 30,
+                            RezervacijaID = 2
                         },
                         new
                         {
                             PretragaId = 73,
                             KupacId = 1,
                             Ocjena = 4,
-                            RelacijaId = 20,
-                            RezervacijaID = 19
+                            RelacijaId = 29,
+                            RezervacijaID = 10
                         },
                         new
                         {
                             PretragaId = 74,
                             KupacId = 1,
                             Ocjena = 3,
-                            RelacijaId = 14,
-                            RezervacijaID = 15
+                            RelacijaId = 4,
+                            RezervacijaID = 22
                         },
                         new
                         {
                             PretragaId = 75,
                             KupacId = 1,
-                            Ocjena = 3,
-                            RelacijaId = 40,
-                            RezervacijaID = 13
+                            Ocjena = 4,
+                            RelacijaId = 31,
+                            RezervacijaID = 25
                         },
                         new
                         {
                             PretragaId = 76,
                             KupacId = 1,
-                            Ocjena = 4,
-                            RelacijaId = 21,
-                            RezervacijaID = 20
+                            Ocjena = 3,
+                            RelacijaId = 19,
+                            RezervacijaID = 5
                         },
                         new
                         {
                             PretragaId = 77,
                             KupacId = 1,
-                            Ocjena = 3,
-                            RelacijaId = 20,
-                            RezervacijaID = 26
+                            Ocjena = 4,
+                            RelacijaId = 12,
+                            RezervacijaID = 5
                         },
                         new
                         {
                             PretragaId = 78,
                             KupacId = 1,
                             Ocjena = 3,
-                            RelacijaId = 29,
-                            RezervacijaID = 22
+                            RelacijaId = 20,
+                            RezervacijaID = 25
                         },
                         new
                         {
                             PretragaId = 79,
                             KupacId = 1,
                             Ocjena = 3,
-                            RelacijaId = 22,
-                            RezervacijaID = 15
+                            RelacijaId = 29,
+                            RezervacijaID = 12
                         },
                         new
                         {
                             PretragaId = 80,
                             KupacId = 1,
-                            Ocjena = 3,
-                            RelacijaId = 5,
-                            RezervacijaID = 28
+                            Ocjena = 4,
+                            RelacijaId = 8,
+                            RezervacijaID = 19
                         },
                         new
                         {
                             PretragaId = 81,
                             KupacId = 1,
-                            Ocjena = 3,
-                            RelacijaId = 41,
-                            RezervacijaID = 20
+                            Ocjena = 4,
+                            RelacijaId = 21,
+                            RezervacijaID = 12
                         },
                         new
                         {
                             PretragaId = 82,
                             KupacId = 1,
                             Ocjena = 3,
-                            RelacijaId = 38,
-                            RezervacijaID = 11
+                            RelacijaId = 29,
+                            RezervacijaID = 14
                         },
                         new
                         {
                             PretragaId = 83,
                             KupacId = 1,
                             Ocjena = 3,
-                            RelacijaId = 38,
-                            RezervacijaID = 19
+                            RelacijaId = 32,
+                            RezervacijaID = 24
                         },
                         new
                         {
                             PretragaId = 84,
                             KupacId = 1,
-                            Ocjena = 3,
-                            RelacijaId = 7,
-                            RezervacijaID = 17
+                            Ocjena = 4,
+                            RelacijaId = 28,
+                            RezervacijaID = 6
                         },
                         new
                         {
                             PretragaId = 85,
                             KupacId = 1,
                             Ocjena = 4,
-                            RelacijaId = 38,
-                            RezervacijaID = 9
+                            RelacijaId = 11,
+                            RezervacijaID = 27
                         },
                         new
                         {
                             PretragaId = 86,
                             KupacId = 1,
                             Ocjena = 3,
-                            RelacijaId = 22,
-                            RezervacijaID = 4
+                            RelacijaId = 5,
+                            RezervacijaID = 23
                         },
                         new
                         {
                             PretragaId = 87,
                             KupacId = 1,
                             Ocjena = 3,
-                            RelacijaId = 35,
-                            RezervacijaID = 26
+                            RelacijaId = 12,
+                            RezervacijaID = 5
                         },
                         new
                         {
                             PretragaId = 88,
                             KupacId = 1,
                             Ocjena = 4,
-                            RelacijaId = 40,
-                            RezervacijaID = 29
+                            RelacijaId = 3,
+                            RezervacijaID = 27
                         },
                         new
                         {
                             PretragaId = 89,
                             KupacId = 1,
-                            Ocjena = 4,
-                            RelacijaId = 38,
-                            RezervacijaID = 6
+                            Ocjena = 3,
+                            RelacijaId = 8,
+                            RezervacijaID = 27
                         },
                         new
                         {
                             PretragaId = 90,
                             KupacId = 1,
                             Ocjena = 3,
-                            RelacijaId = 19,
-                            RezervacijaID = 17
+                            RelacijaId = 28,
+                            RezervacijaID = 2
                         },
                         new
                         {
                             PretragaId = 91,
                             KupacId = 1,
-                            Ocjena = 3,
-                            RelacijaId = 30,
-                            RezervacijaID = 25
+                            Ocjena = 4,
+                            RelacijaId = 29,
+                            RezervacijaID = 26
                         },
                         new
                         {
                             PretragaId = 92,
                             KupacId = 1,
-                            Ocjena = 3,
-                            RelacijaId = 34,
-                            RezervacijaID = 15
+                            Ocjena = 4,
+                            RelacijaId = 15,
+                            RezervacijaID = 22
                         },
                         new
                         {
                             PretragaId = 93,
                             KupacId = 1,
                             Ocjena = 3,
-                            RelacijaId = 3,
-                            RezervacijaID = 17
+                            RelacijaId = 15,
+                            RezervacijaID = 10
                         },
                         new
                         {
                             PretragaId = 94,
                             KupacId = 1,
                             Ocjena = 4,
-                            RelacijaId = 2,
-                            RezervacijaID = 1
+                            RelacijaId = 15,
+                            RezervacijaID = 13
                         },
                         new
                         {
                             PretragaId = 95,
                             KupacId = 1,
-                            Ocjena = 3,
-                            RelacijaId = 14,
-                            RezervacijaID = 18
+                            Ocjena = 4,
+                            RelacijaId = 40,
+                            RezervacijaID = 23
                         },
                         new
                         {
                             PretragaId = 96,
                             KupacId = 1,
-                            Ocjena = 4,
-                            RelacijaId = 19,
-                            RezervacijaID = 18
+                            Ocjena = 3,
+                            RelacijaId = 38,
+                            RezervacijaID = 1
                         },
                         new
                         {
                             PretragaId = 97,
                             KupacId = 1,
                             Ocjena = 4,
-                            RelacijaId = 16,
-                            RezervacijaID = 13
+                            RelacijaId = 26,
+                            RezervacijaID = 8
                         },
                         new
                         {
                             PretragaId = 98,
                             KupacId = 1,
-                            Ocjena = 3,
-                            RelacijaId = 2,
-                            RezervacijaID = 7
+                            Ocjena = 4,
+                            RelacijaId = 22,
+                            RezervacijaID = 24
                         },
                         new
                         {
                             PretragaId = 99,
                             KupacId = 1,
                             Ocjena = 3,
-                            RelacijaId = 30,
-                            RezervacijaID = 3
+                            RelacijaId = 20,
+                            RezervacijaID = 19
                         });
                 });
 
@@ -1656,7 +1656,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 1,
                             Cijena = 5.5,
-                            DatumPolaska = new DateTime(2021, 2, 18, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 24, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 1,
                             VrijemeDolaska = new TimeSpan(0, 10, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 3, 30, 0, 0)
@@ -1665,7 +1665,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 2,
                             Cijena = 6.0,
-                            DatumPolaska = new DateTime(2021, 2, 18, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 24, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 2,
                             VrijemeDolaska = new TimeSpan(0, 10, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 3, 30, 0, 0)
@@ -1674,7 +1674,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 3,
                             Cijena = 6.5,
-                            DatumPolaska = new DateTime(2021, 2, 18, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 24, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 3,
                             VrijemeDolaska = new TimeSpan(0, 10, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 3, 30, 0, 0)
@@ -1683,7 +1683,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 4,
                             Cijena = 7.0,
-                            DatumPolaska = new DateTime(2021, 2, 18, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 24, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 4,
                             VrijemeDolaska = new TimeSpan(0, 10, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 3, 30, 0, 0)
@@ -1692,7 +1692,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 5,
                             Cijena = 7.5,
-                            DatumPolaska = new DateTime(2021, 2, 18, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 24, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 5,
                             VrijemeDolaska = new TimeSpan(0, 10, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 3, 30, 0, 0)
@@ -1701,7 +1701,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 6,
                             Cijena = 8.0,
-                            DatumPolaska = new DateTime(2021, 2, 18, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 24, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 6,
                             VrijemeDolaska = new TimeSpan(0, 10, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 3, 30, 0, 0)
@@ -1710,7 +1710,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 7,
                             Cijena = 8.5,
-                            DatumPolaska = new DateTime(2021, 2, 18, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 24, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 7,
                             VrijemeDolaska = new TimeSpan(0, 10, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 3, 30, 0, 0)
@@ -1719,7 +1719,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 8,
                             Cijena = 9.0,
-                            DatumPolaska = new DateTime(2021, 2, 18, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 24, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 8,
                             VrijemeDolaska = new TimeSpan(0, 10, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 3, 30, 0, 0)
@@ -1728,7 +1728,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 9,
                             Cijena = 9.5,
-                            DatumPolaska = new DateTime(2021, 2, 18, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 24, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 9,
                             VrijemeDolaska = new TimeSpan(0, 10, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 3, 30, 0, 0)
@@ -1737,7 +1737,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 10,
                             Cijena = 10.0,
-                            DatumPolaska = new DateTime(2021, 2, 18, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 24, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 10,
                             VrijemeDolaska = new TimeSpan(0, 10, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 3, 30, 0, 0)
@@ -1746,7 +1746,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 11,
                             Cijena = 10.5,
-                            DatumPolaska = new DateTime(2021, 2, 18, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 24, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 11,
                             VrijemeDolaska = new TimeSpan(0, 10, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 3, 30, 0, 0)
@@ -1755,7 +1755,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 12,
                             Cijena = 11.0,
-                            DatumPolaska = new DateTime(2021, 2, 18, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 24, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 12,
                             VrijemeDolaska = new TimeSpan(0, 10, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 3, 30, 0, 0)
@@ -1764,7 +1764,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 13,
                             Cijena = 11.5,
-                            DatumPolaska = new DateTime(2021, 2, 18, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 24, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 13,
                             VrijemeDolaska = new TimeSpan(0, 10, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 3, 30, 0, 0)
@@ -1773,7 +1773,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 14,
                             Cijena = 12.0,
-                            DatumPolaska = new DateTime(2021, 2, 18, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 24, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 14,
                             VrijemeDolaska = new TimeSpan(0, 10, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 3, 30, 0, 0)
@@ -1782,7 +1782,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 15,
                             Cijena = 12.5,
-                            DatumPolaska = new DateTime(2021, 2, 18, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 24, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 15,
                             VrijemeDolaska = new TimeSpan(0, 10, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 3, 30, 0, 0)
@@ -1791,7 +1791,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 16,
                             Cijena = 13.0,
-                            DatumPolaska = new DateTime(2021, 2, 18, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 24, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 16,
                             VrijemeDolaska = new TimeSpan(0, 10, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 3, 30, 0, 0)
@@ -1800,7 +1800,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 17,
                             Cijena = 13.5,
-                            DatumPolaska = new DateTime(2021, 2, 18, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 24, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 17,
                             VrijemeDolaska = new TimeSpan(0, 10, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 3, 30, 0, 0)
@@ -1809,7 +1809,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 18,
                             Cijena = 14.0,
-                            DatumPolaska = new DateTime(2021, 2, 18, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 24, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 18,
                             VrijemeDolaska = new TimeSpan(0, 10, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 3, 30, 0, 0)
@@ -1818,7 +1818,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 19,
                             Cijena = 14.5,
-                            DatumPolaska = new DateTime(2021, 2, 18, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 24, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 19,
                             VrijemeDolaska = new TimeSpan(0, 10, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 3, 30, 0, 0)
@@ -1827,7 +1827,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 20,
                             Cijena = 15.0,
-                            DatumPolaska = new DateTime(2021, 2, 18, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 24, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 20,
                             VrijemeDolaska = new TimeSpan(0, 10, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 3, 30, 0, 0)
@@ -1836,7 +1836,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 21,
                             Cijena = 15.5,
-                            DatumPolaska = new DateTime(2021, 2, 18, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 24, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 21,
                             VrijemeDolaska = new TimeSpan(0, 10, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 3, 30, 0, 0)
@@ -1845,7 +1845,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 22,
                             Cijena = 16.0,
-                            DatumPolaska = new DateTime(2021, 2, 18, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 24, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 22,
                             VrijemeDolaska = new TimeSpan(0, 10, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 3, 30, 0, 0)
@@ -1854,7 +1854,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 23,
                             Cijena = 16.5,
-                            DatumPolaska = new DateTime(2021, 2, 18, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 24, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 23,
                             VrijemeDolaska = new TimeSpan(0, 10, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 3, 30, 0, 0)
@@ -1863,7 +1863,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 24,
                             Cijena = 17.0,
-                            DatumPolaska = new DateTime(2021, 2, 18, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 24, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 24,
                             VrijemeDolaska = new TimeSpan(0, 10, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 3, 30, 0, 0)
@@ -1872,7 +1872,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 25,
                             Cijena = 17.5,
-                            DatumPolaska = new DateTime(2021, 2, 18, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 24, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 25,
                             VrijemeDolaska = new TimeSpan(0, 10, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 3, 30, 0, 0)
@@ -1881,7 +1881,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 26,
                             Cijena = 18.0,
-                            DatumPolaska = new DateTime(2021, 2, 18, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 24, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 26,
                             VrijemeDolaska = new TimeSpan(0, 10, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 3, 30, 0, 0)
@@ -1890,7 +1890,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 27,
                             Cijena = 18.5,
-                            DatumPolaska = new DateTime(2021, 2, 18, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 24, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 27,
                             VrijemeDolaska = new TimeSpan(0, 10, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 3, 30, 0, 0)
@@ -1899,7 +1899,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 28,
                             Cijena = 19.0,
-                            DatumPolaska = new DateTime(2021, 2, 18, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 24, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 28,
                             VrijemeDolaska = new TimeSpan(0, 10, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 3, 30, 0, 0)
@@ -1908,7 +1908,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 29,
                             Cijena = 19.5,
-                            DatumPolaska = new DateTime(2021, 2, 18, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 24, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 29,
                             VrijemeDolaska = new TimeSpan(0, 10, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 3, 30, 0, 0)
@@ -1917,7 +1917,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 30,
                             Cijena = 20.0,
-                            DatumPolaska = new DateTime(2021, 2, 18, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 24, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 30,
                             VrijemeDolaska = new TimeSpan(0, 10, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 3, 30, 0, 0)
@@ -1926,7 +1926,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 31,
                             Cijena = 20.5,
-                            DatumPolaska = new DateTime(2021, 2, 18, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 24, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 31,
                             VrijemeDolaska = new TimeSpan(0, 10, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 3, 30, 0, 0)
@@ -1935,7 +1935,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 32,
                             Cijena = 21.0,
-                            DatumPolaska = new DateTime(2021, 2, 18, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 24, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 32,
                             VrijemeDolaska = new TimeSpan(0, 10, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 3, 30, 0, 0)
@@ -1944,7 +1944,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 33,
                             Cijena = 21.5,
-                            DatumPolaska = new DateTime(2021, 2, 18, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 24, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 33,
                             VrijemeDolaska = new TimeSpan(0, 10, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 3, 30, 0, 0)
@@ -1953,7 +1953,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 34,
                             Cijena = 22.0,
-                            DatumPolaska = new DateTime(2021, 2, 18, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 24, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 34,
                             VrijemeDolaska = new TimeSpan(0, 10, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 3, 30, 0, 0)
@@ -1962,7 +1962,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 35,
                             Cijena = 22.5,
-                            DatumPolaska = new DateTime(2021, 2, 18, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 24, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 35,
                             VrijemeDolaska = new TimeSpan(0, 10, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 3, 30, 0, 0)
@@ -1971,7 +1971,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 36,
                             Cijena = 23.0,
-                            DatumPolaska = new DateTime(2021, 2, 18, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 24, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 36,
                             VrijemeDolaska = new TimeSpan(0, 10, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 3, 30, 0, 0)
@@ -1980,7 +1980,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 37,
                             Cijena = 23.5,
-                            DatumPolaska = new DateTime(2021, 2, 18, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 24, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 37,
                             VrijemeDolaska = new TimeSpan(0, 10, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 3, 30, 0, 0)
@@ -1989,7 +1989,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 38,
                             Cijena = 24.0,
-                            DatumPolaska = new DateTime(2021, 2, 18, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 24, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 38,
                             VrijemeDolaska = new TimeSpan(0, 10, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 3, 30, 0, 0)
@@ -1998,7 +1998,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 39,
                             Cijena = 24.5,
-                            DatumPolaska = new DateTime(2021, 2, 18, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 24, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 39,
                             VrijemeDolaska = new TimeSpan(0, 10, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 3, 30, 0, 0)
@@ -2007,7 +2007,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 40,
                             Cijena = 25.0,
-                            DatumPolaska = new DateTime(2021, 2, 18, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 24, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 40,
                             VrijemeDolaska = new TimeSpan(0, 10, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 3, 30, 0, 0)
@@ -2016,7 +2016,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 41,
                             Cijena = 25.5,
-                            DatumPolaska = new DateTime(2021, 2, 18, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 24, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 41,
                             VrijemeDolaska = new TimeSpan(0, 10, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 3, 30, 0, 0)
@@ -2025,7 +2025,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 42,
                             Cijena = 26.0,
-                            DatumPolaska = new DateTime(2021, 2, 18, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 24, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 42,
                             VrijemeDolaska = new TimeSpan(0, 10, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 3, 30, 0, 0)
@@ -2034,7 +2034,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 43,
                             Cijena = 5.75,
-                            DatumPolaska = new DateTime(2021, 2, 19, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 25, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 1,
                             VrijemeDolaska = new TimeSpan(0, 11, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 4, 30, 0, 0)
@@ -2043,7 +2043,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 44,
                             Cijena = 6.25,
-                            DatumPolaska = new DateTime(2021, 2, 19, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 25, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 2,
                             VrijemeDolaska = new TimeSpan(0, 11, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 4, 30, 0, 0)
@@ -2052,7 +2052,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 45,
                             Cijena = 6.75,
-                            DatumPolaska = new DateTime(2021, 2, 19, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 25, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 3,
                             VrijemeDolaska = new TimeSpan(0, 11, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 4, 30, 0, 0)
@@ -2061,7 +2061,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 46,
                             Cijena = 7.25,
-                            DatumPolaska = new DateTime(2021, 2, 19, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 25, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 4,
                             VrijemeDolaska = new TimeSpan(0, 11, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 4, 30, 0, 0)
@@ -2070,7 +2070,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 47,
                             Cijena = 7.75,
-                            DatumPolaska = new DateTime(2021, 2, 19, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 25, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 5,
                             VrijemeDolaska = new TimeSpan(0, 11, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 4, 30, 0, 0)
@@ -2079,7 +2079,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 48,
                             Cijena = 8.25,
-                            DatumPolaska = new DateTime(2021, 2, 19, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 25, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 6,
                             VrijemeDolaska = new TimeSpan(0, 11, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 4, 30, 0, 0)
@@ -2088,7 +2088,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 49,
                             Cijena = 8.75,
-                            DatumPolaska = new DateTime(2021, 2, 19, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 25, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 7,
                             VrijemeDolaska = new TimeSpan(0, 11, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 4, 30, 0, 0)
@@ -2097,7 +2097,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 50,
                             Cijena = 9.25,
-                            DatumPolaska = new DateTime(2021, 2, 19, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 25, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 8,
                             VrijemeDolaska = new TimeSpan(0, 11, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 4, 30, 0, 0)
@@ -2106,7 +2106,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 51,
                             Cijena = 9.75,
-                            DatumPolaska = new DateTime(2021, 2, 19, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 25, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 9,
                             VrijemeDolaska = new TimeSpan(0, 11, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 4, 30, 0, 0)
@@ -2115,7 +2115,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 52,
                             Cijena = 10.25,
-                            DatumPolaska = new DateTime(2021, 2, 19, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 25, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 10,
                             VrijemeDolaska = new TimeSpan(0, 11, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 4, 30, 0, 0)
@@ -2124,7 +2124,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 53,
                             Cijena = 10.75,
-                            DatumPolaska = new DateTime(2021, 2, 19, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 25, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 11,
                             VrijemeDolaska = new TimeSpan(0, 11, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 4, 30, 0, 0)
@@ -2133,7 +2133,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 54,
                             Cijena = 11.25,
-                            DatumPolaska = new DateTime(2021, 2, 19, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 25, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 12,
                             VrijemeDolaska = new TimeSpan(0, 11, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 4, 30, 0, 0)
@@ -2142,7 +2142,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 55,
                             Cijena = 11.75,
-                            DatumPolaska = new DateTime(2021, 2, 19, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 25, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 13,
                             VrijemeDolaska = new TimeSpan(0, 11, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 4, 30, 0, 0)
@@ -2151,7 +2151,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 56,
                             Cijena = 12.25,
-                            DatumPolaska = new DateTime(2021, 2, 19, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 25, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 14,
                             VrijemeDolaska = new TimeSpan(0, 11, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 4, 30, 0, 0)
@@ -2160,7 +2160,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 57,
                             Cijena = 12.75,
-                            DatumPolaska = new DateTime(2021, 2, 19, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 25, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 15,
                             VrijemeDolaska = new TimeSpan(0, 11, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 4, 30, 0, 0)
@@ -2169,7 +2169,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 58,
                             Cijena = 13.25,
-                            DatumPolaska = new DateTime(2021, 2, 19, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 25, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 16,
                             VrijemeDolaska = new TimeSpan(0, 11, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 4, 30, 0, 0)
@@ -2178,7 +2178,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 59,
                             Cijena = 13.75,
-                            DatumPolaska = new DateTime(2021, 2, 19, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 25, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 17,
                             VrijemeDolaska = new TimeSpan(0, 11, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 4, 30, 0, 0)
@@ -2187,7 +2187,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 60,
                             Cijena = 14.25,
-                            DatumPolaska = new DateTime(2021, 2, 19, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 25, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 18,
                             VrijemeDolaska = new TimeSpan(0, 11, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 4, 30, 0, 0)
@@ -2196,7 +2196,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 61,
                             Cijena = 14.75,
-                            DatumPolaska = new DateTime(2021, 2, 19, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 25, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 19,
                             VrijemeDolaska = new TimeSpan(0, 11, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 4, 30, 0, 0)
@@ -2205,7 +2205,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 62,
                             Cijena = 15.25,
-                            DatumPolaska = new DateTime(2021, 2, 19, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 25, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 20,
                             VrijemeDolaska = new TimeSpan(0, 11, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 4, 30, 0, 0)
@@ -2214,7 +2214,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 63,
                             Cijena = 15.75,
-                            DatumPolaska = new DateTime(2021, 2, 19, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 25, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 21,
                             VrijemeDolaska = new TimeSpan(0, 11, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 4, 30, 0, 0)
@@ -2223,7 +2223,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 64,
                             Cijena = 16.25,
-                            DatumPolaska = new DateTime(2021, 2, 19, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 25, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 22,
                             VrijemeDolaska = new TimeSpan(0, 11, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 4, 30, 0, 0)
@@ -2232,7 +2232,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 65,
                             Cijena = 16.75,
-                            DatumPolaska = new DateTime(2021, 2, 19, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 25, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 23,
                             VrijemeDolaska = new TimeSpan(0, 11, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 4, 30, 0, 0)
@@ -2241,7 +2241,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 66,
                             Cijena = 17.25,
-                            DatumPolaska = new DateTime(2021, 2, 19, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 25, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 24,
                             VrijemeDolaska = new TimeSpan(0, 11, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 4, 30, 0, 0)
@@ -2250,7 +2250,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 67,
                             Cijena = 17.75,
-                            DatumPolaska = new DateTime(2021, 2, 19, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 25, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 25,
                             VrijemeDolaska = new TimeSpan(0, 11, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 4, 30, 0, 0)
@@ -2259,7 +2259,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 68,
                             Cijena = 18.25,
-                            DatumPolaska = new DateTime(2021, 2, 19, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 25, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 26,
                             VrijemeDolaska = new TimeSpan(0, 11, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 4, 30, 0, 0)
@@ -2268,7 +2268,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 69,
                             Cijena = 18.75,
-                            DatumPolaska = new DateTime(2021, 2, 19, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 25, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 27,
                             VrijemeDolaska = new TimeSpan(0, 11, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 4, 30, 0, 0)
@@ -2277,7 +2277,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 70,
                             Cijena = 19.25,
-                            DatumPolaska = new DateTime(2021, 2, 19, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 25, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 28,
                             VrijemeDolaska = new TimeSpan(0, 11, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 4, 30, 0, 0)
@@ -2286,7 +2286,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 71,
                             Cijena = 19.75,
-                            DatumPolaska = new DateTime(2021, 2, 19, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 25, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 29,
                             VrijemeDolaska = new TimeSpan(0, 11, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 4, 30, 0, 0)
@@ -2295,7 +2295,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 72,
                             Cijena = 20.25,
-                            DatumPolaska = new DateTime(2021, 2, 19, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 25, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 30,
                             VrijemeDolaska = new TimeSpan(0, 11, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 4, 30, 0, 0)
@@ -2304,7 +2304,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 73,
                             Cijena = 20.75,
-                            DatumPolaska = new DateTime(2021, 2, 19, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 25, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 31,
                             VrijemeDolaska = new TimeSpan(0, 11, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 4, 30, 0, 0)
@@ -2313,7 +2313,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 74,
                             Cijena = 21.25,
-                            DatumPolaska = new DateTime(2021, 2, 19, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 25, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 32,
                             VrijemeDolaska = new TimeSpan(0, 11, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 4, 30, 0, 0)
@@ -2322,7 +2322,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 75,
                             Cijena = 21.75,
-                            DatumPolaska = new DateTime(2021, 2, 19, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 25, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 33,
                             VrijemeDolaska = new TimeSpan(0, 11, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 4, 30, 0, 0)
@@ -2331,7 +2331,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 76,
                             Cijena = 22.25,
-                            DatumPolaska = new DateTime(2021, 2, 19, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 25, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 34,
                             VrijemeDolaska = new TimeSpan(0, 11, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 4, 30, 0, 0)
@@ -2340,7 +2340,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 77,
                             Cijena = 22.75,
-                            DatumPolaska = new DateTime(2021, 2, 19, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 25, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 35,
                             VrijemeDolaska = new TimeSpan(0, 11, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 4, 30, 0, 0)
@@ -2349,7 +2349,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 78,
                             Cijena = 23.25,
-                            DatumPolaska = new DateTime(2021, 2, 19, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 25, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 36,
                             VrijemeDolaska = new TimeSpan(0, 11, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 4, 30, 0, 0)
@@ -2358,7 +2358,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 79,
                             Cijena = 23.75,
-                            DatumPolaska = new DateTime(2021, 2, 19, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 25, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 37,
                             VrijemeDolaska = new TimeSpan(0, 11, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 4, 30, 0, 0)
@@ -2367,7 +2367,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 80,
                             Cijena = 24.25,
-                            DatumPolaska = new DateTime(2021, 2, 19, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 25, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 38,
                             VrijemeDolaska = new TimeSpan(0, 11, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 4, 30, 0, 0)
@@ -2376,7 +2376,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 81,
                             Cijena = 24.75,
-                            DatumPolaska = new DateTime(2021, 2, 19, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 25, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 39,
                             VrijemeDolaska = new TimeSpan(0, 11, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 4, 30, 0, 0)
@@ -2385,7 +2385,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 82,
                             Cijena = 25.25,
-                            DatumPolaska = new DateTime(2021, 2, 19, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 25, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 40,
                             VrijemeDolaska = new TimeSpan(0, 11, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 4, 30, 0, 0)
@@ -2394,7 +2394,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 83,
                             Cijena = 25.75,
-                            DatumPolaska = new DateTime(2021, 2, 19, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 25, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 41,
                             VrijemeDolaska = new TimeSpan(0, 11, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 4, 30, 0, 0)
@@ -2403,7 +2403,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 84,
                             Cijena = 26.25,
-                            DatumPolaska = new DateTime(2021, 2, 19, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 25, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 42,
                             VrijemeDolaska = new TimeSpan(0, 11, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 4, 30, 0, 0)
@@ -2412,7 +2412,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 85,
                             Cijena = 7.9500000000000002,
-                            DatumPolaska = new DateTime(2021, 2, 20, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 26, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 1,
                             VrijemeDolaska = new TimeSpan(0, 12, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 5, 30, 0, 0)
@@ -2421,7 +2421,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 86,
                             Cijena = 8.4499999999999993,
-                            DatumPolaska = new DateTime(2021, 2, 20, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 26, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 2,
                             VrijemeDolaska = new TimeSpan(0, 12, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 5, 30, 0, 0)
@@ -2430,7 +2430,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 87,
                             Cijena = 8.9499999999999993,
-                            DatumPolaska = new DateTime(2021, 2, 20, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 26, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 3,
                             VrijemeDolaska = new TimeSpan(0, 12, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 5, 30, 0, 0)
@@ -2439,7 +2439,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 88,
                             Cijena = 9.4499999999999993,
-                            DatumPolaska = new DateTime(2021, 2, 20, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 26, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 4,
                             VrijemeDolaska = new TimeSpan(0, 12, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 5, 30, 0, 0)
@@ -2448,7 +2448,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 89,
                             Cijena = 9.9499999999999993,
-                            DatumPolaska = new DateTime(2021, 2, 20, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 26, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 5,
                             VrijemeDolaska = new TimeSpan(0, 12, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 5, 30, 0, 0)
@@ -2457,7 +2457,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 90,
                             Cijena = 10.449999999999999,
-                            DatumPolaska = new DateTime(2021, 2, 20, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 26, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 6,
                             VrijemeDolaska = new TimeSpan(0, 12, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 5, 30, 0, 0)
@@ -2466,7 +2466,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 91,
                             Cijena = 10.949999999999999,
-                            DatumPolaska = new DateTime(2021, 2, 20, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 26, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 7,
                             VrijemeDolaska = new TimeSpan(0, 12, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 5, 30, 0, 0)
@@ -2475,7 +2475,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 92,
                             Cijena = 11.449999999999999,
-                            DatumPolaska = new DateTime(2021, 2, 20, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 26, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 8,
                             VrijemeDolaska = new TimeSpan(0, 12, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 5, 30, 0, 0)
@@ -2484,7 +2484,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 93,
                             Cijena = 11.949999999999999,
-                            DatumPolaska = new DateTime(2021, 2, 20, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 26, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 9,
                             VrijemeDolaska = new TimeSpan(0, 12, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 5, 30, 0, 0)
@@ -2493,7 +2493,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 94,
                             Cijena = 12.449999999999999,
-                            DatumPolaska = new DateTime(2021, 2, 20, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 26, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 10,
                             VrijemeDolaska = new TimeSpan(0, 12, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 5, 30, 0, 0)
@@ -2502,7 +2502,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 95,
                             Cijena = 12.949999999999999,
-                            DatumPolaska = new DateTime(2021, 2, 20, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 26, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 11,
                             VrijemeDolaska = new TimeSpan(0, 12, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 5, 30, 0, 0)
@@ -2511,7 +2511,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 96,
                             Cijena = 13.449999999999999,
-                            DatumPolaska = new DateTime(2021, 2, 20, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 26, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 12,
                             VrijemeDolaska = new TimeSpan(0, 12, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 5, 30, 0, 0)
@@ -2520,7 +2520,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 97,
                             Cijena = 13.949999999999999,
-                            DatumPolaska = new DateTime(2021, 2, 20, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 26, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 13,
                             VrijemeDolaska = new TimeSpan(0, 12, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 5, 30, 0, 0)
@@ -2529,7 +2529,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 98,
                             Cijena = 14.449999999999999,
-                            DatumPolaska = new DateTime(2021, 2, 20, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 26, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 14,
                             VrijemeDolaska = new TimeSpan(0, 12, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 5, 30, 0, 0)
@@ -2538,7 +2538,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 99,
                             Cijena = 14.949999999999999,
-                            DatumPolaska = new DateTime(2021, 2, 20, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 26, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 15,
                             VrijemeDolaska = new TimeSpan(0, 12, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 5, 30, 0, 0)
@@ -2547,7 +2547,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 100,
                             Cijena = 15.449999999999999,
-                            DatumPolaska = new DateTime(2021, 2, 20, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 26, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 16,
                             VrijemeDolaska = new TimeSpan(0, 12, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 5, 30, 0, 0)
@@ -2556,7 +2556,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 101,
                             Cijena = 15.949999999999999,
-                            DatumPolaska = new DateTime(2021, 2, 20, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 26, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 17,
                             VrijemeDolaska = new TimeSpan(0, 12, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 5, 30, 0, 0)
@@ -2565,7 +2565,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 102,
                             Cijena = 16.449999999999999,
-                            DatumPolaska = new DateTime(2021, 2, 20, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 26, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 18,
                             VrijemeDolaska = new TimeSpan(0, 12, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 5, 30, 0, 0)
@@ -2574,7 +2574,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 103,
                             Cijena = 16.949999999999999,
-                            DatumPolaska = new DateTime(2021, 2, 20, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 26, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 19,
                             VrijemeDolaska = new TimeSpan(0, 12, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 5, 30, 0, 0)
@@ -2583,7 +2583,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 104,
                             Cijena = 17.449999999999999,
-                            DatumPolaska = new DateTime(2021, 2, 20, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 26, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 20,
                             VrijemeDolaska = new TimeSpan(0, 12, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 5, 30, 0, 0)
@@ -2592,7 +2592,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 105,
                             Cijena = 17.949999999999999,
-                            DatumPolaska = new DateTime(2021, 2, 20, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 26, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 21,
                             VrijemeDolaska = new TimeSpan(0, 12, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 5, 30, 0, 0)
@@ -2601,7 +2601,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 106,
                             Cijena = 18.449999999999999,
-                            DatumPolaska = new DateTime(2021, 2, 20, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 26, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 22,
                             VrijemeDolaska = new TimeSpan(0, 12, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 5, 30, 0, 0)
@@ -2610,7 +2610,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 107,
                             Cijena = 18.949999999999999,
-                            DatumPolaska = new DateTime(2021, 2, 20, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 26, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 23,
                             VrijemeDolaska = new TimeSpan(0, 12, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 5, 30, 0, 0)
@@ -2619,7 +2619,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 108,
                             Cijena = 19.449999999999999,
-                            DatumPolaska = new DateTime(2021, 2, 20, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 26, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 24,
                             VrijemeDolaska = new TimeSpan(0, 12, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 5, 30, 0, 0)
@@ -2628,7 +2628,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 109,
                             Cijena = 19.949999999999999,
-                            DatumPolaska = new DateTime(2021, 2, 20, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 26, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 25,
                             VrijemeDolaska = new TimeSpan(0, 12, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 5, 30, 0, 0)
@@ -2637,7 +2637,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 110,
                             Cijena = 20.449999999999999,
-                            DatumPolaska = new DateTime(2021, 2, 20, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 26, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 26,
                             VrijemeDolaska = new TimeSpan(0, 12, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 5, 30, 0, 0)
@@ -2646,7 +2646,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 111,
                             Cijena = 20.949999999999999,
-                            DatumPolaska = new DateTime(2021, 2, 20, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 26, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 27,
                             VrijemeDolaska = new TimeSpan(0, 12, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 5, 30, 0, 0)
@@ -2655,7 +2655,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 112,
                             Cijena = 21.449999999999999,
-                            DatumPolaska = new DateTime(2021, 2, 20, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 26, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 28,
                             VrijemeDolaska = new TimeSpan(0, 12, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 5, 30, 0, 0)
@@ -2664,7 +2664,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 113,
                             Cijena = 21.949999999999999,
-                            DatumPolaska = new DateTime(2021, 2, 20, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 26, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 29,
                             VrijemeDolaska = new TimeSpan(0, 12, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 5, 30, 0, 0)
@@ -2673,7 +2673,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 114,
                             Cijena = 22.449999999999999,
-                            DatumPolaska = new DateTime(2021, 2, 20, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 26, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 30,
                             VrijemeDolaska = new TimeSpan(0, 12, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 5, 30, 0, 0)
@@ -2682,7 +2682,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 115,
                             Cijena = 22.949999999999999,
-                            DatumPolaska = new DateTime(2021, 2, 20, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 26, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 31,
                             VrijemeDolaska = new TimeSpan(0, 12, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 5, 30, 0, 0)
@@ -2691,7 +2691,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 116,
                             Cijena = 23.449999999999999,
-                            DatumPolaska = new DateTime(2021, 2, 20, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 26, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 32,
                             VrijemeDolaska = new TimeSpan(0, 12, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 5, 30, 0, 0)
@@ -2700,7 +2700,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 117,
                             Cijena = 23.949999999999999,
-                            DatumPolaska = new DateTime(2021, 2, 20, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 26, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 33,
                             VrijemeDolaska = new TimeSpan(0, 12, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 5, 30, 0, 0)
@@ -2709,7 +2709,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 118,
                             Cijena = 24.449999999999999,
-                            DatumPolaska = new DateTime(2021, 2, 20, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 26, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 34,
                             VrijemeDolaska = new TimeSpan(0, 12, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 5, 30, 0, 0)
@@ -2718,7 +2718,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 119,
                             Cijena = 24.949999999999999,
-                            DatumPolaska = new DateTime(2021, 2, 20, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 26, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 35,
                             VrijemeDolaska = new TimeSpan(0, 12, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 5, 30, 0, 0)
@@ -2727,7 +2727,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 120,
                             Cijena = 25.449999999999999,
-                            DatumPolaska = new DateTime(2021, 2, 20, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 26, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 36,
                             VrijemeDolaska = new TimeSpan(0, 12, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 5, 30, 0, 0)
@@ -2736,7 +2736,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 121,
                             Cijena = 25.949999999999999,
-                            DatumPolaska = new DateTime(2021, 2, 20, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 26, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 37,
                             VrijemeDolaska = new TimeSpan(0, 12, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 5, 30, 0, 0)
@@ -2745,7 +2745,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 122,
                             Cijena = 26.449999999999999,
-                            DatumPolaska = new DateTime(2021, 2, 20, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 26, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 38,
                             VrijemeDolaska = new TimeSpan(0, 12, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 5, 30, 0, 0)
@@ -2754,7 +2754,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 123,
                             Cijena = 26.949999999999999,
-                            DatumPolaska = new DateTime(2021, 2, 20, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 26, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 39,
                             VrijemeDolaska = new TimeSpan(0, 12, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 5, 30, 0, 0)
@@ -2763,7 +2763,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 124,
                             Cijena = 27.449999999999999,
-                            DatumPolaska = new DateTime(2021, 2, 20, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 26, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 40,
                             VrijemeDolaska = new TimeSpan(0, 12, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 5, 30, 0, 0)
@@ -2772,7 +2772,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 125,
                             Cijena = 27.949999999999999,
-                            DatumPolaska = new DateTime(2021, 2, 20, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 26, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 41,
                             VrijemeDolaska = new TimeSpan(0, 12, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 5, 30, 0, 0)
@@ -2781,7 +2781,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 126,
                             Cijena = 28.449999999999999,
-                            DatumPolaska = new DateTime(2021, 2, 20, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 26, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 42,
                             VrijemeDolaska = new TimeSpan(0, 12, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 5, 30, 0, 0)
@@ -2790,7 +2790,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 127,
                             Cijena = 28.449999999999999,
-                            DatumPolaska = new DateTime(2021, 2, 20, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 26, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 1,
                             VrijemeDolaska = new TimeSpan(0, 12, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 5, 30, 0, 0)
@@ -2799,7 +2799,7 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 128,
                             Cijena = 28.449999999999999,
-                            DatumPolaska = new DateTime(2021, 2, 20, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 26, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 1,
                             VrijemeDolaska = new TimeSpan(0, 12, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 5, 30, 0, 0)
@@ -2808,11 +2808,35 @@ namespace eZeljeznice.WebAPI.Migrations
                         {
                             PutovanjeId = 129,
                             Cijena = 28.449999999999999,
-                            DatumPolaska = new DateTime(2021, 2, 20, 0, 0, 0, 0, DateTimeKind.Local),
+                            DatumPolaska = new DateTime(2021, 2, 26, 0, 0, 0, 0, DateTimeKind.Local),
                             RelacijaId = 2,
                             VrijemeDolaska = new TimeSpan(0, 12, 30, 0, 0),
                             VrijemePolaska = new TimeSpan(0, 5, 30, 0, 0)
                         });
+                });
+
+            modelBuilder.Entity("eZeljeznice.WebAPI.Database.RSII", b =>
+                {
+                    b.Property<int>("RSIIId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnName("RSIIId")
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("KupacID")
+                        .HasColumnName("KupacID")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Maliciozan")
+                        .HasColumnName("Maliciozan")
+                        .HasColumnType("bit");
+
+                    b.HasKey("RSIIId")
+                        .HasName("PK__RSII__75C8FA1B23B7AAC2");
+
+                    b.HasIndex("KupacID");
+
+                    b.ToTable("RSII");
                 });
 
             modelBuilder.Entity("eZeljeznice.WebAPI.Database.Relacije", b =>
@@ -3154,272 +3178,272 @@ namespace eZeljeznice.WebAPI.Migrations
                         new
                         {
                             RezervacijaId = 1,
-                            DatumRezervacije = new DateTime(2021, 2, 17, 21, 47, 23, 157, DateTimeKind.Local).AddTicks(1728),
+                            DatumRezervacije = new DateTime(2021, 2, 23, 21, 33, 17, 483, DateTimeKind.Local).AddTicks(1531),
                             KartaId = 1,
-                            Kompletirana = true,
-                            KupacId = 1,
-                            PutovanjeId = 34
-                        },
-                        new
-                        {
-                            RezervacijaId = 2,
-                            DatumRezervacije = new DateTime(2021, 2, 17, 21, 47, 23, 157, DateTimeKind.Local).AddTicks(4086),
-                            KartaId = 2,
-                            Kompletirana = true,
-                            KupacId = 1,
-                            PutovanjeId = 6
-                        },
-                        new
-                        {
-                            RezervacijaId = 3,
-                            DatumRezervacije = new DateTime(2021, 2, 17, 21, 47, 23, 157, DateTimeKind.Local).AddTicks(4248),
-                            KartaId = 3,
-                            Kompletirana = true,
-                            KupacId = 1,
-                            PutovanjeId = 36
-                        },
-                        new
-                        {
-                            RezervacijaId = 4,
-                            DatumRezervacije = new DateTime(2021, 2, 17, 21, 47, 23, 157, DateTimeKind.Local).AddTicks(4283),
-                            KartaId = 4,
-                            Kompletirana = true,
-                            KupacId = 1,
-                            PutovanjeId = 46
-                        },
-                        new
-                        {
-                            RezervacijaId = 5,
-                            DatumRezervacije = new DateTime(2021, 2, 17, 21, 47, 23, 157, DateTimeKind.Local).AddTicks(4310),
-                            KartaId = 5,
-                            Kompletirana = true,
-                            KupacId = 1,
-                            PutovanjeId = 1
-                        },
-                        new
-                        {
-                            RezervacijaId = 6,
-                            DatumRezervacije = new DateTime(2021, 2, 17, 21, 47, 23, 157, DateTimeKind.Local).AddTicks(4341),
-                            KartaId = 6,
-                            Kompletirana = true,
-                            KupacId = 1,
-                            PutovanjeId = 57
-                        },
-                        new
-                        {
-                            RezervacijaId = 7,
-                            DatumRezervacije = new DateTime(2021, 2, 17, 21, 47, 23, 157, DateTimeKind.Local).AddTicks(4368),
-                            KartaId = 7,
-                            Kompletirana = true,
-                            KupacId = 1,
-                            PutovanjeId = 80
-                        },
-                        new
-                        {
-                            RezervacijaId = 8,
-                            DatumRezervacije = new DateTime(2021, 2, 17, 21, 47, 23, 157, DateTimeKind.Local).AddTicks(4394),
-                            KartaId = 8,
-                            Kompletirana = true,
-                            KupacId = 1,
-                            PutovanjeId = 122
-                        },
-                        new
-                        {
-                            RezervacijaId = 9,
-                            DatumRezervacije = new DateTime(2021, 2, 17, 21, 47, 23, 157, DateTimeKind.Local).AddTicks(4421),
-                            KartaId = 9,
-                            Kompletirana = true,
-                            KupacId = 1,
-                            PutovanjeId = 116
-                        },
-                        new
-                        {
-                            RezervacijaId = 10,
-                            DatumRezervacije = new DateTime(2021, 2, 17, 21, 47, 23, 157, DateTimeKind.Local).AddTicks(4511),
-                            KartaId = 10,
-                            Kompletirana = true,
-                            KupacId = 1,
-                            PutovanjeId = 60
-                        },
-                        new
-                        {
-                            RezervacijaId = 11,
-                            DatumRezervacije = new DateTime(2021, 2, 17, 21, 47, 23, 157, DateTimeKind.Local).AddTicks(4541),
-                            KartaId = 11,
                             Kompletirana = true,
                             KupacId = 1,
                             PutovanjeId = 58
                         },
                         new
                         {
-                            RezervacijaId = 12,
-                            DatumRezervacije = new DateTime(2021, 2, 17, 21, 47, 23, 157, DateTimeKind.Local).AddTicks(4568),
-                            KartaId = 12,
+                            RezervacijaId = 2,
+                            DatumRezervacije = new DateTime(2021, 2, 23, 21, 33, 17, 483, DateTimeKind.Local).AddTicks(6416),
+                            KartaId = 2,
                             Kompletirana = true,
                             KupacId = 1,
-                            PutovanjeId = 40
+                            PutovanjeId = 76
                         },
                         new
                         {
-                            RezervacijaId = 13,
-                            DatumRezervacije = new DateTime(2021, 2, 17, 21, 47, 23, 157, DateTimeKind.Local).AddTicks(4593),
-                            KartaId = 13,
+                            RezervacijaId = 3,
+                            DatumRezervacije = new DateTime(2021, 2, 23, 21, 33, 17, 483, DateTimeKind.Local).AddTicks(6637),
+                            KartaId = 3,
                             Kompletirana = true,
-                            KupacId = 1,
-                            PutovanjeId = 98
-                        },
-                        new
-                        {
-                            RezervacijaId = 14,
-                            DatumRezervacije = new DateTime(2021, 2, 17, 21, 47, 23, 157, DateTimeKind.Local).AddTicks(4619),
-                            KartaId = 14,
-                            Kompletirana = true,
-                            KupacId = 1,
-                            PutovanjeId = 93
-                        },
-                        new
-                        {
-                            RezervacijaId = 15,
-                            DatumRezervacije = new DateTime(2021, 2, 17, 21, 47, 23, 157, DateTimeKind.Local).AddTicks(4645),
-                            KartaId = 15,
-                            Kompletirana = true,
-                            KupacId = 1,
-                            PutovanjeId = 70
-                        },
-                        new
-                        {
-                            RezervacijaId = 16,
-                            DatumRezervacije = new DateTime(2021, 2, 17, 21, 47, 23, 157, DateTimeKind.Local).AddTicks(4672),
-                            KartaId = 16,
-                            Kompletirana = true,
-                            KupacId = 1,
-                            PutovanjeId = 62
-                        },
-                        new
-                        {
-                            RezervacijaId = 17,
-                            DatumRezervacije = new DateTime(2021, 2, 17, 21, 47, 23, 157, DateTimeKind.Local).AddTicks(4697),
-                            KartaId = 17,
-                            Kompletirana = true,
-                            KupacId = 1,
-                            PutovanjeId = 120
-                        },
-                        new
-                        {
-                            RezervacijaId = 18,
-                            DatumRezervacije = new DateTime(2021, 2, 17, 21, 47, 23, 157, DateTimeKind.Local).AddTicks(4726),
-                            KartaId = 18,
-                            Kompletirana = true,
-                            KupacId = 1,
-                            PutovanjeId = 8
-                        },
-                        new
-                        {
-                            RezervacijaId = 19,
-                            DatumRezervacije = new DateTime(2021, 2, 17, 21, 47, 23, 157, DateTimeKind.Local).AddTicks(4752),
-                            KartaId = 19,
-                            Kompletirana = true,
-                            KupacId = 1,
-                            PutovanjeId = 7
-                        },
-                        new
-                        {
-                            RezervacijaId = 20,
-                            DatumRezervacije = new DateTime(2021, 2, 17, 21, 47, 23, 157, DateTimeKind.Local).AddTicks(4778),
-                            KartaId = 20,
-                            Kompletirana = false,
-                            KupacId = 1,
-                            PutovanjeId = 36
-                        },
-                        new
-                        {
-                            RezervacijaId = 21,
-                            DatumRezervacije = new DateTime(2021, 2, 17, 21, 47, 23, 157, DateTimeKind.Local).AddTicks(4806),
-                            KartaId = 21,
-                            Kompletirana = false,
-                            KupacId = 1,
-                            PutovanjeId = 122
-                        },
-                        new
-                        {
-                            RezervacijaId = 22,
-                            DatumRezervacije = new DateTime(2021, 2, 17, 21, 47, 23, 157, DateTimeKind.Local).AddTicks(4832),
-                            KartaId = 22,
-                            Kompletirana = false,
                             KupacId = 1,
                             PutovanjeId = 27
                         },
                         new
                         {
-                            RezervacijaId = 23,
-                            DatumRezervacije = new DateTime(2021, 2, 17, 21, 47, 23, 157, DateTimeKind.Local).AddTicks(4858),
-                            KartaId = 23,
-                            Kompletirana = false,
+                            RezervacijaId = 4,
+                            DatumRezervacije = new DateTime(2021, 2, 23, 21, 33, 17, 483, DateTimeKind.Local).AddTicks(6718),
+                            KartaId = 4,
+                            Kompletirana = true,
+                            KupacId = 1,
+                            PutovanjeId = 64
+                        },
+                        new
+                        {
+                            RezervacijaId = 5,
+                            DatumRezervacije = new DateTime(2021, 2, 23, 21, 33, 17, 483, DateTimeKind.Local).AddTicks(6789),
+                            KartaId = 5,
+                            Kompletirana = true,
+                            KupacId = 1,
+                            PutovanjeId = 73
+                        },
+                        new
+                        {
+                            RezervacijaId = 6,
+                            DatumRezervacije = new DateTime(2021, 2, 23, 21, 33, 17, 483, DateTimeKind.Local).AddTicks(6867),
+                            KartaId = 6,
+                            Kompletirana = true,
+                            KupacId = 1,
+                            PutovanjeId = 65
+                        },
+                        new
+                        {
+                            RezervacijaId = 7,
+                            DatumRezervacije = new DateTime(2021, 2, 23, 21, 33, 17, 483, DateTimeKind.Local).AddTicks(6938),
+                            KartaId = 7,
+                            Kompletirana = true,
+                            KupacId = 1,
+                            PutovanjeId = 107
+                        },
+                        new
+                        {
+                            RezervacijaId = 8,
+                            DatumRezervacije = new DateTime(2021, 2, 23, 21, 33, 17, 483, DateTimeKind.Local).AddTicks(7008),
+                            KartaId = 8,
+                            Kompletirana = true,
+                            KupacId = 1,
+                            PutovanjeId = 21
+                        },
+                        new
+                        {
+                            RezervacijaId = 9,
+                            DatumRezervacije = new DateTime(2021, 2, 23, 21, 33, 17, 483, DateTimeKind.Local).AddTicks(7078),
+                            KartaId = 9,
+                            Kompletirana = true,
+                            KupacId = 1,
+                            PutovanjeId = 69
+                        },
+                        new
+                        {
+                            RezervacijaId = 10,
+                            DatumRezervacije = new DateTime(2021, 2, 23, 21, 33, 17, 483, DateTimeKind.Local).AddTicks(7240),
+                            KartaId = 10,
+                            Kompletirana = true,
+                            KupacId = 1,
+                            PutovanjeId = 19
+                        },
+                        new
+                        {
+                            RezervacijaId = 11,
+                            DatumRezervacije = new DateTime(2021, 2, 23, 21, 33, 17, 483, DateTimeKind.Local).AddTicks(7327),
+                            KartaId = 11,
+                            Kompletirana = true,
+                            KupacId = 1,
+                            PutovanjeId = 17
+                        },
+                        new
+                        {
+                            RezervacijaId = 12,
+                            DatumRezervacije = new DateTime(2021, 2, 23, 21, 33, 17, 483, DateTimeKind.Local).AddTicks(7396),
+                            KartaId = 12,
+                            Kompletirana = true,
+                            KupacId = 1,
+                            PutovanjeId = 3
+                        },
+                        new
+                        {
+                            RezervacijaId = 13,
+                            DatumRezervacije = new DateTime(2021, 2, 23, 21, 33, 17, 483, DateTimeKind.Local).AddTicks(7463),
+                            KartaId = 13,
+                            Kompletirana = true,
+                            KupacId = 1,
+                            PutovanjeId = 37
+                        },
+                        new
+                        {
+                            RezervacijaId = 14,
+                            DatumRezervacije = new DateTime(2021, 2, 23, 21, 33, 17, 483, DateTimeKind.Local).AddTicks(7531),
+                            KartaId = 14,
+                            Kompletirana = true,
+                            KupacId = 1,
+                            PutovanjeId = 65
+                        },
+                        new
+                        {
+                            RezervacijaId = 15,
+                            DatumRezervacije = new DateTime(2021, 2, 23, 21, 33, 17, 483, DateTimeKind.Local).AddTicks(7598),
+                            KartaId = 15,
+                            Kompletirana = true,
+                            KupacId = 1,
+                            PutovanjeId = 80
+                        },
+                        new
+                        {
+                            RezervacijaId = 16,
+                            DatumRezervacije = new DateTime(2021, 2, 23, 21, 33, 17, 483, DateTimeKind.Local).AddTicks(7667),
+                            KartaId = 16,
+                            Kompletirana = true,
+                            KupacId = 1,
+                            PutovanjeId = 85
+                        },
+                        new
+                        {
+                            RezervacijaId = 17,
+                            DatumRezervacije = new DateTime(2021, 2, 23, 21, 33, 17, 483, DateTimeKind.Local).AddTicks(7734),
+                            KartaId = 17,
+                            Kompletirana = true,
+                            KupacId = 1,
+                            PutovanjeId = 97
+                        },
+                        new
+                        {
+                            RezervacijaId = 18,
+                            DatumRezervacije = new DateTime(2021, 2, 23, 21, 33, 17, 483, DateTimeKind.Local).AddTicks(7808),
+                            KartaId = 18,
+                            Kompletirana = true,
                             KupacId = 1,
                             PutovanjeId = 46
                         },
                         new
                         {
-                            RezervacijaId = 24,
-                            DatumRezervacije = new DateTime(2021, 2, 17, 21, 47, 23, 157, DateTimeKind.Local).AddTicks(4884),
-                            KartaId = 24,
-                            Kompletirana = false,
+                            RezervacijaId = 19,
+                            DatumRezervacije = new DateTime(2021, 2, 23, 21, 33, 17, 483, DateTimeKind.Local).AddTicks(7877),
+                            KartaId = 19,
+                            Kompletirana = true,
                             KupacId = 1,
-                            PutovanjeId = 50
+                            PutovanjeId = 67
                         },
                         new
                         {
-                            RezervacijaId = 25,
-                            DatumRezervacije = new DateTime(2021, 2, 17, 21, 47, 23, 157, DateTimeKind.Local).AddTicks(4909),
-                            KartaId = 25,
+                            RezervacijaId = 20,
+                            DatumRezervacije = new DateTime(2021, 2, 23, 21, 33, 17, 483, DateTimeKind.Local).AddTicks(7947),
+                            KartaId = 20,
                             Kompletirana = false,
                             KupacId = 1,
-                            PutovanjeId = 98
+                            PutovanjeId = 114
                         },
                         new
                         {
-                            RezervacijaId = 26,
-                            DatumRezervacije = new DateTime(2021, 2, 17, 21, 47, 23, 157, DateTimeKind.Local).AddTicks(4935),
-                            KartaId = 26,
-                            Kompletirana = false,
-                            KupacId = 1,
-                            PutovanjeId = 78
-                        },
-                        new
-                        {
-                            RezervacijaId = 27,
-                            DatumRezervacije = new DateTime(2021, 2, 17, 21, 47, 23, 157, DateTimeKind.Local).AddTicks(5009),
-                            KartaId = 27,
-                            Kompletirana = false,
-                            KupacId = 1,
-                            PutovanjeId = 32
-                        },
-                        new
-                        {
-                            RezervacijaId = 28,
-                            DatumRezervacije = new DateTime(2021, 2, 17, 21, 47, 23, 157, DateTimeKind.Local).AddTicks(5038),
-                            KartaId = 28,
+                            RezervacijaId = 21,
+                            DatumRezervacije = new DateTime(2021, 2, 23, 21, 33, 17, 483, DateTimeKind.Local).AddTicks(8017),
+                            KartaId = 21,
                             Kompletirana = false,
                             KupacId = 1,
                             PutovanjeId = 13
                         },
                         new
                         {
+                            RezervacijaId = 22,
+                            DatumRezervacije = new DateTime(2021, 2, 23, 21, 33, 17, 483, DateTimeKind.Local).AddTicks(8085),
+                            KartaId = 22,
+                            Kompletirana = false,
+                            KupacId = 1,
+                            PutovanjeId = 109
+                        },
+                        new
+                        {
+                            RezervacijaId = 23,
+                            DatumRezervacije = new DateTime(2021, 2, 23, 21, 33, 17, 483, DateTimeKind.Local).AddTicks(8153),
+                            KartaId = 23,
+                            Kompletirana = false,
+                            KupacId = 1,
+                            PutovanjeId = 51
+                        },
+                        new
+                        {
+                            RezervacijaId = 24,
+                            DatumRezervacije = new DateTime(2021, 2, 23, 21, 33, 17, 483, DateTimeKind.Local).AddTicks(8221),
+                            KartaId = 24,
+                            Kompletirana = false,
+                            KupacId = 1,
+                            PutovanjeId = 106
+                        },
+                        new
+                        {
+                            RezervacijaId = 25,
+                            DatumRezervacije = new DateTime(2021, 2, 23, 21, 33, 17, 483, DateTimeKind.Local).AddTicks(8288),
+                            KartaId = 25,
+                            Kompletirana = false,
+                            KupacId = 1,
+                            PutovanjeId = 18
+                        },
+                        new
+                        {
+                            RezervacijaId = 26,
+                            DatumRezervacije = new DateTime(2021, 2, 23, 21, 33, 17, 483, DateTimeKind.Local).AddTicks(8357),
+                            KartaId = 26,
+                            Kompletirana = false,
+                            KupacId = 1,
+                            PutovanjeId = 29
+                        },
+                        new
+                        {
+                            RezervacijaId = 27,
+                            DatumRezervacije = new DateTime(2021, 2, 23, 21, 33, 17, 483, DateTimeKind.Local).AddTicks(8487),
+                            KartaId = 27,
+                            Kompletirana = false,
+                            KupacId = 1,
+                            PutovanjeId = 38
+                        },
+                        new
+                        {
+                            RezervacijaId = 28,
+                            DatumRezervacije = new DateTime(2021, 2, 23, 21, 33, 17, 483, DateTimeKind.Local).AddTicks(8568),
+                            KartaId = 28,
+                            Kompletirana = false,
+                            KupacId = 1,
+                            PutovanjeId = 54
+                        },
+                        new
+                        {
                             RezervacijaId = 29,
-                            DatumRezervacije = new DateTime(2021, 2, 17, 21, 47, 23, 157, DateTimeKind.Local).AddTicks(5065),
+                            DatumRezervacije = new DateTime(2021, 2, 23, 21, 33, 17, 483, DateTimeKind.Local).AddTicks(8638),
                             KartaId = 29,
                             Kompletirana = false,
                             KupacId = 1,
-                            PutovanjeId = 85
+                            PutovanjeId = 29
                         },
                         new
                         {
                             RezervacijaId = 30,
-                            DatumRezervacije = new DateTime(2021, 2, 17, 21, 47, 23, 157, DateTimeKind.Local).AddTicks(5091),
+                            DatumRezervacije = new DateTime(2021, 2, 23, 21, 33, 17, 483, DateTimeKind.Local).AddTicks(8707),
                             KartaId = 30,
                             Kompletirana = false,
                             KupacId = 1,
-                            PutovanjeId = 78
+                            PutovanjeId = 55
                         });
                 });
 
@@ -3569,6 +3593,16 @@ namespace eZeljeznice.WebAPI.Migrations
                         .WithMany("Putovanja")
                         .HasForeignKey("RelacijaId")
                         .HasConstraintName("FK__Putovanja__Relac__267ABA7A");
+                });
+
+            modelBuilder.Entity("eZeljeznice.WebAPI.Database.RSII", b =>
+                {
+                    b.HasOne("eZeljeznice.WebAPI.Database.Kupci", "Kupac")
+                        .WithMany("RsII")
+                        .HasForeignKey("KupacID")
+                        .HasConstraintName("FK__RSII__KupacI__32E0915F")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("eZeljeznice.WebAPI.Database.Relacije", b =>

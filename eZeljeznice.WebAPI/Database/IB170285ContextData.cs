@@ -382,7 +382,7 @@ namespace eZeljeznice.WebAPI.Database
                 {
                     ProdanaKartaId = i,
                     BrojRacuna = BrojRacunaHelper.GenerisiBrojRacuna(),
-                    DatumProdaje = DateTime.Now,
+                    DatumProdaje = DateTime.Today.AddDays(-1),
                     RezervacijaId = rnd.Next(1, 30),
                     Popust = 0,
                     KupacId = 1,
@@ -398,7 +398,7 @@ namespace eZeljeznice.WebAPI.Database
                 {
                     ProdanaKartaId = i,
                     BrojRacuna = BrojRacunaHelper.GenerisiBrojRacuna(),
-                    DatumProdaje = DateTime.Now,
+                    DatumProdaje = DateTime.Today.AddDays(-1),
                     RezervacijaId = i,
                     Popust = 0,
                     KupacId = 1,

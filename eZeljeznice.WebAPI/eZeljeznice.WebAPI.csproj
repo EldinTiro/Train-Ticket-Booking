@@ -21,5 +21,9 @@
     <ProjectReference Include="..\eZeljeznice.Model\eZeljeznice.Model.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+
 
 </Project>
